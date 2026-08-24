@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- BUILD_TAG: 2026-08-24f -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>香典返しe-shop｜スマートフォンデザイン案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pl-deep:#41214B;
+  --pl-main:#5E2E6B;
+  --pl-mid:#7A4489;
+  --pl-soft:#EFE7F2;
+  --pl-line:#D9C9DF;
+  --gy-dark:#3B3B3B;
+  --gy-mid:#6E6E6E;
+  --gy-line:#DDDDDD;
+  --gy-bg:#F6F5F4;
+  --txt:#2B2B2B;
+  --txt-sub:#666666;
+  --wh:#FFFFFF;
+  --gold:#B99A5B;
+  --red:#C0392B;
+  --mincho:"Shippori Mincho","Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","YuMincho","Yu Mincho","游明朝","Noto Serif CJK JP","Source Han Serif JP","MS PMincho",serif;
+  --gothic:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro","YuGothic","Yu Gothic","游ゴシック","Noto Sans CJK JP","Source Han Sans JP","Meiryo","メイリオ",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--gothic);color:var(--txt);background:#E9E7E4;-webkit-text-size-adjust:100%;line-height:1.7}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+
+.stage{max-width:440px;margin:0 auto;background:var(--wh);box-shadow:0 0 24px rgba(0,0,0,.08)}
+
+/* 確認用の見出しラベル（本番には入りません） */
+.note{background:#2F2F2F;color:#fff;font-size:11px;letter-spacing:.06em;padding:9px 14px;font-family:var(--gothic)}
+.note b{color:#E7C87A;font-weight:500}
+.note span{display:block;color:#BDBDBD;font-size:10px;margin-top:3px;line-height:1.5}
+
+/* ============ ① ヘッダー ============ */
+.kg-topbar{display:flex;background:var(--pl-deep);color:#fff;font-size:10.5px;letter-spacing:.02em}
+.kg-topbar div{flex:1;padding:6px 8px;text-align:center;white-space:nowrap}
+.kg-topbar div+div{border-left:1px solid rgba(255,255,255,.22)}
+.kg-header{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;background:var(--wh);border-bottom:1px solid var(--gy-line)}
+.kg-logo{display:flex;align-items:center;gap:9px}
+.kg-logo-mark{width:34px;height:34px;flex:none}
+.kg-logo-txt{font-family:var(--mincho);font-size:20px;font-weight:600;letter-spacing:.10em;color:var(--pl-deep);line-height:1.15}
+.kg-logo-en{font-size:8.5px;letter-spacing:.30em;color:var(--gy-mid);font-family:var(--gothic);margin-top:2px}
+.kg-hnav{display:flex;gap:15px}
+.kg-hnav a{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:9px;color:var(--txt);position:relative}
+.kg-hnav svg{width:21px;height:21px;stroke:var(--pl-deep);fill:none;stroke-width:1.7}
+.kg-badge{position:absolute;top:-4px;right:-6px;background:#B4352F;color:#fff;font-size:9px;width:15px;height:15px;border-radius:50%;display:flex;align-items:center;justify-content:center;line-height:1}
+
+/* 検索 */
+.kg-search{padding:9px 14px;background:var(--pl-soft);display:flex}
+.kg-search input{flex:1;border:1px solid var(--pl-line);border-right:0;padding:9px 11px;font-size:13px;background:#fff;border-radius:3px 0 0 3px;font-family:var(--gothic)}
+.kg-search button{width:50px;border:0;background:var(--pl-main);border-radius:0 3px 3px 0;display:flex;align-items:center;justify-content:center}
+.kg-search svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2}
+
+/* グローバルナビ */
+.kg-gnav{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--pl-line)}
+.kg-gnav a{background:var(--wh);padding:11px 4px;display:flex;flex-direction:column;align-items:center;gap:5px;font-size:10.5px;color:var(--pl-deep);text-align:center;line-height:1.35;font-weight:500}
+.kg-gnav svg{width:20px;height:20px;stroke:var(--pl-mid);fill:none;stroke-width:1.6}
+
+/* ============ ② メインビジュアル ============ */
+.kg-hero{position:relative;background:linear-gradient(155deg,#FAF8FB 0%,#F0E9F3 50%,#E4D8E9 100%);padding:16px 14px 12px;overflow:hidden}
+.kg-hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:
+   radial-gradient(circle at 90% 12%,rgba(94,46,107,.06) 0 26px,transparent 27px),
+   radial-gradient(circle at 90% 12%,transparent 0 37px,rgba(94,46,107,.05) 38px 39px,transparent 40px),
+   radial-gradient(circle at 8% 88%,rgba(94,46,107,.045) 0 32px,transparent 33px),
+   radial-gradient(circle at 8% 88%,transparent 0 44px,rgba(94,46,107,.04) 45px 46px,transparent 47px)}
+.kg-hero-inner{position:relative;display:flex;align-items:stretch;justify-content:space-between;min-height:286px}
+.kg-hero-side{font-family:var(--mincho);writing-mode:vertical-rl;font-size:12px;letter-spacing:.20em;line-height:2.0;color:var(--pl-deep);background:rgba(255,255,255,.9);padding:15px 8px;align-self:flex-start;flex:none;box-shadow:0 1px 5px rgba(65,33,75,.07)}
+.kg-hero-img{position:absolute;left:50%;bottom:54px;transform:translateX(-50%);width:68%;max-width:250px;mix-blend-mode:multiply;z-index:1;
+  -webkit-mask-image:radial-gradient(ellipse 74% 70% at 50% 52%,#000 72%,transparent 100%);
+  mask-image:radial-gradient(ellipse 74% 70% at 50% 52%,#000 72%,transparent 100%)}
+.kg-hero-ttl{position:relative;z-index:2;font-family:var(--mincho);writing-mode:vertical-rl;font-size:37px;font-weight:600;letter-spacing:.09em;color:var(--pl-deep);align-self:flex-start;margin-right:2px;text-shadow:0 0 12px rgba(255,255,255,.95),0 0 26px rgba(255,255,255,.85),0 1px 2px rgba(255,255,255,.9)}
+.kg-hero-sub{position:absolute;top:2px;right:0;z-index:2;font-family:var(--mincho);writing-mode:vertical-rl;font-size:10.5px;letter-spacing:.14em;color:var(--pl-mid);height:250px}
+.kg-hero-band{background:var(--pl-deep);color:#fff;font-family:var(--mincho);font-size:11.5px;letter-spacing:.01em;text-align:center;padding:11px 12px}
+
+/* ============ 見出し ============ */
+.kg-h2{text-align:center;padding:28px 16px 16px}
+.kg-h2 .ja{font-family:var(--mincho);font-size:19px;font-weight:600;letter-spacing:.14em;color:var(--pl-deep);display:block;line-height:1.4}
+.kg-h2 .en{display:block;font-size:9px;letter-spacing:.34em;color:var(--gy-mid);margin-top:5px}
+.kg-h2::after{content:"";display:block;width:34px;height:2px;background:var(--gold);margin:11px auto 0}
+.kg-h2.no-en .en{display:none}
+
+/* ============ ③ 挨拶状バナー（穂乃香風） ============ */
+.kg-banners{padding:0 14px}
+.kg-banners a{display:block;border-radius:5px;overflow:hidden;border:1px solid var(--pl-line)}
+.kg-banners a+a{margin-top:8px}          /* ← 間隔を狭めた指定 */
+.kg-bnr{display:flex;align-items:center;gap:11px;padding:13px 14px;background:linear-gradient(105deg,#FBF9FC 0%,#F2EBF5 100%)}
+.kg-bnr-ico{width:46px;height:46px;flex:none;border-radius:50%;background:var(--pl-main);display:flex;align-items:center;justify-content:center}
+.kg-bnr-ico svg{width:23px;height:23px;stroke:#fff;fill:none;stroke-width:1.6}
+.kg-bnr-body{flex:1;min-width:0}
+.kg-bnr-tag{display:inline-block;background:var(--pl-deep);color:#fff;font-size:9.5px;padding:2px 8px;border-radius:2px;letter-spacing:.05em}
+.kg-bnr-ttl{font-family:var(--mincho);font-size:16.5px;font-weight:600;color:var(--pl-deep);letter-spacing:.05em;margin-top:5px;line-height:1.35}
+.kg-bnr-tags{display:flex;gap:5px;margin-top:6px;flex-wrap:wrap}
+.kg-bnr-tags span{font-size:9.5px;color:var(--pl-main);border:1px solid var(--pl-line);border-radius:99px;padding:2px 9px;background:#fff}
+.kg-bnr-arw{flex:none;color:var(--pl-main);font-size:15px}
+
+/* ============ ④ ランキング（カード型） ============ */
+.kg-rank{padding:0 14px}
+.kg-rank-scroll{display:flex;gap:8px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.kg-rank-scroll::-webkit-scrollbar{height:4px}
+.kg-rank-scroll::-webkit-scrollbar-thumb{background:var(--pl-line);border-radius:9px}
+.kg-card{flex:0 0 124px;scroll-snap-align:start;border:1px solid var(--gy-line);border-radius:6px;overflow:hidden;background:#fff;position:relative}
+.kg-card-img{aspect-ratio:1/1;background:var(--gy-bg);display:flex;align-items:center;justify-content:center;color:#C4C4C4;font-size:10px}
+.kg-card-no{position:absolute;top:0;left:0;width:24px;height:24px;background:var(--pl-deep);color:#fff;font-family:var(--mincho);font-size:12px;display:flex;align-items:center;justify-content:center;z-index:2;border-radius:0 0 6px 0}
+.kg-card:nth-child(1) .kg-card-no{background:#A8892F}
+.kg-card:nth-child(2) .kg-card-no{background:#8A8A8A}
+.kg-card:nth-child(3) .kg-card-no{background:#96633C}
+.kg-card-body{padding:7px 8px 9px}
+.kg-card-name{font-size:10.5px;line-height:1.45;height:2.9em;overflow:hidden;color:var(--txt)}
+.kg-card-price{font-family:var(--mincho);font-size:14px;font-weight:600;color:var(--pl-deep);margin-top:4px}
+.kg-card-price small{font-size:9px;font-family:var(--gothic);font-weight:400;color:var(--txt-sub)}
+.kg-card-free{display:inline-block;margin-top:5px;font-size:9px;color:var(--red);border:1px solid var(--red);padding:1px 6px;border-radius:2px;letter-spacing:.02em}
+
+/* ============ ⑤ 金額から選ぶ（ダークグレー） ============ */
+.kg-price-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:0 14px}
+.kg-price-grid a{border:1px solid var(--gy-line);background:#fff;padding:13px 8px 12px;text-align:center;border-radius:4px;position:relative;transition:background .15s,border-color .15s,color .15s}
+.kg-price-grid .lbl{display:block;font-size:10px;color:var(--gy-mid);letter-spacing:.02em}
+.kg-price-grid .val{display:block;font-family:var(--mincho);font-size:18px;font-weight:600;color:var(--gy-dark);margin-top:3px;letter-spacing:.02em}
+.kg-price-grid .val small{font-size:12px;font-weight:400}
+.kg-price-grid a::before{content:"";position:absolute;left:10px;top:50%;transform:translateY(-50%);border-left:6px solid var(--gy-dark);border-top:4.5px solid transparent;border-bottom:4.5px solid transparent}
+.kg-price-grid a.is-active,.kg-price-grid a:active{background:var(--gy-dark);border-color:var(--gy-dark)}
+.kg-price-grid a.is-active .lbl,.kg-price-grid a:active .lbl{color:#D6D6D6}
+.kg-price-grid a.is-active .val,.kg-price-grid a:active .val{color:#fff}
+.kg-price-grid a.is-active::before,.kg-price-grid a:active::before{border-left-color:#fff}
+
+/* ============ ⑥ 電話バナー ============ */
+.kg-tel{padding:22px 16px 4px;text-align:center}
+.kg-tel-lead{font-size:12.5px;color:var(--txt-sub);letter-spacing:.10em;margin-bottom:9px}
+.kg-tel-btn{display:flex;align-items:center;justify-content:center;gap:13px;background:var(--pl-main);border-radius:99px;padding:15px 18px;box-shadow:0 3px 10px rgba(94,46,107,.22)}
+.kg-tel-btn svg{width:31px;height:31px;stroke:#fff;fill:none;stroke-width:1.5;flex:none}
+.kg-tel-num{font-size:27px;font-weight:700;color:#fff;letter-spacing:.03em;line-height:1.15;font-family:var(--gothic)}
+.kg-tel-time{font-size:11.5px;color:rgba(255,255,255,.92);margin-top:1px}
+
+/* ============ 商品ページ サービス説明（6枠） ============ */
+.kg-svc{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:0 14px}
+.kg-svc a{position:relative;display:block;border:1.5px solid var(--gy-dark);background:#fff;overflow:hidden}
+.kg-svc-fig{height:96px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:8px;text-align:center}
+.kg-svc-fig svg{width:34px;height:34px;stroke:var(--gy-dark);fill:none;stroke-width:1.5}
+.kg-svc-lead{font-size:10px;color:var(--gy-mid);letter-spacing:.02em}
+.kg-svc-big{font-size:15px;font-weight:700;color:var(--gy-dark);letter-spacing:.02em;line-height:1.3}
+.kg-svc-lbl{background:var(--gy-dark);color:#fff;font-size:11.5px;font-weight:500;text-align:center;padding:8px 6px;line-height:1.4;letter-spacing:.02em}
+.kg-svc a.is-out .kg-svc-lbl{background:#fff;color:var(--gy-dark);border-top:1.5px solid var(--gy-dark)}
+.kg-svc-corner{position:absolute;right:0;bottom:0;width:0;height:0;border-style:solid;border-width:0 0 15px 15px;border-color:transparent transparent #fff transparent;z-index:2}
+.kg-svc a.is-out .kg-svc-corner{border-color:transparent transparent var(--gy-dark) transparent}
+.kg-svc-badge{position:absolute;top:7px;right:7px;width:34px;height:34px;border-radius:50%;background:var(--gy-dark);color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;z-index:2;letter-spacing:.02em}
+
+/* ============ ⑦ 購入までの流れ ============ */
+.kg-flow{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:0 14px}
+.kg-flow-item{background:var(--gy-bg);padding:15px 9px 14px;text-align:center;border-radius:4px}
+.kg-flow-step{font-family:var(--mincho);font-size:14.5px;font-weight:600;color:var(--pl-main);letter-spacing:.05em}
+.kg-flow-ttl{font-size:12.5px;font-weight:700;margin-top:5px;color:var(--txt);line-height:1.4}
+.kg-flow-ico{height:42px;display:flex;align-items:center;justify-content:center;margin:9px 0 8px}
+.kg-flow-ico svg{width:31px;height:31px;stroke:var(--gy-dark);fill:none;stroke-width:1.5}
+.kg-flow-txt{font-size:10.5px;color:var(--txt-sub);line-height:1.55}
+
+/* ============ ⑧ 特典 ============ */
+.kg-benefit{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 14px}
+.kg-benefit-item{border:1px solid var(--pl-line);border-radius:4px;padding:13px 8px;text-align:center;background:linear-gradient(180deg,#FDFCFD 0%,#F5EFF7 100%)}
+.kg-benefit-item svg{width:26px;height:26px;stroke:var(--pl-main);fill:none;stroke-width:1.5;margin:0 auto 7px}
+.kg-benefit-ttl{font-family:var(--mincho);font-size:13px;font-weight:600;color:var(--pl-deep);letter-spacing:.03em}
+.kg-benefit-txt{font-size:10px;color:var(--txt-sub);margin-top:5px;line-height:1.5}
+
+/* ============ ⑨ フッター ============ */
+.kg-foot{background:var(--pl-deep);color:#fff;margin-top:30px;padding:22px 14px 16px}
+.kg-foot-logo{text-align:center;font-family:var(--mincho);font-size:17px;letter-spacing:.14em;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.2)}
+.kg-acc{border-bottom:1px solid rgba(255,255,255,.16)}
+.kg-acc-hd{display:flex;justify-content:space-between;align-items:center;padding:13px 2px;font-size:13px;letter-spacing:.06em;cursor:pointer;font-weight:500}
+.kg-acc-hd::after{content:"＋";font-size:14px;color:rgba(255,255,255,.75)}
+.kg-acc.open .kg-acc-hd::after{content:"－"}
+.kg-acc-bd{display:none;padding:0 2px 13px}
+.kg-acc.open .kg-acc-bd{display:block}
+.kg-acc-bd ul{display:flex;flex-wrap:wrap;gap:7px}
+.kg-acc-bd a{font-size:11.5px;color:rgba(255,255,255,.86);border:1px solid rgba(255,255,255,.28);border-radius:3px;padding:5px 10px}
+.kg-foot-tel{margin-top:18px;background:rgba(255,255,255,.09);border-radius:5px;padding:15px 12px;text-align:center}
+.kg-foot-tel .lbl{font-size:11px;letter-spacing:.1em;color:rgba(255,255,255,.8)}
+.kg-foot-tel .num{font-size:24px;font-weight:700;margin-top:4px;letter-spacing:.03em}
+.kg-foot-tel .time{font-size:10.5px;color:rgba(255,255,255,.8);margin-top:2px}
+.kg-foot-links{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 12px;margin-top:18px;font-size:10.5px;color:rgba(255,255,255,.8)}
+.kg-copy{text-align:center;font-size:10px;color:rgba(255,255,255,.55);margin-top:16px;letter-spacing:.04em}
+
+.sp-tight{height:8px}
+.gap{height:22px}
+</style>
+</head>
+<body lang="ja">
+<div class="stage">
+
+
+<div class="kg-topbar">
+  <div>香典返し・弔事ギフト専門店</div>
+  <div>全国送料無料</div>
+</div>
+<header class="kg-header">
+  <div class="kg-logo">
+    <svg class="kg-logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+      <path d="M20 5c4 4 7 8 7 12a7 7 0 0 1-14 0c0-4 3-8 7-12z" fill="#5E2E6B" opacity=".9"/>
+      <path d="M20 20c5 2 9 4 11 8-4 2-8 2-11 0-3 2-7 2-11 0 2-4 6-6 11-8z" fill="#7A4489" opacity=".75"/>
+      <path d="M20 28v7" stroke="#41214B" stroke-width="1.6" fill="none"/>
+    </svg>
+    <div>
+      <div class="kg-logo-txt">香典返し</div>
+      <div class="kg-logo-en">E - S H O P</div>
+    </div>
+  </div>
+  <nav class="kg-hnav">
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18" stroke-linecap="round"/></svg>MENU</a>
+    <a href="#"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21" stroke-linecap="round"/></svg>検索</a>
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M3 4h2.2l2.4 12h10.5l2.1-9H6.2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="9.5" cy="19.5" r="1.4"/><circle cx="17.5" cy="19.5" r="1.4"/></svg>カート<span class="kg-badge">0</span></a>
+  </nav>
+</header>
+<div class="kg-search">
+  <input type="text" placeholder="商品名・カテゴリで探す">
+  <button aria-label="検索"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21" stroke-linecap="round"/></svg></button>
+</div>
+<nav class="kg-gnav">
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M4 5h7v7H4zM13 5h7v7h-7zM4 14h7v5H4zM13 14h7v5h-7z"/></svg>カテゴリー<br>から選ぶ</a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M12 3v18M8 7h6.5a2.5 2.5 0 0 1 0 5H9a2.5 2.5 0 0 0 0 5h7" stroke-linecap="round"/></svg>価格から<br>選ぶ</a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M3 8h11v9H3zM14 11h4l3 3v3h-7z"/><circle cx="7" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></svg>複数配送も<br>簡単注文</a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M5 4h14v16l-7-3.5L5 20z"/></svg>挨拶状の<br>無料作成</a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" stroke-linejoin="round"/></svg>お客様の<br>声</a>
+  <a href="#"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.4 9.4a2.7 2.7 0 1 1 3.4 3.2c-.6.2-.9.7-.9 1.4M12 17.2h.01" stroke-linecap="round"/></svg>問合せ・<br>資料請求</a>
+</nav>
+
+
+<section class="kg-hero">
+  <div class="kg-hero-inner">
+    <div class="kg-hero-side">真心のこもったお香典返し、<br>専門店がお手伝いいたします。</div>
+    <img class="kg-hero-img" src="furoshiki.jpg" alt="紫の風呂敷に包まれた香典返しの品">
+    <div class="kg-hero-ttl">お香典返し</div>
+    <div class="kg-hero-sub">故人を偲び、感謝の気持ちを伝える</div>
+  </div>
+</section>
+<div class="kg-hero-band">疑問や不安の多いお香典返し、専門スタッフが寄り添います。</div>
+
+
+<div class="gap"></div>
+<div class="kg-banners">
+  <a href="#"><div class="kg-bnr">
+    <div class="kg-bnr-ico"><svg viewBox="0 0 24 24"><path d="M5 4h14v16l-7-3.5L5 20z"/></svg></div>
+    <div class="kg-bnr-body">
+      <span class="kg-bnr-tag">無料サービス</span>
+      <div class="kg-bnr-ttl">香典返し挨拶状</div>
+      <div class="kg-bnr-tags"><span>カンタン作成</span><span>様々な宗派に対応</span></div>
+    </div>
+    <div class="kg-bnr-arw">›</div>
+  </div></a>
+  <a href="#"><div class="kg-bnr">
+    <div class="kg-bnr-ico"><svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z"/><path d="M3 6l9 7 9-7"/></svg></div>
+    <div class="kg-bnr-body">
+      <span class="kg-bnr-tag">無料サービス</span>
+      <div class="kg-bnr-ttl">メッセージカード</div>
+      <div class="kg-bnr-tags"><span>デザイン豊富</span><span>文例に悩まない</span></div>
+    </div>
+    <div class="kg-bnr-arw">›</div>
+  </div></a>
+  <a href="#"><div class="kg-bnr">
+    <div class="kg-bnr-ico"><svg viewBox="0 0 24 24"><path d="M4 8h16v12H4z"/><path d="M8 8V5h8v3M4 12h16"/></svg></div>
+    <div class="kg-bnr-body">
+      <span class="kg-bnr-tag">無料サービス</span>
+      <div class="kg-bnr-ttl">のし・包装・手提げ袋</div>
+      <div class="kg-bnr-tags"><span>専門店品質</span><span>一点から対応</span></div>
+    </div>
+    <div class="kg-bnr-arw">›</div>
+  </div></a>
+</div>
+
+
+<div class="kg-h2"><span class="ja">人気ランキング</span><span class="en">R A N K I N G</span></div>
+<div class="kg-rank">
+  <div class="kg-rank-scroll">
+    <div class="kg-card"><div class="kg-card-no">1</div><div class="kg-card-img">商品画像</div><div class="kg-card-body"><div class="kg-card-name">スターバックスコーヒー&amp;彩りミニバウム</div><div class="kg-card-price">¥3,180<small> (税込)</small></div><span class="kg-card-free">送料無料</span></div></div>
+    <div class="kg-card"><div class="kg-card-no">2</div><div class="kg-card-img">商品画像</div><div class="kg-card-body"><div class="kg-card-name">今治タオル 白桜 フェイスタオル2枚セット</div><div class="kg-card-price">¥2,970<small> (税込)</small></div><span class="kg-card-free">送料無料</span></div></div>
+    <div class="kg-card"><div class="kg-card-no">3</div><div class="kg-card-img">商品画像</div><div class="kg-card-body"><div class="kg-card-name">カタログギフト 舞心 コース</div><div class="kg-card-price">¥5,500<small> (税込)</small></div><span class="kg-card-free">送料無料</span></div></div>
+    <div class="kg-card"><div class="kg-card-no">4</div><div class="kg-card-img">商品画像</div><div class="kg-card-body"><div class="kg-card-name">有明海産 味付海苔詰合せ</div><div class="kg-card-price">¥2,160<small> (税込)</small></div><span class="kg-card-free">送料無料</span></div></div>
+  </div>
+</div>
+
+
+<div class="kg-h2"><span class="ja">金額から選ぶ</span><span class="en">P R I C E</span></div>
+<div class="kg-price-grid">
+  <a href="#"><span class="lbl">メーカー希望小売価格</span><span class="val">1,000<small>円まで</small></span></a>
+  <a href="#"><span class="lbl">メーカー希望小売価格</span><span class="val">1,500<small>円</small></span></a>
+  <a href="#" class="is-active"><span class="lbl">メーカー希望小売価格</span><span class="val">2,000<small>円</small></span></a>
+  <a href="#"><span class="lbl">メーカー希望小売価格</span><span class="val">2,500<small>円</small></span></a>
+  <a href="#"><span class="lbl">メーカー希望小売価格</span><span class="val">3,000<small>円</small></span></a>
+  <a href="#"><span class="lbl">メーカー希望小売価格</span><span class="val">4,000<small>円</small></span></a>
+  <a href="#"><span class="lbl">メーカー希望小売価格</span><span class="val">5,000<small>円</small></span></a>
+  <a href="#"><span class="lbl">メーカー希望小売価格</span><span class="val">7,000<small>円前後</small></span></a>
+  <a href="#"><span class="lbl">メーカー希望小売価格</span><span class="val">10,000<small>円</small></span></a>
+  <a href="#"><span class="lbl">メーカー希望小売価格</span><span class="val">15,000<small>円以上</small></span></a>
+</div>
+
+
+<div class="kg-h2"><span class="ja">購入までの流れ</span><span class="en">F L O W</span></div>
+<div class="kg-flow">
+  <div class="kg-flow-item"><div class="kg-flow-step">Step 1</div><div class="kg-flow-ttl">商品をカートに入れる</div><div class="kg-flow-ico"><svg viewBox="0 0 24 24"><path d="M2 4h2.4l2.6 11h10.4l2.2-8H5.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/><path d="M17 2v6M14 5h6" stroke-linecap="round"/></svg></div><div class="kg-flow-txt">お気に入りの商品を<br>カートに入れます。</div></div>
+  <div class="kg-flow-item"><div class="kg-flow-step">Step 2</div><div class="kg-flow-ttl">注文画面へ進む</div><div class="kg-flow-ico"><svg viewBox="0 0 24 24"><path d="M3 12h17M14 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="kg-flow-txt">カート画面で商品と金額を<br>確認しレジへ進みます。</div></div>
+  <div class="kg-flow-item"><div class="kg-flow-step">Step 3</div><div class="kg-flow-ttl">お客様情報を入力</div><div class="kg-flow-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6" stroke-linecap="round"/></svg></div><div class="kg-flow-txt">ご住所・連絡先など、<br>必要な情報を入力します。</div></div>
+  <div class="kg-flow-item"><div class="kg-flow-step">Step 4</div><div class="kg-flow-ttl">お支払い方法の設定</div><div class="kg-flow-ico"><svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><path d="M2.5 10h19"/></svg></div><div class="kg-flow-txt">ご希望の決済方法を<br>お選びください。</div></div>
+  <div class="kg-flow-item"><div class="kg-flow-step">Step 5</div><div class="kg-flow-ttl">内容を再確認し完了</div><div class="kg-flow-ico"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h5M8 12h5M8 16h3M14.5 16.5l2 2 4-4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="kg-flow-txt">ご注文内容を再確認し、<br>お手続きを完了します。</div></div>
+  <div class="kg-flow-item"><div class="kg-flow-step">Step 6</div><div class="kg-flow-ttl">商品の発送</div><div class="kg-flow-ico"><svg viewBox="0 0 24 24"><path d="M2 6h11v10H2zM13 9h4l4 4v3h-8z" stroke-linejoin="round"/><circle cx="7" cy="18.5" r="1.5"/><circle cx="17" cy="18.5" r="1.5"/></svg></div><div class="kg-flow-txt">ご注文の商品を発送します。<br>商品の到着をお待ち下さい。</div></div>
+</div>
+
+
+
+<div class="kg-h2"><span class="ja">ご注文方法・無料サービス</span><span class="en">S U P P O R T</span></div>
+<div class="kg-svc">
+  <a href="#"><div class="kg-svc-fig"><div class="kg-svc-lead">手書きで簡単</div><div class="kg-svc-big">FAX注文</div><svg viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="10" rx="1.5"/><path d="M7 9V4h10v5M7 13h4M7 16h4"/><circle cx="16.5" cy="13" r="1"/><circle cx="16.5" cy="16" r="1"/></svg></div><div class="kg-svc-lbl">注文用紙のダウンロードは<br>こちらから</div><span class="kg-svc-corner"></span></a>
+  <a href="#"><div class="kg-svc-fig"><div class="kg-svc-lead">Excelで一括</div><div class="kg-svc-big">メール注文</div><svg viewBox="0 0 24 24"><path d="M2.5 7h13v11h-13z"/><path d="M2.5 7l6.5 5 6.5-5"/><rect x="14" y="3" width="7.5" height="9" rx="1"/><path d="M16 5.5l3.5 4M19.5 5.5l-3.5 4"/></svg></div><div class="kg-svc-lbl">注文用紙のダウンロードは<br>こちらから</div><span class="kg-svc-corner"></span></a>
+  <a href="#" class="is-out"><span class="kg-svc-badge">無料</span><div class="kg-svc-fig"><svg viewBox="0 0 24 24"><path d="M4 3h11l5 5v13H4z" stroke-linejoin="round"/><path d="M15 3v5h5M7.5 12h9M7.5 15h9M7.5 18h6"/></svg></div><div class="kg-svc-lbl">挨拶状作成</div><span class="kg-svc-corner"></span></a>
+  <a href="#" class="is-out"><span class="kg-svc-badge">無料</span><div class="kg-svc-fig"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 9h16M12 4v16"/><path d="M9 6.5h6"/></svg></div><div class="kg-svc-lbl">のし・包装紙</div><span class="kg-svc-corner"></span></a>
+  <a href="#" class="is-out"><span class="kg-svc-badge">無料</span><div class="kg-svc-fig"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M7 9h7M7 12h7M7 15h4"/><path d="M17.5 8.5l1.2 2.4 2.3.3-1.7 1.7.5 2.4-2.3-1.2-2.3 1.2.5-2.4-1.7-1.7 2.3-.3z" stroke-linejoin="round"/></svg></div><div class="kg-svc-lbl">喪中はがき<br>寒中見舞い</div><span class="kg-svc-corner"></span></a>
+  <a href="#" class="is-out"><div class="kg-svc-fig"><svg viewBox="0 0 24 24"><path d="M3 5h14v10H8l-5 4z" stroke-linejoin="round"/><path d="M8.2 8.2a2.2 2.2 0 1 1 2.8 2.6c-.5.2-.8.6-.8 1.2M10.2 14.2h.01" stroke-linecap="round"/></svg></div><div class="kg-svc-lbl">よくあるご質問</div><span class="kg-svc-corner"></span></a>
+</div>
+
+<div class="kg-tel">
+  <div class="kg-tel-lead">お気軽にお問い合わせください</div>
+  <a class="kg-tel-btn" href="tel:0120994527">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.4 7.6c1.6-.4 2 .6 2.4 1.6.3.8-.6 1.2-.7 1.8-.1.9 2.2 3.2 3.1 3.1.6-.1 1-1 1.8-.7 1 .4 2 .8 1.6 2.4-.3 1.2-1.9 1.6-3.2 1.2-2.7-.8-5.6-3.7-6.4-6.4-.4-1.3 0-2.9 1.4-3z" stroke-linejoin="round"/></svg>
+    <div>
+      <div class="kg-tel-num">0120-994-527</div>
+      <div class="kg-tel-time">平日9:00〜17:00</div>
+    </div>
+  </a>
+</div>
+
+
+<div class="kg-h2"><span class="ja">6つの無料サービス</span><span class="en">S E R V I C E</span></div>
+<div class="kg-benefit">
+  <div class="kg-benefit-item"><svg viewBox="0 0 24 24"><path d="M4 8h16v12H4z"/><path d="M8 8V5h8v3M4 12h16"/></svg><div class="kg-benefit-ttl">のし紙・包装紙</div><div class="kg-benefit-txt">熨斗についてご不明な点はお尋ねください。</div></div>
+  <div class="kg-benefit-item"><svg viewBox="0 0 24 24"><path d="M5 4h14v16l-7-3.5L5 20z"/></svg><div class="kg-benefit-ttl">挨拶状</div><div class="kg-benefit-txt">オリジナル挨拶状1部より無料作成いたします。</div></div>
+  <div class="kg-benefit-item"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V5.5a3 3 0 0 1 6 0V8"/></svg><div class="kg-benefit-ttl">手提げ袋</div><div class="kg-benefit-txt">ご自宅にまとめて送られる商品にお付けします。</div></div>
+  <div class="kg-benefit-item"><svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z"/><path d="M3 6l9 7 9-7"/></svg><div class="kg-benefit-ttl">メッセージカード</div><div class="kg-benefit-txt">お見舞い・弔電・御供・供花の4種をご用意。</div></div>
+  <div class="kg-benefit-item"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><div class="kg-benefit-ttl">完全自由文挨拶状</div><div class="kg-benefit-txt">10万円以上ご購入のお客様に無料で作成します。</div></div>
+  <div class="kg-benefit-item"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3z"/><path d="M7 9h6M7 13h4M16 12h3"/></svg><div class="kg-benefit-ttl">喪中はがき</div><div class="kg-benefit-txt">10万円以上ご購入のお客様に無料で作成します。</div></div>
+</div>
+
+
+<footer class="kg-foot">
+  <div class="kg-foot-logo">香典返し e-shop</div>
+
+  <div class="kg-acc open">
+    <div class="kg-acc-hd">カテゴリーから選ぶ</div>
+    <div class="kg-acc-bd"><ul>
+      <li><a href="#">お菓子</a></li><li><a href="#">お茶</a></li><li><a href="#">海苔</a></li>
+      <li><a href="#">コーヒー・紅茶</a></li><li><a href="#">調味料・食用油</a></li><li><a href="#">タオル</a></li>
+      <li><a href="#">寝具・マット</a></li><li><a href="#">洗剤・石鹸</a></li><li><a href="#">カタログギフト</a></li>
+    </ul></div>
+  </div>
+
+  <div class="kg-acc">
+    <div class="kg-acc-hd">アイテムから選ぶ</div>
+    <div class="kg-acc-bd"><ul>
+      <li><a href="#">バスタオル</a></li><li><a href="#">フェイスタオル</a></li><li><a href="#">ハンドタオル</a></li>
+      <li><a href="#">そうめん</a></li><li><a href="#">しいたけ</a></li><li><a href="#">詰合せ</a></li>
+    </ul></div>
+  </div>
+
+  <div class="kg-acc">
+    <div class="kg-acc-hd">ブランドから選ぶ</div>
+    <div class="kg-acc-bd"><ul>
+      <li><a href="#">今治タオル</a></li><li><a href="#">ウェッジウッド</a></li><li><a href="#">スターバックス</a></li>
+      <li><a href="#">日本製</a></li>
+    </ul></div>
+  </div>
+
+  <div class="kg-acc">
+    <div class="kg-acc-hd">ご注文のご案内</div>
+    <div class="kg-acc-bd"><ul>
+      <li><a href="#">選べる4種の注文方法</a></li><li><a href="#">複数配送もカンタン注文</a></li>
+      <li><a href="#">ご注文の流れ</a></li><li><a href="#">お支払い方法</a></li>
+      <li><a href="#">納期について</a></li><li><a href="#">送料について</a></li>
+      <li><a href="#">よくあるご質問</a></li>
+    </ul></div>
+  </div>
+
+  <div class="kg-acc">
+    <div class="kg-acc-hd">香典返しのお役立ち情報</div>
+    <div class="kg-acc-bd"><ul>
+      <li><a href="#">香典返しのマナーガイド</a></li><li><a href="#">日本の三大宗教</a></li>
+      <li><a href="#">宗教別葬儀の流れ</a></li><li><a href="#">忌明法要までの流れ</a></li>
+    </ul></div>
+  </div>
+
+  <div class="kg-foot-tel">
+    <div class="lbl">お気軽にお問い合わせください</div>
+    <div class="num">0120-994-527</div>
+    <div class="time">平日9:00〜17:00</div>
+  </div>
+
+  <div class="kg-foot-links">
+    <a href="#">会社概要</a><a href="#">運営理念</a><a href="#">個人情報の取り扱いについて</a>
+    <a href="#">特定商取引法に関する表示</a><a href="#">サイトマップ</a>
+  </div>
+  <div class="kg-copy">© 香典返し e-shop</div>
+</footer>
+
+</div>
+<script>
+console.log("BUILD_TAG: 2026-08-24f");
+document.querySelectorAll('.kg-acc-hd').forEach(function(h){
+  h.addEventListener('click',function(){h.parentElement.classList.toggle('open');});
+});
+document.querySelectorAll('.kg-price-grid a').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    document.querySelectorAll('.kg-price-grid a').forEach(function(x){x.classList.remove('is-active');});
+    a.classList.add('is-active');
+  });
+});
+</script>
+</body>
+</html>
