@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- BUILD_TAG: 2026-08-24f -->
+<!-- BUILD_TAG: 2026-08-24h -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
@@ -67,21 +67,8 @@ ul{list-style:none}
 .kg-gnav svg{width:20px;height:20px;stroke:var(--pl-mid);fill:none;stroke-width:1.6}
 
 /* ============ ② メインビジュアル ============ */
-.kg-hero{position:relative;background:linear-gradient(155deg,#FAF8FB 0%,#F0E9F3 50%,#E4D8E9 100%);padding:16px 14px 12px;overflow:hidden}
-.kg-hero::before{content:"";position:absolute;inset:0;pointer-events:none;
-  background-image:
-   radial-gradient(circle at 90% 12%,rgba(94,46,107,.06) 0 26px,transparent 27px),
-   radial-gradient(circle at 90% 12%,transparent 0 37px,rgba(94,46,107,.05) 38px 39px,transparent 40px),
-   radial-gradient(circle at 8% 88%,rgba(94,46,107,.045) 0 32px,transparent 33px),
-   radial-gradient(circle at 8% 88%,transparent 0 44px,rgba(94,46,107,.04) 45px 46px,transparent 47px)}
-.kg-hero-inner{position:relative;display:flex;align-items:stretch;justify-content:space-between;min-height:286px}
-.kg-hero-side{font-family:var(--mincho);writing-mode:vertical-rl;font-size:12px;letter-spacing:.20em;line-height:2.0;color:var(--pl-deep);background:rgba(255,255,255,.9);padding:15px 8px;align-self:flex-start;flex:none;box-shadow:0 1px 5px rgba(65,33,75,.07)}
-.kg-hero-img{position:absolute;left:50%;bottom:54px;transform:translateX(-50%);width:68%;max-width:250px;mix-blend-mode:multiply;z-index:1;
-  -webkit-mask-image:radial-gradient(ellipse 74% 70% at 50% 52%,#000 72%,transparent 100%);
-  mask-image:radial-gradient(ellipse 74% 70% at 50% 52%,#000 72%,transparent 100%)}
-.kg-hero-ttl{position:relative;z-index:2;font-family:var(--mincho);writing-mode:vertical-rl;font-size:37px;font-weight:600;letter-spacing:.09em;color:var(--pl-deep);align-self:flex-start;margin-right:2px;text-shadow:0 0 12px rgba(255,255,255,.95),0 0 26px rgba(255,255,255,.85),0 1px 2px rgba(255,255,255,.9)}
-.kg-hero-sub{position:absolute;top:2px;right:0;z-index:2;font-family:var(--mincho);writing-mode:vertical-rl;font-size:10.5px;letter-spacing:.14em;color:var(--pl-mid);height:250px}
-.kg-hero-band{background:var(--pl-deep);color:#fff;font-family:var(--mincho);font-size:11.5px;letter-spacing:.01em;text-align:center;padding:11px 12px}
+.kg-hero{display:block;line-height:0}
+.kg-hero img{width:100%;height:auto;display:block}
 
 /* ============ 見出し ============ */
 .kg-h2{text-align:center;padding:28px 16px 16px}
@@ -233,14 +220,8 @@ ul{list-style:none}
 
 
 <section class="kg-hero">
-  <div class="kg-hero-inner">
-    <div class="kg-hero-side">真心のこもったお香典返し、<br>専門店がお手伝いいたします。</div>
-    <img class="kg-hero-img" src="furoshiki.jpg" alt="紫の風呂敷に包まれた香典返しの品">
-    <div class="kg-hero-ttl">お香典返し</div>
-    <div class="kg-hero-sub">故人を偲び、感謝の気持ちを伝える</div>
-  </div>
+  <img src="hero-main.jpg" alt="故人を偲び、感謝の気持ちを伝えるお香典返し。真心のこもったお香典返し、専門店がお手伝いいたします。疑問や不安の多いお香典返し、専門スタッフが寄り添い、お手伝いさせていただきます。" width="1200" height="800">
 </section>
-<div class="kg-hero-band">疑問や不安の多いお香典返し、専門スタッフが寄り添います。</div>
 
 
 <div class="gap"></div>
@@ -407,7 +388,7 @@ ul{list-style:none}
 
 </div>
 <script>
-console.log("BUILD_TAG: 2026-08-24f");
+console.log("BUILD_TAG: 2026-08-24h");
 document.querySelectorAll('.kg-acc-hd').forEach(function(h){
   h.addEventListener('click',function(){h.parentElement.classList.toggle('open');});
 });
