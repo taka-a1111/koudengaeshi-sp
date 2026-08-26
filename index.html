@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- BUILD_TAG: 2026-08-25c -->
+<!-- BUILD_TAG: 2026-08-26a -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
@@ -112,10 +112,10 @@ ul{list-style:none}
 
 /* ============ ⑤ 金額から選ぶ（ダークグレー） ============ */
 .kg-price-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:0 14px}
-.kg-price-grid a{border:1px solid var(--gy-line);background:#fff;padding:13px 8px 12px;text-align:center;border-radius:4px;position:relative;transition:background .15s,border-color .15s,color .15s}
+.kg-price-grid a{border:1px solid var(--gy-line);background:#fff;padding:17px 8px 16px;text-align:center;border-radius:0;position:relative;transition:background .15s,border-color .15s,color .15s}
 .kg-price-grid .lbl{display:block;font-size:11.5px;color:var(--gy-mid);letter-spacing:.02em}
-.kg-price-grid .val{display:block;font-family:var(--mincho);font-size:18px;font-weight:600;color:var(--gy-dark);margin-top:3px;letter-spacing:.02em}
-.kg-price-grid .val small{font-size:12px;font-weight:400}
+.kg-price-grid .val{display:block;font-family:var(--mincho);font-size:21px;font-weight:600;color:var(--gy-dark);margin-top:3px;letter-spacing:.02em}
+.kg-price-grid .val small{font-size:14px;font-weight:400}
 .kg-price-grid a::before{content:"";position:absolute;left:10px;top:50%;transform:translateY(-50%);border-left:6px solid var(--gy-dark);border-top:4.5px solid transparent;border-bottom:4.5px solid transparent}
 .kg-price-grid a.is-active,.kg-price-grid a:active{background:var(--gy-dark);border-color:var(--gy-dark)}
 .kg-price-grid a.is-active .lbl,.kg-price-grid a:active .lbl{color:#D6D6D6}
@@ -125,8 +125,8 @@ ul{list-style:none}
 /* ============ ⑥ 電話バナー ============ */
 .kg-tel{padding:22px 16px 4px;text-align:center}
 .kg-tel-lead{font-size:12.5px;color:var(--txt-sub);letter-spacing:.10em;margin-bottom:9px}
-.kg-tel-btn{display:flex;align-items:center;justify-content:center;gap:13px;background:var(--pl-main);border-radius:99px;padding:15px 18px;box-shadow:0 3px 10px rgba(94,46,107,.22)}
-.kg-tel-btn svg{width:31px;height:31px;stroke:#fff;fill:none;stroke-width:1.5;flex:none}
+.kg-tel-btn{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;background:var(--pl-main);border-radius:99px;padding:15px 18px;box-shadow:0 3px 10px rgba(94,46,107,.22)}
+.kg-tel-btn svg{position:absolute;left:20px;top:50%;transform:translateY(-50%);width:31px;height:31px;stroke:#fff;fill:none;stroke-width:1.5}
 .kg-tel-num{font-size:27px;font-weight:700;color:#fff;letter-spacing:.03em;line-height:1.15;font-family:var(--gothic)}
 .kg-tel-time{font-size:11.5px;color:rgba(255,255,255,.92);margin-top:1px}
 
@@ -145,12 +145,12 @@ ul{list-style:none}
 
 /* ============ ⑦ 購入までの流れ ============ */
 .kg-flow{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:0 14px}
-.kg-flow-item{background:var(--gy-bg);padding:15px 9px 14px;text-align:center;border-radius:4px}
+.kg-flow-item{background:var(--gy-bg);padding:15px 6px 14px;text-align:center;border-radius:4px}
 .kg-flow-step{font-family:var(--mincho);font-size:14.5px;font-weight:600;color:var(--pl-main);letter-spacing:.05em}
 .kg-flow-ttl{font-size:12.5px;font-weight:700;margin-top:5px;color:var(--txt);line-height:1.4}
-.kg-flow-ico{height:42px;display:flex;align-items:center;justify-content:center;margin:9px 0 8px}
-.kg-flow-ico svg{width:31px;height:31px;stroke:var(--gy-dark);fill:none;stroke-width:1.5}
-.kg-flow-txt{font-size:12px;color:var(--txt-sub);line-height:1.55}
+.kg-flow-ico{height:54px;display:flex;align-items:center;justify-content:center;margin:9px 0 8px}
+.kg-flow-ico svg{width:44px;height:44px;stroke:var(--gy-dark);fill:none;stroke-width:1.5}
+.kg-flow-txt{font-size:11px;color:var(--txt-sub);line-height:1.6;letter-spacing:-.02em}
 
 /* ============ ⑧ 特典 ============ */
 .kg-benefit{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 14px}
@@ -274,27 +274,27 @@ ul{list-style:none}
 
 <div class="kg-h2"><span class="ja">金額から選ぶ</span><span class="en">P R I C E</span></div>
 <div class="kg-price-grid">
-  <a href="#"><span class="lbl">メーカー希望小売価格</span><span class="val">1,000<small>円まで</small></span></a>
-  <a href="#"><span class="lbl">メーカー希望小売価格</span><span class="val">1,500<small>円</small></span></a>
-  <a href="#" class="is-active"><span class="lbl">メーカー希望小売価格</span><span class="val">2,000<small>円</small></span></a>
-  <a href="#"><span class="lbl">メーカー希望小売価格</span><span class="val">2,500<small>円</small></span></a>
-  <a href="#"><span class="lbl">メーカー希望小売価格</span><span class="val">3,000<small>円</small></span></a>
-  <a href="#"><span class="lbl">メーカー希望小売価格</span><span class="val">4,000<small>円</small></span></a>
-  <a href="#"><span class="lbl">メーカー希望小売価格</span><span class="val">5,000<small>円</small></span></a>
-  <a href="#"><span class="lbl">メーカー希望小売価格</span><span class="val">7,000<small>円前後</small></span></a>
-  <a href="#"><span class="lbl">メーカー希望小売価格</span><span class="val">10,000<small>円</small></span></a>
-  <a href="#"><span class="lbl">メーカー希望小売価格</span><span class="val">15,000<small>円以上</small></span></a>
+  <a href="#"><span class="lbl">メーカー小売価格</span><span class="val">〜1,000<small>円</small></span></a>
+  <a href="#"><span class="lbl">メーカー小売価格</span><span class="val">〜1,500<small>円</small></span></a>
+  <a href="#" class="is-active"><span class="lbl">メーカー小売価格</span><span class="val">〜2,000<small>円</small></span></a>
+  <a href="#"><span class="lbl">メーカー小売価格</span><span class="val">〜2,500<small>円</small></span></a>
+  <a href="#"><span class="lbl">メーカー小売価格</span><span class="val">〜3,000<small>円</small></span></a>
+  <a href="#"><span class="lbl">メーカー小売価格</span><span class="val">〜3,500<small>円</small></span></a>
+  <a href="#"><span class="lbl">メーカー小売価格</span><span class="val">〜4,000<small>円</small></span></a>
+  <a href="#"><span class="lbl">メーカー小売価格</span><span class="val">〜5,000<small>円</small></span></a>
+  <a href="#"><span class="lbl">メーカー小売価格</span><span class="val">〜10,000<small>円</small></span></a>
+  <a href="#"><span class="lbl">メーカー小売価格</span><span class="val">10,001<small>円〜</small></span></a>
 </div>
 
 
 <div class="kg-h2"><span class="ja">購入までの流れ</span><span class="en">F L O W</span></div>
 <div class="kg-flow">
-  <div class="kg-flow-item"><div class="kg-flow-step">Step 1</div><div class="kg-flow-ttl">商品をカートに入れる</div><div class="kg-flow-ico"><svg viewBox="0 0 24 24"><path d="M2 4h2.4l2.6 11h10.4l2.2-8H5.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/><path d="M17 2v6M14 5h6" stroke-linecap="round"/></svg></div><div class="kg-flow-txt">お気に入りの商品を<br>カートに入れます。</div></div>
-  <div class="kg-flow-item"><div class="kg-flow-step">Step 2</div><div class="kg-flow-ttl">注文画面へ進む</div><div class="kg-flow-ico"><svg viewBox="0 0 24 24"><path d="M3 12h17M14 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="kg-flow-txt">カート画面で商品と金額を<br>確認しレジへ進みます。</div></div>
-  <div class="kg-flow-item"><div class="kg-flow-step">Step 3</div><div class="kg-flow-ttl">お客様情報を入力</div><div class="kg-flow-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6" stroke-linecap="round"/></svg></div><div class="kg-flow-txt">ご住所・連絡先など、<br>必要な情報を入力します。</div></div>
-  <div class="kg-flow-item"><div class="kg-flow-step">Step 4</div><div class="kg-flow-ttl">お支払い方法の設定</div><div class="kg-flow-ico"><svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><path d="M2.5 10h19"/></svg></div><div class="kg-flow-txt">ご希望の決済方法を<br>お選びください。</div></div>
-  <div class="kg-flow-item"><div class="kg-flow-step">Step 5</div><div class="kg-flow-ttl">内容を再確認し完了</div><div class="kg-flow-ico"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h5M8 12h5M8 16h3M14.5 16.5l2 2 4-4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="kg-flow-txt">ご注文内容を再確認し、<br>お手続きを完了します。</div></div>
-  <div class="kg-flow-item"><div class="kg-flow-step">Step 6</div><div class="kg-flow-ttl">商品の発送</div><div class="kg-flow-ico"><svg viewBox="0 0 24 24"><path d="M2 6h11v10H2zM13 9h4l4 4v3h-8z" stroke-linejoin="round"/><circle cx="7" cy="18.5" r="1.5"/><circle cx="17" cy="18.5" r="1.5"/></svg></div><div class="kg-flow-txt">ご注文の商品を発送します。<br>商品の到着をお待ち下さい。</div></div>
+  <div class="kg-flow-item"><div class="kg-flow-step">Step 1</div><div class="kg-flow-ttl">商品をカートに入れる</div><div class="kg-flow-ico"><svg viewBox="0 0 24 24"><path d="M2 4h2.4l2.6 11h10.4l2.2-8H5.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/><path d="M17 2v6M14 5h6" stroke-linecap="round"/></svg></div><div class="kg-flow-txt">ご希望の商品を選び、<br>カートへ追加します。</div></div>
+  <div class="kg-flow-item"><div class="kg-flow-step">Step 2</div><div class="kg-flow-ttl">注文画面へ進む</div><div class="kg-flow-ico"><svg viewBox="0 0 24 24"><path d="M3 12h17M14 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="kg-flow-txt">カート内の商品と金額を確認し、<br>注文手続きへ進みます。</div></div>
+  <div class="kg-flow-item"><div class="kg-flow-step">Step 3</div><div class="kg-flow-ttl">お客様情報を入力</div><div class="kg-flow-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6" stroke-linecap="round"/></svg></div><div class="kg-flow-txt">お名前・ご住所・連絡先など、<br>必要事項をご入力ください。</div></div>
+  <div class="kg-flow-item"><div class="kg-flow-step">Step 4</div><div class="kg-flow-ttl">お支払い方法の選択</div><div class="kg-flow-ico"><svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><path d="M2.5 10h19"/></svg></div><div class="kg-flow-txt">ご希望の決済方法を<br>お選びください。</div></div>
+  <div class="kg-flow-item"><div class="kg-flow-step">Step 5</div><div class="kg-flow-ttl">ご注文内容を確認する</div><div class="kg-flow-ico"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h5M8 12h5M8 16h3M14.5 16.5l2 2 4-4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="kg-flow-txt">入力した内容を最終確認し、<br>注文を確定します。</div></div>
+  <div class="kg-flow-item"><div class="kg-flow-step">Step 6</div><div class="kg-flow-ttl">商品の発送</div><div class="kg-flow-ico"><svg viewBox="0 0 24 24"><path d="M2 6h11v10H2zM13 9h4l4 4v3h-8z" stroke-linejoin="round"/><circle cx="7" cy="18.5" r="1.5"/><circle cx="17" cy="18.5" r="1.5"/></svg></div><div class="kg-flow-txt">ご注文の商品を準備し、<br>お届け先へ発送いたします。</div></div>
 </div>
 
 
@@ -425,7 +425,7 @@ ul{list-style:none}
 
 </div>
 <script>
-console.log("BUILD_TAG: 2026-08-25c");
+console.log("BUILD_TAG: 2026-08-26a");
 document.querySelectorAll('.kg-acc-hd').forEach(function(h){
   h.addEventListener('click',function(){h.parentElement.classList.toggle('open');});
 });
