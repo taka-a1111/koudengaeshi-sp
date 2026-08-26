@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- BUILD_TAG: 2026-08-26h -->
+<!-- BUILD_TAG: 2026-08-26i -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
@@ -110,9 +110,11 @@ ul{list-style:none}
 
 /* ============ ⑤ 金額から選ぶ（現行サイト準拠） ============ */
 .kg-price-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:2px 8px 0}
-.kg-price-grid a{position:relative;display:flex;align-items:center;justify-content:center;height:56px;background:#F2F2F2;border:1px solid #ECECEC;border-radius:3px;box-shadow:0 2px 3px rgba(0,0,0,.1);color:#1A1A1A;font-family:var(--mincho);font-size:26px;font-weight:700;letter-spacing:.01em;transition:background .15s;box-sizing:border-box}
+.kg-price-grid a{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;height:60px;background:#F2F2F2;border:1px solid #ECECEC;border-radius:3px;box-shadow:0 2px 3px rgba(0,0,0,.1);color:#1A1A1A;letter-spacing:.01em;transition:background .15s;box-sizing:border-box}
 .kg-price-grid a:active{background:#EAEAEA}
-.kg-price-grid .yen{font-size:.55em;margin:0 .02em;position:relative;top:.4em}
+.kg-price-grid .lbl{display:block;font-size:11px;line-height:1;color:#6E6E6E;letter-spacing:.02em;margin-bottom:2px}
+.kg-price-grid .val{display:block;font-family:var(--mincho);font-size:26px;font-weight:700;line-height:1;color:#1A1A1A}
+.kg-price-grid .yen{font-size:.55em;margin:0 .02em;position:relative;top:.05em}
 
 /* ============ ⑥ 電話バナー ============ */
 .kg-tel{padding:22px 16px 4px;text-align:center}
@@ -256,16 +258,16 @@ ul{list-style:none}
 
 <div class="kg-h2"><span class="ja">金額から選ぶ</span><span class="en">P R I C E</span></div>
 <div class="kg-price-grid">
-  <a href="https://koudengaesi-e-shop.net/SHOP/315927/list.html">〜1,000<span class="yen">円</span></a>
-  <a href="https://koudengaesi-e-shop.net/SHOP/315928/list.html">〜1,500<span class="yen">円</span></a>
-  <a href="https://koudengaesi-e-shop.net/SHOP/315929/list.html">〜2,000<span class="yen">円</span></a>
-  <a href="https://koudengaesi-e-shop.net/SHOP/315930/list.html">〜2,500<span class="yen">円</span></a>
-  <a href="https://koudengaesi-e-shop.net/SHOP/315931/list.html">〜3,000<span class="yen">円</span></a>
-  <a href="https://koudengaesi-e-shop.net/SHOP/315932/list.html">〜3,500<span class="yen">円</span></a>
-  <a href="https://koudengaesi-e-shop.net/SHOP/315933/list.html">〜4,000<span class="yen">円</span></a>
-  <a href="https://koudengaesi-e-shop.net/SHOP/315934/list.html">〜5,000<span class="yen">円</span></a>
-  <a href="https://koudengaesi-e-shop.net/SHOP/315935/list.html">〜10,000<span class="yen">円</span></a>
-  <a href="https://koudengaesi-e-shop.net/SHOP/316453/list.html">10,001<span class="yen">円〜</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315927/list.html"><span class="lbl">メーカー小売価格</span><span class="val">〜1,000<span class="yen">円</span></span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315928/list.html"><span class="lbl">メーカー小売価格</span><span class="val">〜1,500<span class="yen">円</span></span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315929/list.html"><span class="lbl">メーカー小売価格</span><span class="val">〜2,000<span class="yen">円</span></span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315930/list.html"><span class="lbl">メーカー小売価格</span><span class="val">〜2,500<span class="yen">円</span></span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315931/list.html"><span class="lbl">メーカー小売価格</span><span class="val">〜3,000<span class="yen">円</span></span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315932/list.html"><span class="lbl">メーカー小売価格</span><span class="val">〜3,500<span class="yen">円</span></span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315933/list.html"><span class="lbl">メーカー小売価格</span><span class="val">〜4,000<span class="yen">円</span></span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315934/list.html"><span class="lbl">メーカー小売価格</span><span class="val">〜5,000<span class="yen">円</span></span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315935/list.html"><span class="lbl">メーカー小売価格</span><span class="val">〜10,000<span class="yen">円</span></span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/316453/list.html"><span class="lbl">メーカー小売価格</span><span class="val">10,001<span class="yen">円〜</span></span></a>
 </div>
 
 
@@ -407,7 +409,7 @@ ul{list-style:none}
 
 </div>
 <script>
-console.log("BUILD_TAG: 2026-08-26h");
+console.log("BUILD_TAG: 2026-08-26i");
 document.querySelectorAll('.kg-acc-hd').forEach(function(h){
   h.addEventListener('click',function(){h.parentElement.classList.toggle('open');});
 });
