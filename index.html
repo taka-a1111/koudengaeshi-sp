@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- BUILD_TAG: 2026-08-27c -->
+<!-- BUILD_TAG: 2026-08-27d -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
@@ -92,21 +92,21 @@ ul{list-style:none}
 
 /* ============ ④ ランキング（カード型） ============ */
 .kg-rank{padding:0 14px}
-.kg-rank-scroll{display:flex;gap:8px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
-.kg-rank-scroll::-webkit-scrollbar{height:4px}
-.kg-rank-scroll::-webkit-scrollbar-thumb{background:var(--pl-line);border-radius:9px}
-.kg-card{flex:0 0 132px;display:block;color:inherit;scroll-snap-align:start;border:1px solid var(--gy-line);border-radius:6px;overflow:hidden;background:#fff;position:relative}
-.kg-card-img{aspect-ratio:1/1;background:#fff;overflow:hidden}
+.kg-rank-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px 12px}
+.kg-rank-no{font-size:clamp(17px,5.1vw,20px);font-weight:700;color:#9E9E9E;letter-spacing:.02em;margin:0 0 7px 2px}
+.kg-rank-item:first-child .kg-rank-no{color:#A18A3C}
+.kg-card{display:block;background:#fff;border:1px solid #E9E9E9;color:var(--txt)}
+.kg-card-img{position:relative;aspect-ratio:1/1;background:#fff;overflow:hidden}
 .kg-card-img img{width:100%;height:100%;object-fit:contain;display:block}
-.kg-card-no{position:absolute;top:0;left:0;width:24px;height:24px;background:var(--pl-deep);color:#fff;font-family:var(--mincho);font-size:12px;display:flex;align-items:center;justify-content:center;z-index:2;border-radius:0 0 6px 0}
+
 .kg-card:nth-child(1) .kg-card-no{background:#A8892F}
 .kg-card:nth-child(2) .kg-card-no{background:#8A8A8A}
 .kg-card:nth-child(3) .kg-card-no{background:#96633C}
 .kg-card-body{padding:7px 8px 9px}
-.kg-card-name{font-size:12px;line-height:1.5;height:3em;overflow:hidden;color:var(--txt)}
-.kg-card-price{font-family:var(--mincho);font-size:14px;font-weight:600;color:var(--pl-deep);margin-top:4px}
+.kg-card-name{font-size:12.5px;font-weight:700;color:#1A1A1A;line-height:1.55;padding:10px 10px 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:49px}
+.kg-card-price{font-size:17px;font-weight:700;color:#1A1A1A;padding:5px 10px 12px}
 .kg-card-price small{font-size:11px;font-family:var(--gothic);font-weight:400;color:var(--txt-sub)}
-.kg-card-free{display:inline-block;margin-top:5px;font-size:11px;color:var(--red);border:1px solid var(--red);padding:1px 6px;border-radius:2px;letter-spacing:.02em}
+.kg-card-free{position:absolute;left:0;bottom:9px;background:#1A1A1A;color:#fff;font-size:11px;letter-spacing:.04em;padding:5px 11px}
 
 /* ============ ④-b カテゴリーから選ぶ（現行サイト準拠） ============ */
 .kg-cats{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:2px 8px 0}
@@ -277,14 +277,14 @@ ul{list-style:none}
 
 <div class="kg-h2"><span class="ja">人気ランキング</span><span class="en">R A N K I N G</span></div>
 <div class="kg-rank">
-  <div class="kg-rank-scroll">
-    <a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/2131.html"><div class="kg-card-no">1</div><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/c7171078.jpg" alt="スターバックスコーヒー&amp;彩りミニバウム C7171-078" loading="lazy"></div><div class="kg-card-body"><div class="kg-card-name">スターバックスコーヒー&amp;彩りミニバウム C7171-078</div><div class="kg-card-price">¥3,180<small> (税込)</small></div><span class="kg-card-free">送料無料</span></div></a>
-    <a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/48091.html"><div class="kg-card-no">2</div><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/sion-2025N.jpg" alt="カタログギフト マイハート紫苑-しおん-" loading="lazy"></div><div class="kg-card-body"><div class="kg-card-name">カタログギフト マイハート紫苑-しおん-</div><div class="kg-card-price">¥16,474<small> (税込)</small></div><span class="kg-card-free">送料無料</span></div></a>
-    <a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/1556.html"><div class="kg-card-no">3</div><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/L1064-064-1.jpg" alt="ヤマサ絹しょうゆバラエティギフト L1064-064" loading="lazy"></div><div class="kg-card-body"><div class="kg-card-name">ヤマサ絹しょうゆバラエティギフト L1064-064</div><div class="kg-card-price">¥9,720<small> (税込)</small></div><span class="kg-card-free">送料無料</span></div></a>
-    <a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/537.html"><div class="kg-card-no">4</div><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/B2097-106-1.jpg" alt="優雅亭 かりんとうギフト B2097-106" loading="lazy"></div><div class="kg-card-body"><div class="kg-card-name">優雅亭 かりんとうギフト B2097-106</div><div class="kg-card-price">¥3,078<small> (税込)</small></div><span class="kg-card-free">送料無料</span></div></a>
-    <a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/1764.html"><div class="kg-card-no">5</div><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/L1093-064-1.jpg" alt="廣川昆布御昆布 10品佃煮詰合せ L1093-064" loading="lazy"></div><div class="kg-card-body"><div class="kg-card-name">廣川昆布御昆布 10品佃煮詰合せ L1093-064</div><span class="kg-card-free">送料無料</span></div></a>
-    <a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/48101.html"><div class="kg-card-no">6</div><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/akane-2025N.jpg" alt="カタログギフト マイハート茜-あかね-" loading="lazy"></div><div class="kg-card-body"><div class="kg-card-name">カタログギフト マイハート茜-あかね-</div><div class="kg-card-price">¥20,847<small> (税込)</small></div><span class="kg-card-free">送料無料</span></div></a>
-  </div>
+<div class="kg-rank-grid">
+  <div class="kg-rank-item"><div class="kg-rank-no">No.1</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/2131.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/c7171078.jpg" alt="スターバックスコーヒー&amp;彩りミニバウム C7171-078" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">スターバックスコーヒー&amp;彩りミニバウム C7171-078</div><div class="kg-card-price">¥3,180<small> (税込)</small></div></div></a></div>
+  <div class="kg-rank-item"><div class="kg-rank-no">No.2</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/48091.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/sion-2025N.jpg" alt="カタログギフト マイハート紫苑-しおん-" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">カタログギフト マイハート紫苑-しおん-</div><div class="kg-card-price">¥16,474<small> (税込)</small></div></div></a></div>
+  <div class="kg-rank-item"><div class="kg-rank-no">No.3</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/1556.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/L1064-064-1.jpg" alt="ヤマサ絹しょうゆバラエティギフト L1064-064" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">ヤマサ絹しょうゆバラエティギフト L1064-064</div><div class="kg-card-price">¥9,720<small> (税込)</small></div></div></a></div>
+  <div class="kg-rank-item"><div class="kg-rank-no">No.4</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/537.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/B2097-106-1.jpg" alt="優雅亭 かりんとうギフト B2097-106" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">優雅亭 かりんとうギフト B2097-106</div><div class="kg-card-price">¥3,078<small> (税込)</small></div></div></a></div>
+  <div class="kg-rank-item"><div class="kg-rank-no">No.5</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/1764.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/L1093-064-1.jpg" alt="廣川昆布御昆布 10品佃煮詰合せ L1093-064" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">廣川昆布御昆布 10品佃煮詰合せ L1093-064</div></div></a></div>
+  <div class="kg-rank-item"><div class="kg-rank-no">No.6</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/48101.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/akane-2025N.jpg" alt="カタログギフト マイハート茜-あかね-" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">カタログギフト マイハート茜-あかね-</div><div class="kg-card-price">¥20,847<small> (税込)</small></div></div></a></div>
+</div>
 </div>
 
 
@@ -487,7 +487,7 @@ ul{list-style:none}
 
 </div>
 <script>
-console.log("BUILD_TAG: 2026-08-27c");
+console.log("BUILD_TAG: 2026-08-27d");
 document.querySelectorAll('.kg-acc-hd').forEach(function(h){
   h.addEventListener('click',function(){h.parentElement.classList.toggle('open');});
 });
