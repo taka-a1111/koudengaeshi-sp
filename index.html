@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- BUILD_TAG: 2026-08-27h -->
+<!-- BUILD_TAG: 2026-08-27i -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
@@ -93,10 +93,8 @@ ul{list-style:none}
 /* ============ ④ ランキング（カード型） ============ */
 .kg-rank{padding:0 14px}
 .kg-rank-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px 12px}
-.kg-rank-no{font-size:clamp(17px,5.1vw,20px);font-weight:700;color:#ABABAB;letter-spacing:.02em;margin:0 0 7px 2px}
-.kg-rank-item:nth-child(1) .kg-rank-no{color:#A18A3C}
-.kg-rank-item:nth-child(2) .kg-rank-no{color:#8A9098}
-.kg-rank-item:nth-child(3) .kg-rank-no{color:#A9713F}
+.kg-rank-no{font-size:clamp(17px,5.1vw,20px);font-weight:700;color:#9E9E9E;letter-spacing:.02em;margin:0 0 7px 2px}
+.kg-rank-item:first-child .kg-rank-no{color:#A18A3C}
 .kg-card{display:block;background:#fff;border:1px solid #E9E9E9;color:var(--txt)}
 .kg-card-img{position:relative;aspect-ratio:1/1;background:#fff;overflow:hidden}
 .kg-card-img img{width:100%;height:100%;object-fit:contain;display:block}
@@ -489,7 +487,7 @@ ul{list-style:none}
 
 </div>
 <script>
-console.log("BUILD_TAG: 2026-08-27h");
+console.log("BUILD_TAG: 2026-08-27i");
 document.querySelectorAll('.kg-acc-hd').forEach(function(h){
   h.addEventListener('click',function(){h.parentElement.classList.toggle('open');});
 });
