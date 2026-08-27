@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- BUILD_TAG: 2026-08-27k -->
+<!-- BUILD_TAG: 2026-08-27l -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
@@ -177,15 +177,16 @@ ul{list-style:none}
 
 /* ============ ⑧ 特典 ============ */
 .kg-benefit{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:16px 11px 18px;background:#F4F4F4}
-.kg-benefit-item{position:relative;background:#fff;border-radius:3px;box-shadow:0 3px 10px rgba(0,0,0,.16);overflow:hidden;text-align:center;display:flex;flex-direction:column;min-height:133px;box-sizing:border-box}
+.kg-benefit-item{position:relative;background:#fff;border-radius:3px;box-shadow:0 3px 10px rgba(0,0,0,.16);overflow:hidden;text-align:center;display:flex;flex-direction:column;min-height:clamp(133px,39.5vw,179px);box-sizing:border-box}
 .kg-ben-band{position:relative;background:#561D4C;color:#fff;font-size:clamp(13px,4.05vw,16px);letter-spacing:.12em;padding:6px 0 5px;flex:none}
 .kg-ben-band::after{content:"";position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);border-top:7px solid #561D4C;border-left:8px solid transparent;border-right:8px solid transparent}
 .kg-ben-art{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:clamp(80px,25vw,90px);height:clamp(80px,25vw,90px);stroke:#EDE3E9;fill:none;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
-.kg-ben-body{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:5px 7px calc(clamp(33px,9.8vw,38px) + 6px)}
+.kg-ben-body{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:5px 7px clamp(20px,6vw,27px)}
 .kg-benefit-ttl{position:relative;font-family:var(--mincho);font-size:clamp(17px,7.4vw,29px);font-weight:700;color:#1A1A1A;letter-spacing:.02em;line-height:1.3;white-space:nowrap}
 .kg-benefit-ttl.mid{font-size:clamp(15px,6.4vw,25px);letter-spacing:0}
 .kg-benefit-ttl.long{font-size:clamp(12.5px,4.9vw,20px);letter-spacing:0}
-.kg-benefit-item:has(.kg-ben-note){min-height:144px}
+.kg-benefit-item:has(.kg-ben-note){min-height:clamp(144px,42.8vw,194px)}
+.kg-benefit-item:has(.kg-ben-note) .kg-ben-body{padding-bottom:clamp(24px,7.2vw,32px)}
 .kg-ben-note{position:relative;font-size:clamp(7.7px,2.4vw,9px);color:#5A5A5A;margin-top:4px;letter-spacing:0;max-width:calc(100% - 14px)}
 .kg-ben-coin{position:absolute;right:5px;bottom:5px;width:clamp(33px,9.8vw,38px);height:clamp(33px,9.8vw,38px);border-radius:50%;background:radial-gradient(circle at 34% 30%,#D8BC6F 0%,#B79035 58%,#967122 100%);color:#fff;font-family:var(--mincho);font-size:clamp(11.5px,3.45vw,13.5px);font-weight:700;display:flex;align-items:center;justify-content:center;letter-spacing:.05em}
 
@@ -491,7 +492,7 @@ ul{list-style:none}
 
 </div>
 <script>
-console.log("BUILD_TAG: 2026-08-27k");
+console.log("BUILD_TAG: 2026-08-27l");
 document.querySelectorAll('.kg-acc-hd').forEach(function(h){
   h.addEventListener('click',function(){h.parentElement.classList.toggle('open');});
 });
