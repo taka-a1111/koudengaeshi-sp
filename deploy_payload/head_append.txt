@@ -380,7 +380,9 @@ body:has(.kg-cats) .kg-rank-more.is-open:after{transform:rotate(-135deg);margin-
 body:has(.kg-cats) #main-column>section:not(:has(.kg-sp)):not(:has(.ranking)){padding:0 14px!important}
 
 /* 2026-08-28 23:53 指示: 購入までの流れを非表示（⑤）／サービス説明は再表示（③） */
-body:has(.kg-cats) .kg-flow,body:has(.kg-cats) .kg-h2:has(+ .kg-flow){display:none!important}
+body:has(.kg-cats) .kg-flow,body:has(.kg-cats) .kg-h2:has(+ .kg-flow),body:has(.kg-cats) .kg-svc,body:has(.kg-cats) .kg-h2:has(+ .kg-svc){display:none!important}
+body:has(.kg-cats) #main-column>section:has(.kg-genre) .free-contents>*:not(.kg-sp){display:none!important}
+body:has(.kg-cats) .footer_area .kg-benefit,body:has(.kg-cats) .footer_area .kg-h2:has(+ .kg-benefit){display:none!important}
 
 body:has(.kg-cats) .kg-cashback{display:block;margin:22px 14px 0}
 
@@ -405,42 +407,18 @@ kgHdr();
 if(!document.querySelector('.kg-cats'))return;
 document.querySelectorAll('.ranking section.column5').forEach(function(sec){if(sec.querySelector('.kg-rcard'))return;var bx=document.createElement('div');bx.className='kg-rcard';while(sec.firstChild){bx.appendChild(sec.firstChild);}sec.appendChild(bx);});
 var kgOrder=function(){
-  if(document.querySelector('.kg-moved')) return;
-  var stage=document.querySelector('.kg-hero') && document.querySelector('.kg-hero').closest('.kg-stage');
-  if(!stage) return;
-  var hostSec=stage.closest('section')||stage.parentElement;
-  var h2for=function(el){var p=el&&el.previousElementSibling;return (p&&p.classList&&p.classList.contains('kg-h2'))?p:null;};
-  var move=function(el,ref,pos){ if(!el||!ref) return;
-    var h=h2for(el); var frag=document.createDocumentFragment();
-    if(h) frag.appendChild(h); frag.appendChild(el);
-    if(pos==='after'){ ref.parentNode.insertBefore(frag, ref.nextSibling); }
-    else { ref.parentNode.insertBefore(frag, ref); } };
-  // ① メインビジュアルの直下へ 6大特典
-  var ben=document.querySelector('.kg-benefit');
-  if(ben && hostSec){
-    var bh=h2for(ben), wrap=document.createElement('div');
-    wrap.className='kg-sp kg-stage kg-moved';
-    if(bh) wrap.appendChild(bh);
-    wrap.appendChild(ben);
-    hostSec.parentNode.insertBefore(wrap, hostSec.nextSibling);
-    // ④ 6大特典の下に大口キャッシュバックバナー
-    if(!document.querySelector('.kg-cashback')){
-      var a=document.createElement('a');
-      a.className='kg-cashback';
-      a.href='https://koudengaesi-e-shop.net/hpgen/HPB/entries/7.html';
-      a.innerHTML='<img src="https://koudengaesi-e-shop.net/pic-labo/cashback.jpg" alt="大口キャッシュバックキャンペーン">';
-      wrap.appendChild(a);
-    }
-  }
-  // ② 人気ランキングの直下へ カテゴリー→金額
+  if(document.querySelector('.kg-moved2')) return;
   var rank=document.querySelector('.ranking');
   var cats=document.querySelector('.kg-cats');
   if(rank && cats){
     var cstage=cats.closest('.kg-stage'); var rsec=rank.closest('section')||rank;
-    if(cstage && rsec && rsec.parentNode) rsec.parentNode.insertBefore(cstage, rsec.nextSibling);
+    if(cstage && rsec && rsec.parentNode){
+      cstage.classList.add('kg-moved2');
+      rsec.parentNode.insertBefore(cstage, rsec.nextSibling);
+    }
   }
 };
-window.addEventListener('load',kgOrder);setTimeout(kgOrder,600);
+kgOrder();window.addEventListener('load',kgOrder);
 var kgStrip=function(){document.querySelectorAll('.ranking .is-toggle-hidden').forEach(function(e){e.classList.remove('is-toggle-hidden')});};window.addEventListener('load',kgStrip);setTimeout(kgStrip,1200);setTimeout(kgStrip,3000);document.addEventListener('click',function(ev){if(ev.target.closest&&ev.target.closest('.kg-rank-more')){kgStrip();}});
 
 (function(){
