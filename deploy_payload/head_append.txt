@@ -384,7 +384,8 @@ html.kg-top #main-column>section:not(:has(.kg-sp)):not(:has(.ranking)){padding:0
 
 /* 2026-08-28 23:53 指示: 購入までの流れを非表示（⑤）／サービス説明は再表示（③） */
 html.kg-top .kg-flow,html.kg-top .kg-h2:has(+ .kg-flow),html.kg-top .kg-svc,html.kg-top .kg-h2:has(+ .kg-svc){display:none!important}
-html.kg-top #main-column>section:has(.kg-genre) .free-contents>*:not(.kg-sp){display:none!important}
+/* 旧カテゴリ・旧金額のみ非表示（挨拶状・エクセル注文の旧案内は表示 2026-08-29 01:26指示） */
+html.kg-top #main-column>section:has(.kg-genre) .free-contents>.kg-genre,html.kg-top #main-column>section:has(.kg-genre) .free-contents>.kg-price{display:none!important}
 html.kg-top .footer_area .kg-benefit,html.kg-top .footer_area .kg-h2:has(+ .kg-benefit){display:none!important}
 
 html.kg-top .kg-cashback{display:block;margin:22px 14px 0}
