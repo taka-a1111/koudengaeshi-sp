@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- BUILD_TAG: 2026-08-28g -->
+<!-- BUILD_TAG: 2026-08-28h -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
@@ -181,15 +181,16 @@ ul{list-style:none}
 
 /* ============ ⑧ 特典 ============ */
 .kg-benefit{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:16px 11px 18px;background:#F4F4F4}
-.kg-benefit-item{position:relative;background:#fff;border-radius:3px;box-shadow:0 3px 10px rgba(0,0,0,.16);overflow:hidden;text-align:center;display:flex;flex-direction:column;min-height:clamp(122px,calc(29.52vw + 26px),142px);box-sizing:border-box}
+.kg-benefit-item{position:relative;background:#fff;border-radius:3px;box-shadow:0 3px 10px rgba(0,0,0,.16);overflow:hidden;text-align:center;display:flex;flex-direction:column;min-height:clamp(105px,calc(26.81vw + 15px),122px);box-sizing:border-box}
 .kg-ben-band{position:relative;background:#561D4C;color:#fff;font-size:clamp(13px,4.05vw,16px);letter-spacing:.12em;padding:4px 0 3px;flex:none}
 .kg-ben-band::after{content:"";position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);border-top:7px solid #561D4C;border-left:8px solid transparent;border-right:8px solid transparent}
 .kg-ben-body{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:5px 7px}
-.kg-benefit-ttl{position:relative;font-family:var(--mincho);font-size:clamp(14px,5.9vw,23px);font-weight:700;color:#1A1A1A;letter-spacing:.02em;line-height:1.16;white-space:nowrap}
-.kg-benefit-ttl.mid{font-size:clamp(14px,5.9vw,23px);letter-spacing:0}
+.kg-benefit-ttl{position:relative;font-family:var(--mincho);font-size:clamp(14px,5.8vw,23px);font-weight:700;color:#1A1A1A;letter-spacing:.02em;line-height:1.16;white-space:nowrap}
+.kg-benefit-ttl.mid{font-size:clamp(11.5px,4.15vw,18px);letter-spacing:0}
+.kg-benefit-ttl.mid5{font-size:clamp(14px,4.95vw,21px);letter-spacing:0}
 .kg-benefit-ttl.long{font-size:clamp(12.8px,5vw,20px);letter-spacing:0}
-.kg-ben-note{position:relative;font-size:clamp(6.6px,2.05vw,7.8px);color:#5A5A5A;margin-top:3px;letter-spacing:0;max-width:calc(100% - 14px)}
-.kg-ben-coin{position:absolute;right:4px;bottom:3px;width:clamp(28px,8.2vw,32px);height:clamp(28px,8.2vw,32px);border-radius:50%;background:radial-gradient(circle at 34% 30%,#D8BC6F 0%,#B79035 58%,#967122 100%);color:#fff;font-family:var(--mincho);font-size:clamp(11.5px,3.45vw,13.5px);font-weight:700;display:flex;align-items:center;justify-content:center;letter-spacing:.05em}
+.kg-ben-note{position:relative;font-size:clamp(6.4px,2.0vw,7.8px);color:#5A5A5A;margin-top:3px;letter-spacing:0;max-width:calc(100% - 14px)}
+.kg-ben-coin{position:absolute;right:3px;bottom:3px;width:clamp(28px,8.8vw,34px);height:clamp(28px,8.8vw,34px);border-radius:50%;background:radial-gradient(circle at 34% 30%,#D8BC6F 0%,#B79035 58%,#967122 100%);color:#fff;font-family:var(--mincho);font-size:clamp(11.5px,3.45vw,13.5px);font-weight:700;display:flex;align-items:center;justify-content:center;letter-spacing:.05em}
 
 /* ============ ⑨ フッター ============ */
 .kg-foot{background:var(--pl-deep);color:#fff;margin-top:30px;padding:22px 14px 16px}
@@ -374,7 +375,7 @@ ul{list-style:none}
   <div class="kg-benefit-item"><div class="kg-ben-band">特典 3</div><div class="kg-ben-body"><div class="kg-benefit-ttl">手提げ袋</div></div><span class="kg-ben-coin">無料</span></div>
   <div class="kg-benefit-item"><div class="kg-ben-band">特典 4</div><div class="kg-ben-body"><div class="kg-benefit-ttl">配送料</div></div><span class="kg-ben-coin">無料</span></div>
   <div class="kg-benefit-item"><div class="kg-ben-band">特典 5</div><div class="kg-ben-body"><div class="kg-benefit-ttl long">完全自由文挨拶状</div><div class="kg-ben-note">※10万円以上注文の場合</div></div><span class="kg-ben-coin">無料</span></div>
-  <div class="kg-benefit-item"><div class="kg-ben-band">特典 6</div><div class="kg-ben-body"><div class="kg-benefit-ttl mid">喪中はがき</div><div class="kg-ben-note">※10万円以上注文の場合</div></div><span class="kg-ben-coin">無料</span></div>
+  <div class="kg-benefit-item"><div class="kg-ben-band">特典 6</div><div class="kg-ben-body"><div class="kg-benefit-ttl mid5">喪中はがき</div><div class="kg-ben-note">※10万円以上注文の場合</div></div><span class="kg-ben-coin">無料</span></div>
 </div></div>
 </div>
 
@@ -512,7 +513,7 @@ ul{list-style:none}
     btn.setAttribute('aria-expanded',open?'true':'false');
   });
 })();
-console.log("BUILD_TAG: 2026-08-28g");
+console.log("BUILD_TAG: 2026-08-28h");
 document.querySelectorAll('.kg-acc-hd').forEach(function(h){
   h.addEventListener('click',function(){h.parentElement.classList.toggle('open');});
 });
