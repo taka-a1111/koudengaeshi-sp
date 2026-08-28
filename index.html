@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- BUILD_TAG: 2026-08-28d -->
+<!-- BUILD_TAG: 2026-08-28c -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
@@ -92,6 +92,10 @@ ul{list-style:none}
 
 /* ============ ④ ランキング（カード型） ============ */
 .kg-rank{padding:0 14px}
+.kg-rank-item.is-hidden{display:none}
+.kg-rank-more{margin:22px auto 0;display:block;width:min(220px,72%);padding:12px 0;background:#fff;border:1px solid #561D4C;border-radius:999px;color:#561D4C;font-family:var(--mincho);font-size:clamp(13px,3.9vw,15px);font-weight:700;letter-spacing:.08em;text-align:center;cursor:pointer;-webkit-appearance:none;appearance:none}
+.kg-rank-more:after{content:"";display:inline-block;width:6px;height:6px;margin:0 0 2px 8px;border-right:1.5px solid #561D4C;border-bottom:1.5px solid #561D4C;transform:rotate(45deg);vertical-align:middle}
+.kg-rank-more.is-open:after{transform:rotate(-135deg);margin-bottom:-2px}
 .kg-rank-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px 12px}
 .kg-rank-no{font-size:clamp(17px,5.1vw,20px);font-weight:700;color:#9E9E9E;letter-spacing:.02em;margin:0 0 7px 2px}
 .kg-rank-item:nth-child(1) .kg-rank-no{color:#A18A3C}
@@ -177,16 +181,15 @@ ul{list-style:none}
 
 /* ============ ⑧ 特典 ============ */
 .kg-benefit{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:16px 11px 18px;background:#F4F4F4}
-.kg-benefit-item{position:relative;background:#fff;border-radius:3px;box-shadow:0 3px 10px rgba(0,0,0,.16);overflow:hidden;text-align:center;display:flex;flex-direction:column;min-height:clamp(108px,32vw,126px);box-sizing:border-box}
+.kg-benefit-item{position:relative;background:#fff;border-radius:3px;box-shadow:0 3px 10px rgba(0,0,0,.16);overflow:hidden;text-align:center;display:flex;flex-direction:column;min-height:clamp(128px,calc(40vw - 13.6px),162px);box-sizing:border-box}
 .kg-ben-band{position:relative;background:#561D4C;color:#fff;font-size:clamp(13px,4.05vw,16px);letter-spacing:.12em;padding:6px 0 5px;flex:none}
 .kg-ben-band::after{content:"";position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);border-top:7px solid #561D4C;border-left:8px solid transparent;border-right:8px solid transparent}
-.kg-ben-art{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:clamp(96px,28.5vw,126px);height:auto;max-height:clamp(62px,18.5vw,78px);stroke:#DCC5D5;fill:none;stroke-width:.9px;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.kg-ben-art{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:clamp(76px,22.6vw,100px);height:auto;max-height:clamp(84px,25vw,112px);stroke:#DCC5D5;fill:none;stroke-width:.9px;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
 .kg-ben-art *{vector-effect:non-scaling-stroke}
-.kg-ben-body{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:5px calc(clamp(33px,9.8vw,38px) + 7px) 5px 6px}
+.kg-ben-body{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:5px 7px clamp(28px,9.2vw,42px)}
 .kg-benefit-ttl{position:relative;font-family:var(--mincho);font-size:clamp(14px,5.9vw,23px);font-weight:700;color:#1A1A1A;letter-spacing:.02em;line-height:1.3;white-space:nowrap}
-.kg-benefit-ttl.mid{font-size:clamp(12.7px,5.35vw,21px);letter-spacing:0}
-.kg-benefit-ttl.long{font-size:clamp(9.6px,4vw,15.5px);letter-spacing:0}
-.kg-benefit-item:has(.kg-ben-note){min-height:clamp(120px,35.5vw,140px)}
+.kg-benefit-ttl.mid{font-size:clamp(14px,5.9vw,23px);letter-spacing:0}
+.kg-benefit-ttl.long{font-size:clamp(12.8px,5vw,20px);letter-spacing:0}
 .kg-ben-note{position:relative;font-size:clamp(7.7px,2.4vw,9px);color:#5A5A5A;margin-top:4px;letter-spacing:0;max-width:calc(100% - 14px)}
 .kg-ben-coin{position:absolute;right:4px;bottom:4px;width:clamp(33px,9.8vw,38px);height:clamp(33px,9.8vw,38px);border-radius:50%;background:radial-gradient(circle at 34% 30%,#D8BC6F 0%,#B79035 58%,#967122 100%);color:#fff;font-family:var(--mincho);font-size:clamp(11.5px,3.45vw,13.5px);font-weight:700;display:flex;align-items:center;justify-content:center;letter-spacing:.05em}
 
@@ -282,14 +285,15 @@ ul{list-style:none}
 
 <div class="kg-h2"><span class="ja">人気ランキング</span><span class="en">R A N K I N G</span></div>
 <div class="kg-rank">
-<div class="kg-rank-grid">
+<div class="kg-rank-grid" id="kgRankGrid">
   <div class="kg-rank-item"><div class="kg-rank-no">No.1</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/2131.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/c7171078.jpg" alt="スターバックスコーヒー&amp;彩りミニバウム C7171-078" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">スターバックスコーヒー&amp;彩りミニバウム C7171-078</div><div class="kg-card-price">¥3,180<small> (税込)</small></div></div></a></div>
   <div class="kg-rank-item"><div class="kg-rank-no">No.2</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/48091.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/sion-2025N.jpg" alt="カタログギフト マイハート紫苑-しおん-" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">カタログギフト マイハート紫苑-しおん-</div><div class="kg-card-price">¥16,474<small> (税込)</small></div></div></a></div>
   <div class="kg-rank-item"><div class="kg-rank-no">No.3</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/1556.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/L1064-064-1.jpg" alt="ヤマサ絹しょうゆバラエティギフト L1064-064" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">ヤマサ絹しょうゆバラエティギフト L1064-064</div><div class="kg-card-price">¥9,720<small> (税込)</small></div></div></a></div>
   <div class="kg-rank-item"><div class="kg-rank-no">No.4</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/537.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/B2097-106-1.jpg" alt="優雅亭 かりんとうギフト B2097-106" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">優雅亭 かりんとうギフト B2097-106</div><div class="kg-card-price">¥3,078<small> (税込)</small></div></div></a></div>
-  <div class="kg-rank-item"><div class="kg-rank-no">No.5</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/1764.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/L1093-064-1.jpg" alt="廣川昆布御昆布 10品佃煮詰合せ L1093-064" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">廣川昆布御昆布 10品佃煮詰合せ L1093-064</div><div class="kg-card-price">¥3,888<small> (税込)</small></div></div></a></div>
-  <div class="kg-rank-item"><div class="kg-rank-no">No.6</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/48101.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/akane-2025N.jpg" alt="カタログギフト マイハート茜-あかね-" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">カタログギフト マイハート茜-あかね-</div><div class="kg-card-price">¥20,847<small> (税込)</small></div></div></a></div>
+  <div class="kg-rank-item is-hidden"><div class="kg-rank-no">No.5</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/1764.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/L1093-064-1.jpg" alt="廣川昆布御昆布 10品佃煮詰合せ L1093-064" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">廣川昆布御昆布 10品佃煮詰合せ L1093-064</div><div class="kg-card-price">¥3,888<small> (税込)</small></div></div></a></div>
+  <div class="kg-rank-item is-hidden"><div class="kg-rank-no">No.6</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/48101.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/akane-2025N.jpg" alt="カタログギフト マイハート茜-あかね-" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">カタログギフト マイハート茜-あかね-</div><div class="kg-card-price">¥20,847<small> (税込)</small></div></div></a></div>
 </div>
+<button type="button" class="kg-rank-more" id="kgRankMore" aria-expanded="false" aria-controls="kgRankGrid">もっと見る</button>
 </div>
 
 
@@ -492,7 +496,21 @@ ul{list-style:none}
 
 </div>
 <script>
-console.log("BUILD_TAG: 2026-08-28d");
+(function(){
+  var btn=document.getElementById('kgRankMore');
+  if(!btn) return;
+  var items=document.querySelectorAll('.kg-rank-item.is-hidden');
+  if(!items.length){btn.style.display='none';return;}
+  btn.addEventListener('click',function(){
+    var open=btn.classList.toggle('is-open');
+    document.querySelectorAll('.kg-rank-item').forEach(function(el,i){
+      if(i>=4) el.classList.toggle('is-hidden',!open);
+    });
+    btn.textContent=open?'閉じる':'もっと見る';
+    btn.setAttribute('aria-expanded',open?'true':'false');
+  });
+})();
+console.log("BUILD_TAG: 2026-08-28c");
 document.querySelectorAll('.kg-acc-hd').forEach(function(h){
   h.addEventListener('click',function(){h.parentElement.classList.toggle('open');});
 });
