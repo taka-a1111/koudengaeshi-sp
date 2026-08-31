@@ -1,0 +1,1227 @@
+<!-- （新）カテゴリーから選ぶ [Start] -->
+<style>
+article .category  a:hover p{
+    background-color:transparent;
+}
+.category.wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 0px;
+}
+.category .sec-head {
+    text-align: center;
+    padding: 26px 0 6px;
+}
+.category .sec-head .jp {
+    font-size: 22px;
+    font-weight: 700;
+    color: #4a3f5c;
+    letter-spacing: .06em;
+}
+.category .sec-head .en {
+    display: block;
+    font-size: 11px;
+    letter-spacing: .25em;
+    color: #b3a9c4;
+    margin-top: 4px;
+    font-weight: 500;
+}
+.category .sec-head .rule {
+    width: 46px;
+    height: 3px;
+    background: #6d627c;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+
+.category .karin-popular-products * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.category .karin-products-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.category .karin-popular-products * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.category .karin-product-item {
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eaeaea;
+}
+.category .karin-product-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    font-family: inherit;
+}
+.category a:visited {
+    color: #353535;
+    text-decoration: none;
+}
+.category p {
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+    font-feature-settings: "palt";
+    font-size: 14px;
+    line-height: 24px;
+}
+.category .karin-product-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.category .karin-product-image {
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.category .karin-product-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.category .karin-product-summary {
+    padding: 12px 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    font-family: inherit;
+}
+.category .karin-product-catch {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.category .karin-product-price {
+    margin-bottom: 8px;
+    font-family: inherit;
+}
+.category .karin-price-main {
+    font-size: 15px;
+    font-weight: bold;
+    color: #B22222;
+}
+.category .karin-tax {
+    font-size: 10px;
+    color: #999;
+}
+.category .karin-tags-container {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+.category .karin-discount-tag, .karin-free-shipping {
+    padding: 2px 6px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.category .karin-discount-tag {
+    background-color: #B22222;
+    color: #fff;
+}
+.category .karin-free-shipping {
+    background-color: #B22222;
+    color: #fff;
+}
+.category .karin-discount-tag, .karin-free-shipping {
+    border-radius: 2px;
+    font-size: 10px;
+    font-weight: bold;
+}
+.category .karin-product-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-top: auto;
+    overflow: hidden;
+}
+.category p:last-child {
+    margin-bottom: 0;
+}
+.category .karin-product-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-color: #d3c6dd;
+    background-color: #faf8ff;
+}
+.category .karin-product-item:hover .karin-product-image img {
+    transform: scale(1.03);
+}
+.category .button, .button--typeA, 
+.category .button--typeB, 
+.category .button--typeC, 
+.category .button--typeD, 
+.category .megaMenu__button, 
+.category a.button {
+    position: relative;
+    width: 270px;
+    line-height: 27px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: center;
+    vertical-align: middle;
+    transition: 0.7s;
+    padding: 8px 30px;
+}
+.category .button--typeA, 
+.category a.button--typeA, 
+.category .button, a.button {
+    color: rgb(255, 255, 255);
+    background: rgb(109, 98, 124);
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(109, 98, 124);
+    border-image: none;
+    border-radius: 100px;
+}
+.category ::after {
+    box-sizing: border-box;
+}
+.category .arrow:hover{
+    transition: 0.3s;
+}
+.category .arrow::after {
+    right: 15px;
+        content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    transform: rotate(45deg) translateY(-50%);
+    transform-origin: center top;
+    border-top: 2px solid rgb(53, 53, 53);
+    border-right: 2px solid rgb(53, 53, 53);
+    transition: 0.15s;
+}
+.category .button.arrow, 
+.category .button--typeA.arrow, 
+.category .button--typeB.arrow, 
+.category .button--typeC.arrow, 
+.category .button--typeD.arrow, 
+.category .megaMenu__button.arrow, 
+.category a.button.arrow {
+    padding-right: 30px;
+}
+.category .button--typeA, 
+.category a.button--typeA, 
+.category .button, a.button {
+    color: rgb(255, 255, 255);
+    background: rgb(109, 98, 124);
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(109, 98, 124);
+    border-image: none;
+    border-radius: 100px;
+}
+.category .button--typeA.arrow::after, 
+.category a.button--typeA.arrow::after, 
+.category .button.arrow::after, 
+.category a.button.arrow::after {
+    right: 15px;
+    border-color: rgb(255, 255, 255);
+}
+.category .button--typeA.arrow:hover, 
+.category a.button--typeA.arrow:hover, 
+.category .button.arrow:hover, 
+.category a.button.arrow:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(109, 98, 124);
+    border-color: rgb(109, 98, 124);
+}
+.category .button--typeA.arrow:hover::after, 
+.category a.button--typeA.arrow:hover::after, 
+.category .button.arrow:hover::after, 
+.category a.button.arrow:hover::after {
+    right: 10px;
+    border-color: rgb(109, 98, 124);
+}
+
+.category .button.arrow, 
+.category .button--typeA.arrow, 
+.category .button--typeB.arrow, 
+.category .button--typeC.arrow, 
+.category .button--typeD.arrow, 
+.category .megaMenu__button.arrow, 
+.category a.button.arrow {
+    padding-right: 30px;
+    display: block;
+    margin: 20px auto;
+}
+/*
+.category .morebtnWrap{
+    display:none;
+}
+*/
+@media (max-width: 768px) {
+ .category  .morebtnWrap {
+    display: block;
+    margin-top: 24px;
+    text-align: center;
+  }
+
+  /*
+   * JavaScript読み込み前にも、
+   * 5件目以降が一瞬表示されないようにする
+   */
+   /*
+ .category  .karin-products-list:not(.is-toggle-ready)
+    > .karin-product-item:nth-child(n + 5) {
+    display: none;
+  }
+
+.category   .karin-products-list
+    > .karin-product-item.is-toggle-hidden {
+    display: none;
+  }
+
+.category   .js-products-toggle::after {
+    transition: transform 0.3s ease;
+  }
+
+.category   .js-products-toggle.is-open::after {
+    transform: rotate(-45deg);
+  }
+  */
+ .category    .karin-products-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+.category     .karin-product-catch {
+        font-size: 13px;
+    }
+.category     .karin-product-summary {
+        padding: 10px 8px;
+    }
+.category     .karin-price-main {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 480px) {
+.category article a:hover p{
+background-color:transparent;
+}
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const mediaQuery = window.matchMedia('(max-width: 768px)');
+
+  document.querySelectorAll('.category .karin-products-list').forEach(function (list) {
+    const items = Array.from(
+      list.querySelectorAll(':scope > .karin-product-item')
+    );
+
+    const hiddenItems = items.slice(4);
+
+    /*
+     * .karin-products-listの直後に
+     * .morebtnWrapがある構成を想定
+     */
+    const buttonWrap = list.nextElementSibling;
+    const button = buttonWrap &&
+      buttonWrap.classList.contains('morebtnWrap')
+        ? buttonWrap.querySelector('.category .js-products-toggle')
+        : null;
+
+    if (!button || hiddenItems.length === 0) {
+      if (buttonWrap) {
+        buttonWrap.style.display = 'none';
+      }
+
+      list.classList.add('is-toggle-ready');
+      return;
+    }
+
+    let isAnimating = false;
+
+    function hideImmediately() {
+      hiddenItems.forEach(function (item) {
+        item.classList.add('is-toggle-hidden');
+        item.removeAttribute('style');
+      });
+
+      button.classList.remove('is-open');
+      button.setAttribute('aria-expanded', 'false');
+      button.textContent = 'もっと見る';
+    }
+
+    function showImmediately() {
+      hiddenItems.forEach(function (item) {
+        item.classList.remove('is-toggle-hidden');
+        item.removeAttribute('style');
+      });
+
+      button.classList.add('is-open');
+      button.setAttribute('aria-expanded', 'true');
+      button.textContent = '閉じる';
+    }
+
+    function openItems() {
+      if (isAnimating) return;
+
+      isAnimating = true;
+
+      hiddenItems.forEach(function (item) {
+        item.classList.remove('is-toggle-hidden');
+
+        item.animate(
+          [
+            {
+              opacity: 0,
+              transform: 'translateY(-12px) scaleY(0.96)'
+            },
+            {
+              opacity: 1,
+              transform: 'translateY(0) scaleY(1)'
+            }
+          ],
+          {
+            duration: 400,
+            easing: 'ease-out',
+            fill: 'both'
+          }
+        );
+      });
+
+      button.classList.add('is-open');
+      button.setAttribute('aria-expanded', 'true');
+      button.textContent = '閉じる';
+
+      window.setTimeout(function () {
+        hiddenItems.forEach(function (item) {
+          item.getAnimations().forEach(function (animation) {
+            animation.cancel();
+          });
+        });
+
+        isAnimating = false;
+      }, 400);
+    }
+
+    function closeItems() {
+      if (isAnimating) return;
+
+      isAnimating = true;
+
+      const animations = hiddenItems.map(function (item) {
+        return item.animate(
+          [
+            {
+              opacity: 1,
+              transform: 'translateY(0) scaleY(1)'
+            },
+            {
+              opacity: 0,
+              transform: 'translateY(-12px) scaleY(0.96)'
+            }
+          ],
+          {
+            duration: 300,
+            easing: 'ease-in',
+            fill: 'forwards'
+          }
+        );
+      });
+
+      button.classList.remove('is-open');
+      button.setAttribute('aria-expanded', 'false');
+      button.textContent = 'もっと見る';
+
+      Promise.all(
+        animations.map(function (animation) {
+          return animation.finished.catch(function () {});
+        })
+      ).then(function () {
+        hiddenItems.forEach(function (item) {
+          item.classList.add('is-toggle-hidden');
+
+          item.getAnimations().forEach(function (animation) {
+            animation.cancel();
+          });
+        });
+
+        isAnimating = false;
+      });
+    }
+
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+
+      const isOpen =
+        button.getAttribute('aria-expanded') === 'true';
+
+      if (isOpen) {
+        closeItems();
+      } else {
+        openItems();
+      }
+    });
+
+    function applyViewportState() {
+      if (mediaQuery.matches) {
+        hideImmediately();
+      } else {
+        showImmediately();
+      }
+
+      list.classList.add('is-toggle-ready');
+    }
+
+    applyViewportState();
+
+    if (typeof mediaQuery.addEventListener === 'function') {
+      mediaQuery.addEventListener('change', applyViewportState);
+    } else {
+      mediaQuery.addListener(applyViewportState);
+    }
+  });
+});
+</script>
+<div class="category">
+<!-- div class="sec-head">
+<span class="jp">カテゴリーから選ぶ</span>
+<span class="en">CATEGORY</span>
+<div class="rule"></div>
+</div -->
+
+<div class="karin-products-list">
+<!-- スターバックス　 -->
+<div class="karin-product-item">
+<a href="https://koudengaesi-e-shop.net/SHOP/173451/316434/list.html" class="karin-product-link" rel="noopener">
+<div class="karin-product-inner">
+<div class="karin-product-image">
+<img loading="lazy" decoding="async" src="https://koudengaesi-e-shop.net/pic-labo/1.jpeg" alt="スターバックス" >
+</div>
+<div class="karin-product-summary">
+<div class="karin-product-catch">スターバックス</div>
+<div class="karin-product-price">
+<span class="karin-price-main">2,970円&#12316;6,480円</span>
+<span class="karin-tax">(税込)</span>
+</div>
+<div class="karin-tags-container" aria-label="特典">  
+<span class="karin-free-shipping">送料無料</span>
+</div>
+<p class="karin-product-desc">ご年配の方から若い世代まで幅広い層の方に喜ばれる人気のギフトです。</p>
+</div>
+</div>
+</a>
+</div>
+  
+<!-- 宇治茶詰合せ（伝統銘茶） -->
+<div class="karin-product-item">
+<a href="https://koudengaesi-e-shop.net/SHOP/173449/315897/list.html" class="karin-product-link" rel="noopener">
+<div class="karin-product-inner">
+<div class="karin-product-image">
+<img loading="lazy" decoding="async" src="https://koudengaesi-e-shop.net/pic-labo/2.jpeg" alt="宇治茶詰合せ（伝統銘茶）" >
+</div>
+<div class="karin-product-summary">
+<div class="karin-product-catch">宇治茶詰合せ（伝統銘茶）</div>
+<div class="karin-product-price">
+<span class="karin-price-main">2,916円&#12316;19,440円</span>
+<span class="karin-tax">(税込)</span>
+</div>
+<div class="karin-tags-container" aria-label="特典">  
+<span class="karin-free-shipping">送料無料</span>
+<span class="karin-discount-tag">最大10%OFF</span>
+</div>
+<p class="karin-product-desc">香典返しの定番品。上品な香りが楽しめるリピート率No.1ギフトです。</p>
+</div>
+</div>
+</a>
+</div>
+
+<!-- バウムクーヘン -->
+<div class="karin-product-item">
+<a href="https://koudengaesi-e-shop.net/SHOP/315885/315911/list.html" class="karin-product-link" rel="noopener">
+<div class="karin-product-inner">
+<div class="karin-product-image">
+<img loading="lazy" decoding="async" src="https://koudengaesi-e-shop.net/pic-labo/3.jpeg" alt="バウムクーヘン" >
+</div>
+<div class="karin-product-summary">
+<div class="karin-product-catch">バウムクーヘン</div>
+<div class="karin-product-price">
+<span class="karin-price-main">2,916円&#12316;5,400円</span>
+<span class="karin-tax">(税込)</span>
+</div>
+<div class="karin-tags-container" aria-label="特典">  
+<span class="karin-free-shipping">送料無料</span>
+<span class="karin-discount-tag">最大10%OFF</span>
+</div>
+<p class="karin-product-desc">ご家族皆様で楽しめる、お菓子ジャンルで人気上位のギフトです。</p>
+</div>
+</div>
+</a>
+</div>
+
+
+<!-- スープ・味噌汁 -->
+<div class="karin-product-item">
+<a href="https://koudengaesi-e-shop.net/SHOP/9999/315993/list.html" class="karin-product-link" rel="noopener">
+<div class="karin-product-inner">
+<div class="karin-product-image">
+<img loading="lazy" decoding="async" src="https://koudengaesi-e-shop.net/pic-labo/4.jpeg" alt="スープ・味噌汁" >
+</div>
+<div class="karin-product-summary">
+<div class="karin-product-catch">スープ・味噌汁</div>
+<div class="karin-product-price">
+<span class="karin-price-main">2,916円&#12316;9,720円</span>
+<span class="karin-tax">(税込)</span>
+</div>
+<div class="karin-tags-container" aria-label="特典">  
+<span class="karin-free-shipping">送料無料</span>
+<span class="karin-discount-tag">最大10%OFF</span>
+</div>
+<p class="karin-product-desc">毎日の食卓で手軽に楽しんで頂ける、香典返し定番ギフトです。</p>
+</div>
+</div>
+</a>
+</div>
+
+<!-- 今治タオル -->
+<div class="karin-product-item">
+<a href="https://koudengaesi-e-shop.net/SHOP/9998/315887/list.html" class="karin-product-link" rel="noopener">
+<div class="karin-product-inner">
+<div class="karin-product-image">
+<img loading="lazy" decoding="async" src="https://koudengaesi-e-shop.net/pic-labo/5.jpeg" alt="今治タオル" >
+</div>
+<div class="karin-product-summary">
+<div class="karin-product-catch">今治タオル</div>
+<div class="karin-product-price">
+<span class="karin-price-main">1,045円&#12316;33,000円</span>
+<span class="karin-tax">(税込)</span>
+</div>
+<div class="karin-tags-container" aria-label="特典">  
+<span class="karin-free-shipping">送料無料</span>
+<span class="karin-discount-tag">最大10%OFF</span>
+</div>
+<p class="karin-product-desc">当店で長年人気のベストセラー商品。上質な肌触りのタオルギフトです。</p>
+</div>
+</div>
+</a>
+</div>
+
+
+<!-- カタログギフト　舞妓 -->
+<div class="karin-product-item">
+<a href="https://koudengaesi-e-shop.net/SHOP/316705/316706/list.html" class="karin-product-link" rel="noopener">
+<div class="karin-product-inner">
+<div class="karin-product-image">
+<img loading="lazy" decoding="async" src="https://koudengaesi-e-shop.net/pic-labo/6.jpeg" alt="カタログギフト　舞妓" >
+</div>
+<div class="karin-product-summary">
+<div class="karin-product-catch">カタログギフト　舞妓</div>
+<div class="karin-product-price">
+<span class="karin-price-main">5,060円&#12316;51,207円</span>
+<span class="karin-tax">(税込)</span>
+</div>
+<div class="karin-tags-container" aria-label="特典">  
+<span class="karin-free-shipping">送料無料</span>
+<span class="karin-discount-tag">最大10%OFF</span>
+</div>
+<p class="karin-product-desc">お客様にお好きな商品をお選び頂ける為、近年人気のギフトです。</p>
+</div>
+</div>
+</a>
+</div>
+
+<!-- カタログギフト　マイハート -->
+<div class="karin-product-item">
+<a href="https://koudengaesi-e-shop.net/SHOP/316705/316707/list.html" class="karin-product-link" rel="noopener">
+<div class="karin-product-inner">
+<div class="karin-product-image">
+<img loading="lazy" decoding="async" src="https://koudengaesi-e-shop.net/pic-labo/7.png" alt="カタログギフト　マイハート" >
+</div>
+<div class="karin-product-summary">
+<div class="karin-product-catch">カタログギフト　マイハート</div>
+<div class="karin-product-price">
+<span class="karin-price-main">5,060円&#12316;51,207円</span>
+<span class="karin-tax">(税込)</span>
+</div>
+<div class="karin-tags-container" aria-label="特典">  
+<span class="karin-free-shipping">送料無料</span>
+<span class="karin-discount-tag">最大10%OFF</span>
+</div>
+<p class="karin-product-desc">お客様にお好きな商品をお選び頂ける為、近年人気のギフトです。</p>
+</div>
+</div>
+</a>
+</div>
+
+<!-- お米ギフト -->
+<div class="karin-product-item">
+<a href="https://koudengaesi-e-shop.net/SHOP/9999/316001/list.html" class="karin-product-link" rel="noopener">
+<div class="karin-product-inner">
+<div class="karin-product-image">
+<img loading="lazy" decoding="async" src="https://koudengaesi-e-shop.net/pic-labo/8.jpeg" alt="お米ギフト" >
+</div>
+<div class="karin-product-summary">
+<div class="karin-product-catch">お米ギフト</div>
+<div class="karin-product-price">
+<span class="karin-price-main"> 3,240円&#12316;16,200円</span>
+<span class="karin-tax">(税込)</span>
+</div>
+<div class="karin-tags-container" aria-label="特典">  
+<span class="karin-free-shipping">送料無料</span>
+<span class="karin-discount-tag">最大10%OFF</span>
+</div>
+<p class="karin-product-desc">毎日の食卓で喜ばれる、近年人気上昇中のお米ギフトです。</p>
+</div>
+</div>
+</a>
+</div>
+
+<!-- 調味料ギフト -->
+<div class="karin-product-item">
+<a href="https://koudengaesi-e-shop.net/SHOP/173455/316278/list.html" class="karin-product-link" rel="noopener">
+<div class="karin-product-inner">
+<div class="karin-product-image">
+<img loading="lazy" decoding="async" src="https://koudengaesi-e-shop.net/pic-labo/9.jpeg" alt="調味料ギフト" >
+</div>
+<div class="karin-product-summary">
+<div class="karin-product-catch">調味料ギフト</div>
+<div class="karin-product-price">
+<span class="karin-price-main"> 2,916円&#12316;14,580円</span>
+<span class="karin-tax">(税込)</span>
+</div>
+<div class="karin-tags-container" aria-label="特典">  
+<span class="karin-free-shipping">送料無料</span>
+<span class="karin-discount-tag">最大10%OFF</span>
+</div>
+<p class="karin-product-desc">毎日の食卓で幅広く活躍し、どのご家庭にも喜ばれるギフトです。　</p>
+</div>
+</div>
+</a>
+</div>
+
+<!-- かりんとうギフト -->
+<div class="karin-product-item">
+<a href="https://koudengaesi-e-shop.net/SHOP/315886/315940/list.html" class="karin-product-link" rel="noopener">
+<div class="karin-product-inner">
+<div class="karin-product-image">
+<img loading="lazy" decoding="async" src="https://koudengaesi-e-shop.net/pic-labo/10s.png" alt="かりんとうギフト" >
+</div>
+<div class="karin-product-summary">
+<div class="karin-product-catch">かりんとうギフト</div>
+<div class="karin-product-price">
+<span class="karin-price-main"> 2,884円&#12316;5,400円</span>
+<span class="karin-tax">(税込)</span>
+</div>
+<div class="karin-tags-container" aria-label="特典">  
+<span class="karin-free-shipping">送料無料</span>
+<span class="karin-discount-tag">最大10%OFF</span>
+</div>
+<p class="karin-product-desc">昔ながらのやさしい甘さが楽しめる、人気のお菓子ギフトです。</p>
+</div>
+</div>
+</a>
+</div>
+
+<!-- 素麺（そうめん） -->
+<div class="karin-product-item">
+<a href="https://koudengaesi-e-shop.net/SHOP/9997/173457/list.html" class="karin-product-link" rel="noopener">
+<div class="karin-product-inner">
+<div class="karin-product-image">
+<img loading="lazy" decoding="async" src="https://koudengaesi-e-shop.net/pic-labo/11.jpeg" alt="素麺（そうめん）" >
+</div>
+<div class="karin-product-summary">
+<div class="karin-product-catch">素麺（そうめん）</div>
+<div class="karin-product-price">
+<span class="karin-price-main">2,916円&#12316;10,800円</span>
+<span class="karin-tax">(税込)</span>
+</div>
+<div class="karin-tags-container" aria-label="特典">  
+<span class="karin-free-shipping">送料無料</span>
+<span class="karin-discount-tag">最大10%OFF</span>
+</div>
+<p class="karin-product-desc">夏に人気の定番ギフト。三輪素麺・揖保乃糸・播州素麺など豊富な種類をご用意。</p>
+</div>
+</div>
+</a>
+</div>
+
+<!-- アリエール ギフトセット -->
+<div class="karin-product-item">
+<a href="https://koudengaesi-e-shop.net/SHOP/10001/315895/list.html" class="karin-product-link" rel="noopener">
+<div class="karin-product-inner">
+<div class="karin-product-image">
+<img loading="lazy" decoding="async" src="https://koudengaesi-e-shop.net/pic-labo/12s.png" alt="アリエール ギフトセット" >
+</div>
+<div class="karin-product-summary">
+<div class="karin-product-catch">アリエール ギフトセット</div>
+<div class="karin-product-price">
+<span class="karin-price-main">3,300円&#12316;11,000円</span>
+<span class="karin-tax">(税込)</span>
+</div>
+<div class="karin-tags-container" aria-label="特典">  
+<span class="karin-free-shipping">送料無料</span>
+<span class="karin-discount-tag">最大10%OFF</span>
+</div>
+<p class="karin-product-desc">利便性が優れたギフトを贈りたい方に人気の洗剤・石鹸ギフトです。</p>
+</div>
+</div>
+</a>
+</div>
+
+
+</div><!-- .karin-products-list -->
+
+</div><!-- .category -->
+<!-- （新）カテゴリーから選ぶ [End] -->
+
+<!-- 古いデータ（アイテムから選ぶ　1品から送料無料の商品）
+<h2 class="top_h2">アイテムから選ぶ　1品から送料無料の商品</h2>
+<div class="column-set top_responsive4">
+
+<section class="column4 column4waku">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/9997/48711/list.html" title="お菓子">
+              
+              <span class="item-list-span-img"><img src="/image/top/item1.jpg" alt="お菓子"></span>
+              </a>
+            </p>
+          </div>        
+<p class="Snameleft">お菓子は食べるとなくなる「消えもの」でお菓子を食べながら故人を偲ぶという意味が込められています。
+
+</p>
+<p><a href="//koudengaesi-e-shop.net/SHOP/9997/48711/list.html"><span class="blue">お菓子一覧へ
+
+</span></a></p>
+</section>
+
+
+<section class="column4 column4waku">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/9997/9999/list.html" title="食品">
+              
+              <span class="item-list-span-img"><img src="/image/top/item2.jpg" alt="食品"></span>
+              </a>
+            </p>
+          </div>
+<p class="Snameleft">食品は「消えもの」であることから不祝儀が残らないようにとの意味があります。</p>
+<p><a href="//koudengaesi-e-shop.net/SHOP/9997/9999/list.html"><span class="blue">食品一覧へ
+
+</span></a></p>
+</section>
+
+
+<section class="column4 column4waku">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/9997/10001/list.html" title="洗剤・石鹸">
+              
+              <span class="item-list-span-img"><img src="/image/top/item3.jpg" alt="洗剤・石鹸"></span>
+              </a>
+            </p>
+          </div>
+<p class="Snameleft">洗剤・石鹸は不幸や悲しみを洗い流すという意味合いで贈られま
+
+す。</p>
+<p><a href="//koudengaesi-e-shop.net/SHOP/9997/10001/list.html"><span class="blue">洗剤・石鹸一覧へ
+
+</span></a></p>
+</section>
+
+
+<section class="column4 column4waku">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/9997/9998/list.html" title="タオル">         
+              <span class="item-list-span-img"><img src="/image/top/item4.jpg" alt="タオル"></span>
+              </a>
+            </p>
+          </div>
+<p class="Snameleft">白いタオルは仏の世界へ白装束で旅立つ意味合いと慈愛を表すことで贈られます。</p>
+<p><a href="//koudengaesi-e-shop.net/SHOP/9997/9998/list.html"><span class="blue">タオル一覧へ
+
+</span></a></p>
+</section>
+
+
+<section class="column4 column4waku">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/9997/10000/list.html" title="寝具・マット">
+              
+              <span class="item-list-span-img"><img src="/image/top/item5.jpg" alt="寝具・マット"></span>
+              </a>
+            </p>
+          </div>
+<p class="Snameleft">白い寝具は仏の世界へ白装束で旅立つ意味合いで布団やシーツなどが贈られます。</p>
+<p><a href="//koudengaesi-e-shop.net/SHOP/9997/10000/list.html"><span class="blue">寝具・マット一覧へ
+
+</span></a></p>
+</section>
+
+<section class="column4 column4waku">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/9997/10002/list.html" title="日用品">
+              <span class="item-list-span-img"><img src="/image/top/item6.jpg" alt="日用品"></span>
+              </a>
+            </p>
+          </div>
+<p class="Snameleft">昔の埋葬の習慣から人は土に帰るという意味合いで陶器できた品物が贈られます。</p>
+<p><a href="//koudengaesi-e-shop.net/SHOP/9997/10002/list.html"><span class="blue">日用品一覧へ
+
+</span></a><br><br></p>
+</section>
+
+
+<section class="column4 column4waku">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/9997/173449/list.html" title="お茶">
+              
+              <span class="item-list-span-img"><img src="/pic-labo/mimg/item8.jpg" alt="お茶"></span>
+              </a>
+            </p>
+          </div>
+<p class="Snameleft">お茶は仏教との関わりが深く、またどなたでも毎日飲みますので香典返しの定番品です。</p>
+<p><a href="//koudengaesi-e-shop.net/SHOP/9997/173449/list.html"><span class="blue">お茶の一覧へ
+
+</span></a><br><br></p>
+</section>
+
+<section class="column4 column4waku">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/10483/list.html" title="カタログギフト">
+              
+              <span class="item-list-span-img"><img src="/image/top/item7.jpg" alt="カタログギフ
+
+ト"></span>
+              </a>
+            </p>
+          </div>
+<p class="Snameleft">贈り先様がお好きな品物を選べるカタログギフトは近年人気です。</p>
+<p><a href="//koudengaesi-e-shop.net/SHOP/10483/list.html"><span class="blue">カタログギフト一覧へ
+
+</span></a></p>
+</section>
+</div>
+-->
+<div style="height: 5px; clear: both;"></div>
+
+<h2 class="top_h2">ブランドから選ぶ</h2>
+
+<div class="column-set top_responsive4">
+<!--1-->
+<section class="column4">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=%E5%A4%A7%E6%A3%AE%E5%B1%8B" title="
+
+大森屋">
+              
+              <span class="item-list-span-img"><img src="https://image1.shopserve.jp/koudengaesi-e-
+
+shop.net/pic-labo/llimg/TOP-B8053-515-1.jpg" alt="大森屋"></span>
+              </a>
+            </p>
+          </div>
+<p class="cate_syouhinn_list"><a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=%E5%A4%A7%E6%A3%AE
+
+%E5%B1%8B">大森屋</a></p>
+</section>
+
+<!--2-->
+<section class="column4">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=%E3%83%A2%E3%83%B3%E3%82%AB
+
+%E3%83%95%E3%82%A7" title="モンカフェ">
+              
+              <span class="item-list-span-img"><img src="https://image1.shopserve.jp/koudengaesi-e-
+
+shop.net/pic-labo/llimg/TOP-B8068-510-1.jpg" alt="モンカフェ"></span>
+              </a>
+            </p>
+          </div>
+<p class="cate_syouhinn_list"><a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=
+
+%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%95%E3%82%A7">モンカフェ</a></p>
+</section>
+
+<!--3-->
+<section class="column4">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=%E3%83%89%E3%83%88%E3%83%BC
+
+%E3%83%AB" title="ドトールコーヒー">
+              
+              <span class="item-list-span-img"><img src="https://image1.shopserve.jp/koudengaesi-e-
+
+shop.net/pic-labo/llimg/TOP-B8050-545-1.jpg" alt="ドトールコーヒー"></span>
+              </a>
+            </p>
+          </div>
+<p class="cate_syouhinn_list"><a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=
+
+%E3%83%89%E3%83%88%E3%83%BC%E3%83%AB">ドトールコーヒー</a></p>
+</section>
+
+<!--4-->
+<section class="column4">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=AGF" title="AGF">
+              
+              <span class="item-list-span-img"><img src="https://image1.shopserve.jp/koudengaesi-e-
+
+shop.net/pic-labo/llimg/TOP-B8068-548-1.jpg?t=20230201145234" alt="AGF"></span>
+              </a>
+            </p>
+          </div>
+<p class="cate_syouhinn_list"><a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=AGF">AGF</a></p>
+</section>
+
+<!--5-->
+<section class="column4">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=%E6%97%A5%E6%B8%85%E3%82%AA
+
+%E3%82%A4%E3%83%AA%E3%82%AA" title="日清オイリオ">
+              
+              <span class="item-list-span-img"><img src="https://image1.shopserve.jp/koudengaesi-e-
+
+shop.net/pic-labo/llimg/TOP-B8054-519-1.jpg" alt="日清オイリオ"></span>
+              </a>
+            </p>
+          </div>
+<p class="cate_syouhinn_list"><a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=
+
+%E6%97%A5%E6%B8%85%E3%82%AA%E3%82%A4%E3%83%AA%E3%82%AA">日清オイリオ</a></p>
+</section>
+
+<!--6-->
+<section class="column4">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=%E3%82%AD
+
+%E3%83%83%E3%82%B3%E3%83%BC%E3%83%9E%E3%83%B3" title="キッコーマン">
+              
+              <span class="item-list-span-img"><img src="https://image1.shopserve.jp/koudengaesi-e-
+
+shop.net/pic-labo/llimg/TOP-L7070-518-1.jpg" alt="キッコーマン"></span>
+              </a>
+            </p>
+          </div>
+<p class="cate_syouhinn_list"><a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=%E3%82%AD
+
+%E3%83%83%E3%82%B3%E3%83%BC%E3%83%9E%E3%83%B3">キッコーマン</a></p>
+</section>
+
+<!--7-->
+<section class="column4">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=%E6%8F%96%E4%BF%9D
+
+%E4%B9%83%E7%B3%B8" title="揖保乃糸">
+              
+              <span class="item-list-span-img"><img src="https://image1.shopserve.jp/koudengaesi-e-
+
+shop.net/pic-labo/llimg/TOP-H8020-7-1.jpg" alt="揖保乃糸"></span>
+              </a>
+            </p>
+          </div>
+<p class="cate_syouhinn_list"><a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=%E6%8F%96%E4%BF%9D
+
+%E4%B9%83%E7%B3%B8">揖保乃糸</a></p>
+</section>
+
+<!--8-->
+<section class="column4">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=%E6%B0%B8%E8%B0%B7%E5%9C%92" title="
+
+永谷園">
+              
+              <span class="item-list-span-img"><img src="https://image1.shopserve.jp/koudengaesi-e-
+
+shop.net/pic-labo/llimg/TOP-L7086-544-1.jpg" alt="永谷園"></span>
+              </a>
+            </p>
+          </div>
+<p class="cate_syouhinn_list" style="letter-spacing: -0.2em;"><a href="//koudengaesi-e-
+
+shop.net/SHOP/list.php?Search=%E6%B0%B8%E8%B0%B7%E5%9C%92">永谷園</a></p>
+</section>
+
+
+<!--9-->
+<section class="column4">
+<div class="itemThumb-wrap">
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=
+
+%E3%82%A2%E3%83%9E%E3%83%8E%E3%83%95%E3%83%BC%E3%82%BA" title="アマノフーズ">
+              
+              <span class="item-list-span-img"><img src="https://image1.shopserve.jp/koudengaesi-e-
+
+shop.net/pic-labo/llimg/TOP-B1047-546-1.jpg" alt="アマノフーズ"></span>
+              </a>
+            </p>
+          </div>
+<p class="cate_syouhinn_list"><a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=
+
+%E3%82%A2%E3%83%9E%E3%83%8E%E3%83%95%E3%83%BC%E3%82%BA">アマノフーズ</a></p>
+</section>
+
+<!--10-->
+<section class="column4">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=
+
+%E3%82%A6%E3%82%A7%E3%83%83%E3%82%B8%E3%82%A6%E3%83%83%E3%83%89" title="ウェッジウッド">
+              
+              <span class="item-list-span-img"><img src="https://image1.shopserve.jp/koudengaesi-e-
+
+shop.net/pic-labo/llimg/TOP-L7014-554-1.jpg" alt="ウェッジウッド"></span>
+              </a>
+            </p>
+          </div>
+<p class="cate_syouhinn_list"><a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=
+
+%E3%82%A6%E3%82%A7%E3%83%83%E3%82%B8%E3%82%A6%E3%83%83%E3%83%89">ウェッジウッド</a></p>
+</section>
+
+<!--11-->
+<section class="column4">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=%E4%BB%8A%E6%B2%BB" title="今治タオ
+
+ル">
+              
+              <span class="item-list-span-img"><img src="https://image1.shopserve.jp/koudengaesi-e-
+
+shop.net/pic-labo/llimg/TOP-B8058-598-1.jpg" alt="今治タオル"></span>
+              </a>
+            </p>
+          </div>
+<p class="cate_syouhinn_list"><a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=%E4%BB%8A%E6%B2%BB">
+
+今治タオル</a></p>
+</section>
+
+<!--12-->
+<section class="column4">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="https://koudengaesi-e-shop.net/SHOP/list.php?Search=nishikawa" title="西川(nishikawa)">
+              
+              <span class="item-list-span-img"><img src="https://image1.shopserve.jp/koudengaesi-e-
+
+shop.net/pic-labo/llimg/TOP-L7051-609-1.jpg" alt="西川(nishikawa)"></span>
+              </a>
+            </p>
+          </div>
+<p class="cate_syouhinn_list"><a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=%E8%A5%BF%E5%B7%9D">
+
+西川(nishikawa)</a></p>
+</section>
+
+<!--13-->
+<section class="column4">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=%E3%82%A2%E3%82%BF%E3%83%83%E3%82%AF" title="花王アタック">
+              
+              <span class="item-list-span-img"><img src="https://image1.shopserve.jp/koudengaesi-e-
+
+shop.net/pic-labo/llimg/TOP-L7133-517-1.jpg" alt="花王アタック"></span>
+              </a>
+            </p>
+          </div>
+<p class="cate_syouhinn_list"><a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=%E3%82%A2%E3%82%BF%E3%83%83%E3%82%AF">
+
+花王・アタック</a></p>
+</section>
+
+<!--14-->
+<section class="column4">
+<div class="itemThumb-wrap">            
+            <p class="itemThumb">
+              <a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=%E3%82%A2%E3%83%AA%E3%82%A8%E3%83%BC%E3%83%AB" title="アリエール">
+              
+              <span class="item-list-span-img"><img src="https://image1.shopserve.jp/koudengaesi-e-
+
+shop.net/pic-labo/llimg/TOP-B1075-577-1.jpg" alt="P&G・アリエール"></span>
+              </a>
+            </p>
+          </div>
+<p class="cate_syouhinn_list"><a href="//koudengaesi-e-shop.net/SHOP/list.php?Search=%E3%82%A2%E3%83%AA%E3%82%A8%E3%83%BC%E3%83%AB">
+
+P&G・アリエール</a></p>
+</section>
+
+</div>
+
+
+<div style="height: 5px; clear: both;"></div>
+
+<!-- kg-sp 2026-08-28 -->
+<div class="kg-sp kg-stage" style="display:none">
+<div class="kg-h2" id="cate_link"><span class="ja">カテゴリーから選ぶ</span><span class="en">C A T E G O R Y</span></div>
+<div class="kg-cats">
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/48711/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre01.jpg" alt="お菓子" loading="lazy" width="640" height="386"><span>お菓子</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/173451/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre02.jpg" alt="コーヒー・紅茶" loading="lazy" width="640" height="640"><span>コーヒー・紅茶</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/173449/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre03.jpg" alt="お茶" loading="lazy" width="640" height="449"><span>お茶</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/173450/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre04.jpg" alt="海苔" loading="lazy" width="640" height="535"><span>海苔</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/173455/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre05.jpg" alt="調味料・食用油" loading="lazy" width="640" height="426"><span>調味料・食用油</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/10001/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre06.jpg" alt="洗剤・石鹸" loading="lazy" width="640" height="426"><span>洗剤・石鹸</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/9998/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre07.jpg" alt="タオル" loading="lazy" width="640" height="413"><span>タオル</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/10000/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre08.jpg" alt="寝具・マット" loading="lazy" width="640" height="400"><span>寝具・マット</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/9999/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre09.jpg" alt="食品・詰合せ" loading="lazy" width="640" height="535"><span>食品・詰合せ</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/316705/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre10.jpg" alt="カタログギフト" loading="lazy" width="640" height="431"><span>カタログギフト</span></a>
+</div>
+
+<div class="kg-h2" id="price_link"><span class="ja">金額から選ぶ</span><span class="en">P R I C E</span></div>
+<div class="kg-pgrid">
+  <a href="https://koudengaesi-e-shop.net/SHOP/315927/list.html"><span class="lbl">メーカー小売価格</span><span class="val">&#12316;1,000円</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315928/list.html"><span class="lbl">メーカー小売価格</span><span class="val">&#12316;1,500円</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315929/list.html"><span class="lbl">メーカー小売価格</span><span class="val">&#12316;2,000円</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315930/list.html"><span class="lbl">メーカー小売価格</span><span class="val">&#12316;2,500円</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315931/list.html"><span class="lbl">メーカー小売価格</span><span class="val">&#12316;3,000円</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315932/list.html"><span class="lbl">メーカー小売価格</span><span class="val">&#12316;3,500円</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315933/list.html"><span class="lbl">メーカー小売価格</span><span class="val">&#12316;4,000円</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315934/list.html"><span class="lbl">メーカー小売価格</span><span class="val">&#12316;5,000円</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315935/list.html"><span class="lbl">メーカー小売価格</span><span class="val">&#12316;10,000円</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/316453/list.html"><span class="lbl">メーカー小売価格</span><span class="val">10,001円&#12316;</span></a>
+</div>
+</div>
