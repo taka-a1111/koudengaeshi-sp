@@ -1665,18 +1665,25 @@ gtag('event', 'conversion', {'send_to': 'AW-1063854970/h5fKCNqPqeUcEPrGpPsD'});
 <!-- kg-omo demo step2 -->
 <style>
 @media (max-width:768px){
-/* ============ おもてなしサービス ============ */
-.kg-omo{margin:0;padding:0;background:#fff}
-.kg-omo-head{background:#fff;text-align:center;padding:30px 16px 20px;
-  border-bottom:7px solid #1A1A1A}
-.kg-omo-mk{display:block;width:52px;height:38px;margin:0 auto 10px;fill:#1A1A1A}
-.kg-omo-band{display:inline-block;background:#1A1A1A;color:#D8B863;
-  font-family:var(--mincho);font-size:14px;font-weight:600;letter-spacing:.16em;
-  padding:5px 22px 6px;margin-bottom:14px}
-.kg-omo-h2{margin:0;font-family:var(--mincho);font-size:24px;font-weight:600;
-  line-height:1.5;letter-spacing:.04em;color:#C08A2E}
+/* ============ おもてなしサービス ============
+   本番の html.kg-top *{margin:0;padding:0} が詳細度(0,1,1)で効くため、
+   全ルールに html.kg-top を付けて(0,2,1)以上にする。
+   セクション自身の余白は #main-column > section の !important に勝つ必要があるので
+   ID を含む(1,4,1)で指定する。 */
+html.kg-top #main-column section.kg-omo.kg-sp{
+  margin:0!important;padding:0!important;background:#fff}
 
-.kg-omo-body{
+html.kg-top .kg-omo-head{background:#fff;text-align:center;
+  padding:30px 16px 20px;border-bottom:7px solid #1A1A1A}
+html.kg-top .kg-omo-mk{display:block;width:52px;height:38px;
+  margin:0 auto 10px;fill:#1A1A1A}
+html.kg-top .kg-omo-band{display:inline-block;background:#1A1A1A;color:#D8B863;
+  font-family:var(--mincho);font-size:14px;font-weight:600;letter-spacing:.16em;
+  padding:5px 22px 6px;margin:0 0 14px}
+html.kg-top .kg-omo-h2{margin:0;font-family:var(--mincho);font-size:24px;
+  font-weight:600;line-height:1.5;letter-spacing:.04em;color:#C08A2E}
+
+html.kg-top .kg-omo-body{
   background:
     radial-gradient(120% 60% at 50% 0%,rgba(255,255,255,.9) 0%,rgba(255,255,255,0) 60%),
     repeating-linear-gradient(122deg,rgba(0,0,0,.030) 0 2px,rgba(255,255,255,0) 2px 7px),
@@ -1684,33 +1691,33 @@ gtag('event', 'conversion', {'send_to': 'AW-1063854970/h5fKCNqPqeUcEPrGpPsD'});
     linear-gradient(180deg,#F2F1EF 0%,#E4E3E1 46%,#EDECEA 100%);
   padding:6px 0 26px}
 
-.kg-omo-item{padding:26px 16px 30px;text-align:center;
+html.kg-top .kg-omo-item{padding:26px 16px 30px;text-align:center;
   border-bottom:1px solid rgba(0,0,0,.10)}
-.kg-omo-item:last-child{border-bottom:0}
+html.kg-top .kg-omo-item:last-child{border-bottom:0}
 
 /* 月桂冠と番号 */
-.kg-omo-no{position:relative;width:132px;height:142px;margin:0 auto 2px}
-.kg-omo-wr{position:absolute;left:0;top:22px;width:132px;height:120px}
-.kg-omo-lbl{position:absolute;left:0;right:0;top:0;
+html.kg-top .kg-omo-no{position:relative;width:132px;height:142px;margin:0 auto 2px}
+html.kg-top .kg-omo-wr{position:absolute;left:0;top:22px;width:132px;height:120px}
+html.kg-top .kg-omo-lbl{position:absolute;left:0;right:0;top:0;
   font-family:var(--mincho);font-size:12px;font-weight:600;line-height:1.35;
   letter-spacing:.06em;color:#B08A3C}
-.kg-omo-num{position:absolute;left:0;right:0;top:54px;
-  font-family:var(--mincho);font-size:54px;font-weight:700;line-height:1;
-  color:#C9A75B}
+html.kg-top .kg-omo-num{position:absolute;left:0;right:0;top:54px;
+  font-family:var(--mincho);font-size:54px;font-weight:700;line-height:1;color:#C9A75B}
 
 /* 見出し */
-.kg-omo-name{margin:2px 0 12px;font-family:var(--mincho);font-size:23px;
+html.kg-top .kg-omo-name{margin:2px 0 12px;font-family:var(--mincho);font-size:23px;
   font-weight:600;line-height:1.45;letter-spacing:.02em;color:#1A1A1A}
-.kg-omo-name em{font-style:normal;color:#C08A2E}
+html.kg-top .kg-omo-name em{font-style:normal;color:#C08A2E}
 
 /* 本文 */
-.kg-omo-txt{margin:0 0 16px;font-family:var(--mincho);font-size:15px;
+html.kg-top .kg-omo-txt{margin:0 0 16px;font-family:var(--mincho);font-size:15px;
   line-height:1.95;letter-spacing:.01em;color:#2B2B2B;text-align:justify;
   text-justify:inter-character}
 
 /* バナー */
-.kg-omo-bnr{display:block;margin:0 auto;max-width:347px}
-.kg-omo-bnr img{display:block;width:100%;height:auto;border:1px solid rgba(0,0,0,.10)}
+html.kg-top .kg-omo-bnr{display:block;margin:0 auto;max-width:347px}
+html.kg-top .kg-omo-bnr img{display:block;width:100%;height:auto;
+  border:1px solid rgba(0,0,0,.10)}
 
 /* 旧5ブロックはSPのみ非表示（PCは従来どおり表示） */
 html.kg-top .kg-legacy5{display:none!important}
