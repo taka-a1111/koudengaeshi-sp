@@ -1,4 +1,1027 @@
+<!--{if $pg =='shop'}-->
+<!--{if !$stores.isUseResponsiveTheme}-->
+<script type="text/javascript" src="/hpgen/HPB/theme/js/jquery.tile.js"></script>
+<script type="text/javascript" src="/hpgen/HPB/theme/js/jquery.distile.js"></script>
+<script type="text/javascript">
+{block name="pageMainColumnJs"}
+$(function($){
+    var elem1 = $('#main-column');
+    var elem2 = $('#sub-column');
+    $(window).on('resize load',function(){
+        $("#itemList > .column-set > .column4").tile(4);
+        $("#main-column .newItem > .column-set > .column4").tile(4);
+        $("#main-column .pickup > .column-set > .column5").tile(5);
+        $("#main-column .ranking > .column-set > .column5").tile(5);
+        $(".half-cont_wrap01 > .half-cont > div").tile(); //1つめの50％表示ボックスの高さ調整//
+        $(".half-cont_wrap02 > .half-cont > div").tile(); //2つめの50％表示ボックスの高さ調整//
+        if ($(elem1).offset().top ==  $(elem2).offset().top) {
+            // 縦型
+            $("#sub-column .newItem > .column-set > .column4").distile();
+            $("#sub-column .pickup > .column-set > .column5").distile();
+            $("#sub-column .ranking > .column-set > .column5").distile();
+        } else {
+            // 横型
+            $("#sub-column .newItem > .column-set > .column4").tile(4);
+            $("#sub-column .pickup > .column-set > .column5").tile(5);
+            $("#sub-column .ranking > .column-set > .column5").tile(5);
+        }
+    });
+});
+{/block}
+</script>
+<!--{/if}-->
+<script type="text/javascript" src="/SHOP/js/floating_menu.js"></script>
+<!--{else}-->
+<script type="text/javascript" src="https://cart<!--{$setNumber}-->.shopserve.jp/js/floating_menu.js"></script>
+<!--{/if}-->
+<!-- exp ここから -->
+{literal}
+<!-- レコメンド出力共通用＆追跡タグ挿入始まり -->
+<!-- サーバー状況確認共通スクリプト始まり -->
+<script type="text/javascript">
+if(!window.ExpSc){var ExpSc={f:0,h:"",m:{},c:function(){ExpSc.h=(location.protocol=="https:"?"https:":"http:");var i=document.createElement("img");i.style.display="none";i.onload=function(){ExpSc.f=2;};i.onerror=function(){ExpSc.f=1;};i.src=ExpSc.h+"//koudengaesi-e-shop.ec-optimizer.com/img/spacer.gif?t="+(new Date-0);document.body.appendChild(i);},r:function(u,i,p){ if(!ExpSc.f){setTimeout(function(){ExpSc.r(u,i,p);},9);}else if(ExpSc.f==2){ if(i){ if(ExpSc.m[i])return;ExpSc.m[i]=1;}var s=document.createElement("script");s.type="text/javascript";s.charset="UTF-8";if(i)s.id=i;for(var k in p)s.setAttribute(k,p[k]);s.src=ExpSc.h+u+"?t="+(new Date/(1<<20)|0);document.body.appendChild(s);}},s:function(){ if(document.readyState.match(/(^u|g$)/)){ if(document.addEventListener){document.addEventListener("DOMContentLoaded",ExpSc.c,!1);}else{setTimeout(ExpSc.s,0);}}else{ExpSc.c();}}};ExpSc.s();}
+</script>
+<!-- サーバー状況確認共通スクリプト終わり -->
+<!-- js呼び出しスクリプト始まり -->
+<script type="text/javascript">
+var expscrec=function(){ if(!window.ExpSc){setTimeout(expscrec,9);}else{ExpSc.r("//koudengaesi-e-shop.ec-optimizer.com/speights/dynrec2.js","fsrecommend",{});}};expscrec();
+</script>
+<!-- js呼び出しスクリプト終わり -->
+<!-- レコメンド出力共通用＆追跡タグ挿入終わり -->
+<script type="text/javascript">
+function addExplsid() {
+if (!window.ExpSid) {
+ setTimeout(addExplsid, 9);
+ return;
+}
+if (!ExpSid.sids) return;
+var obj = ExpSid.get("koudengaesi-e-shop");
+if (!obj || obj.f < 2) {
+ setTimeout(addExplsid, 9);
+ return;
+}
+var sid = obj.s;
+var list = document.getElementsByTagName("form");
+for (var i = 0; i < list.length; i++) {
+ var form = list[i];
+ if (typeof(form.action) == "string" && form.action.match(/shopserve.+cart\.\w+/) && !form.action.match(/EXPLsid/)) {
+  form.action = form.action + (form.action.indexOf("?") < 0 ? "?" : "&") + "EXPLsid=" + sid;
+ }
+}
+var list = document.getElementsByTagName("a");
+for (var i = 0; i < list.length; i++) {
+ var href = list[i].href;
+ if (href.match(/cart\d*\.shopserve.+cart\.\w+/) && !href.match(/EXPLsid/)) {
+  list[i].href = href + (href.indexOf("?") < 0 ? "?" : "&") + "EXPLsid=" + sid;
+ }
+}
+}
+$(document).ready(addExplsid);
+</script>
+{/literal}
+<!-- exp ここまで -->
+{literal}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('a[href="tel:0120984425"]').forEach(function (a) {
+    a.setAttribute('href', 'tel:0120994527');
+    var img = a.querySelector('img[src*="header_shop_phone_side"]');
+    if (img) {
+      img.src = 'https://koudengaesi-e-shop.net/pic-labo/freedial_banner_new.jpg';
+      img.alt = 'お問い合わせ電話番号 0120-994-527';
+      img.style.maxWidth = '430px';
+      img.style.width = '100%';
+      img.style.height = 'auto';
+    }
+  });
+});
+</script>
+{/literal}
+{literal}
+<script>
+/* 香典返しe-shop ／ 電話バナー 旧画像の一括差し替え
+   旧バナー画像（shop_phone.png / header_shop_phone_side）が、リンクの番号に関わらず
+   残っている箇所（フリーページ等）を、新バナーに置き換える。 */
+document.addEventListener('DOMContentLoaded', function () {
+  var NEW = 'https://koudengaesi-e-shop.net/pic-labo/freedial_banner_new.jpg';
+  document.querySelectorAll('img[src*="shop_phone.png"], img[src*="header_shop_phone_side"]').forEach(function (img) {
+    if ((img.getAttribute('src') || '').indexOf('freedial_banner_new') > -1) return;
+    img.src = NEW;
+    img.alt = 'お問い合わせ電話番号 0120-994-527';
+    img.style.maxWidth = '430px';
+    img.style.width = '100%';
+    img.style.height = 'auto';
+    var a = img.closest('a');
+    if (a && /^tel:/.test(a.getAttribute('href') || '')) a.setAttribute('href', 'tel:0120994527');
+  });
+  // 直書きで残っている旧番号リンク（tel:01209945276）を新番号に統一
+  document.querySelectorAll('a[href="tel:01209945276"], a[href="tel:0120-994-5276"]').forEach(function (a) {
+    a.setAttribute('href', 'tel:0120994527');
+  });
+});
+</script>
+{/literal}
+{literal}
+<script>
+/* 香典返しe-shop ／ 商品一覧 送料無料ラベル */
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.column-set .column4').forEach(function (card) {
+    var nameEl = card.querySelector('h2 a') || card.querySelector('h2');
+    if (!nameEl || nameEl.textContent.indexOf('【送料無料】') === -1) return;
+    if (card.querySelector('.ship-free')) return;
+    nameEl.innerHTML = nameEl.innerHTML.replace(/【送料無料】/g, '').trim();
+    var price = card.querySelector('.sp_price') || card.querySelector('.price');
+    var label = document.createElement('span');
+    label.className = 'ship-free';
+    label.textContent = '送料無料';
+    if (price && price.parentNode) {
+      price.parentNode.insertBefore(label, price.nextSibling);
+    } else {
+      card.appendChild(label);
+    }
+  });
+});
+</script>
+{/literal}
+{literal}
+<style>
+/* ============================================================
+   香典返しe-shop ／ 商品一覧ページ デザインCSS（穂乃香ベース・#itemList限定版）
+   ※ headタグへの追記で読み込む版。テーマCSSが反映されないため <style> で直接注入。
+   既存CSSとの競合・サイドバー巻き込みを避けるため、すべて #itemList に限定。
+   ============================================================ */
+#itemList .column-set{
+  display:grid !important;
+  grid-template-columns:repeat(3,1fr) !important;
+  gap:26px 20px !important;
+  margin:18px 0 !important;
+  overflow:visible !important;
+}
+#itemList .column-set .column4{
+  width:auto !important; float:none !important; clear:none !important;
+  margin:0 !important; padding-bottom:0 !important;
+  display:flex !important; flex-direction:column; position:relative;
+  border:none; background:none;
+}
+/* 商品画像（正方形・枠なし） */
+#itemList .column4 .itemThumb{margin:0 !important; text-align:center;}
+#itemList .column4 .itemThumb a{
+  display:block; border:none; border-radius:0; overflow:hidden;
+  background:#fff; aspect-ratio:1/1; width:100%; height:auto;
+}
+#itemList .column4 .itemThumb a img{
+  width:100% !important; height:100% !important;
+  max-width:none !important; max-height:none !important;
+  object-fit:cover; transition:.4s;
+}
+#itemList .column4:hover .itemThumb a img{transform:scale(1.04)}
+#itemList .column4{transition:.25s}
+/* 商品名（2行省略） */
+#itemList .column4 h2,
+article #main-column #itemList section.column4 h2{
+  background:none !important; border:none !important;
+  margin:12px 0 0 !important; padding:0 !important;
+  font-size:13.5px !important; font-weight:500 !important;
+  line-height:1.55 !important; height:auto !important; max-height:3.2em !important;
+  display:-webkit-box !important; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+}
+#itemList .column4 h2 a{color:#33302c !important; text-decoration:none}
+#itemList .column4 h2 a:hover{color:#6f573a !important}
+/* 定価（取り消し線）は非表示 */
+#itemList .column4 p.fx_price{display:none !important}
+/* 価格行：左寄せ・赤字価格＋赤いOFFバッジ */
+#itemList .column4 p.sp_price,
+#itemList .column4 p.price{
+  display:flex !important; align-items:flex-end; flex-wrap:wrap;
+  gap:0; margin:11px 0 0 !important; padding:0 !important; text-align:left !important;
+}
+/* 「価格:」ラベルは非表示（プレビューに合わせる） */
+#itemList .column4 .selling_price_str,
+#itemList .column4 .special_price_str{display:none !important}
+#itemList .column4 .selling_price{font-size:21px !important; font-weight:700; color:#c4302b !important; line-height:1}
+#itemList .column4 .taxin{font-size:11px !important; font-weight:500; color:#c4302b !important; margin-left:2px; line-height:1}
+#itemList .column4 .discount_rate{
+  background:#c4302b !important; color:#fff !important;
+  font-size:13.5px !important; font-weight:700; line-height:1;
+  padding:7px 9px !important; border-radius:5px; margin-left:9px; display:inline-block;
+}
+/* 送料無料ラベル（JSで価格直後に挿入・ゴールド枠） */
+#itemList .column4 .ship-free{
+  align-self:flex-start; margin-top:8px;
+  background:#fff !important; color:#9b8e67 !important; border:1.5px solid #9b8e67 !important;
+  font-size:11px; font-weight:700; padding:2.5px 10px; border-radius:4px; letter-spacing:.03em; display:inline-block;
+}
+/* レスポンシブ：2カラム */
+@media screen and (max-width:768px){
+  #itemList .column-set{grid-template-columns:repeat(2,1fr) !important; gap:20px 14px !important;}
+  #itemList .column4 .selling_price{font-size:19px !important}
+}
+@media screen and (max-width:480px){
+  #itemList .column-set{grid-template-columns:repeat(2,1fr) !important; gap:16px 10px !important;}
+  #itemList .column4 .selling_price{font-size:18px !important}
+  #itemList .column4 .discount_rate{font-size:12px !important; padding:6px 8px !important}
+}
+/* ============================================================
+   カテゴリページ 見出し・パンくず・ページャー（プレビュー合わせ）
+   ============================================================ */
+/* 見出し（明朝＋茶色の下線アクセント） */
+article h1.entry_title{
+  border:none !important; border-top:none !important;
+  margin:4px 0 20px !important; padding:0 0 14px !important;
+  font-family:"Hiragino Mincho ProN","YuMincho","Yu Mincho",serif !important;
+  font-size:30px !important; font-weight:600 !important; color:#33302c !important;
+  letter-spacing:.06em !important; line-height:1.3 !important; position:relative !important;
+}
+article h1.entry_title::after{
+  content:"" !important; position:absolute; left:2px; bottom:0; width:60px; height:3px; background:#8a6d4b;
+}
+/* パンくず（グレー・「>」区切り） */
+#bread-crumb{ margin:0 0 18px !important; }
+#bread-crumb-listTop ol li{ background:none !important; padding:0 !important; font-size:13px !important; color:#a59f95 !important; }
+#bread-crumb-listTop ol li + li::before{ content:">"; margin:0 9px; color:#cdc6ba; }
+#wrapper.spsDrawerClose div#contents article div#main-column div#bread-crumb nav#bread-crumb-listTop ol li a{ color:#a59f95 !important; }
+#bread-crumb-listTop ol li a:hover{ color:#6f573a !important; text-decoration:underline; }
+/* ページャー（枠ボックス・現在ページ＝塗り） */
+#pager-bm{ border-top:none !important; padding:24px 0 0 !important; text-align:center !important; }
+#pager-bm .quantity{ display:none !important; }
+#pager-bm .pagerlist{ float:none !important; }
+#pager-bm .pagerlist ul{ display:flex !important; flex-wrap:wrap; gap:8px; justify-content:center; margin:0 !important; padding:0 !important; }
+#pager-bm .pagerlist ul li{ float:none !important; padding:0 !important; margin:0 !important; font-size:15px !important; letter-spacing:0 !important; line-height:1 !important; list-style:none !important; background:none !important; }
+#pager-bm .pagerlist ul li a,
+#pager-bm .pagerlist ul li.selected{
+  display:flex !important; align-items:center; justify-content:center;
+  min-width:46px; height:46px; padding:0 14px; box-sizing:border-box;
+  border:1px solid #d4cdbf !important; background:#fff !important; color:#595757 !important; text-decoration:none !important;
+}
+#pager-bm .pagerlist ul li a:link,#pager-bm .pagerlist ul li a:visited{ color:#595757 !important; }
+#pager-bm .pagerlist ul li.selected{ background:#595757 !important; border-color:#595757 !important; color:#fff !important; font-weight:700; }
+#pager-bm .pagerlist ul li a:hover{ background:#f4efe6 !important; }
+#pager-top .pagerlist{ display:none !important; }
+/* 並べ替えツールバー（ネイティブselectをJSでタブUIに置換） */
+#pager-top .selectbox{ display:none !important; }
+#pager-top .pagerlist{ display:none !important; }
+#pager-top .quantity{ display:none !important; }
+/* テンプレート標準の「商品一覧」見出し（黒い太線）はカテゴリ名と重複するため非表示 */
+#itemList > h1{ display:none !important; }
+.kg-sortbar{ display:flex; align-items:center; flex-wrap:wrap; gap:2px 0; padding:14px 2px; border-top:1px solid #e7e2d8; border-bottom:1px solid #e7e2d8; margin:0 0 22px; }
+.kg-sortbar .kg-count{ font-size:14px; color:#4a4640; letter-spacing:.02em; }
+.kg-sortbar .kg-count b{ font-size:19px; font-weight:700; margin:0 2px; }
+.kg-sortbar .kg-sort-label{ color:#8a8378; font-size:14px; margin-left:auto; margin-right:14px; }
+.kg-sortbar .kg-tab{ background:none; border:0; cursor:pointer; font-family:inherit; font-size:14px; color:#9b958c; padding:0 20px; line-height:1.2; }
+.kg-sortbar .kg-tab:last-child{ padding-right:2px; }
+.kg-sortbar .kg-tab + .kg-tab{ border-left:1px solid #ddd6c9; }
+.kg-sortbar .kg-tab.active{ color:#2b2b2b; font-weight:700; }
+.kg-sortbar .kg-tab:hover{ color:#6f573a; }
+@media screen and (max-width:600px){ .kg-sortbar .kg-tab{ padding:0 12px; } .kg-sortbar .kg-sort-label{ margin-left:0; margin-right:8px; } }
+/* ============================================================
+   カテゴリ別 説明ボックス（一次情報）／JSで本文を差し込み
+   ============================================================ */
+.kg-cat-intro{ background:#f1ebdf; border-left:5px solid #8a6d4b; padding:22px 26px; margin:0 0 26px; border-radius:2px; }
+.kg-cat-intro .kg-cat-intro-ttl{ margin:0 0 12px !important; padding:0 !important; border:none !important; background:none !important; font-family:"Hiragino Mincho ProN","Yu Mincho",serif !important; font-size:19px !important; font-weight:600 !important; color:#6f573a !important; letter-spacing:.04em; line-height:1.4; }
+.kg-cat-intro p{ margin:0 !important; font-size:14.5px !important; line-height:1.95 !important; color:#4a4640 !important; letter-spacing:.02em; }
+@media screen and (max-width:768px){ .kg-cat-intro{ padding:18px 18px; } .kg-cat-intro .kg-cat-intro-ttl{ font-size:17px !important; } }
+/* ============================================================
+   トップページ ランキング（一覧と同じカード体裁・5枚並びとランクバッジは維持）
+   ============================================================ */
+#main-column .ranking .column5 .itemThumb{ margin:0 !important; }
+#main-column .ranking .column5 .itemThumb a{ display:block; }
+#main-column .ranking .column5 .item-list-span-img{ display:block !important; aspect-ratio:1/1; overflow:hidden; background:#fff; }
+#main-column .ranking .column5 .item-list-span-img img{ width:100% !important; height:100% !important; max-width:none !important; max-height:none !important; object-fit:cover; }
+#main-column .ranking .column5 h3{ font-size:13px !important; font-weight:500 !important; line-height:1.5 !important; margin:10px 0 0 !important; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; max-height:3em; }
+#main-column .ranking .column5 h3 a{ color:#33302c !important; text-decoration:none; }
+#main-column .ranking .column5 p.price{ margin:8px 0 0 !important; }
+#main-column .ranking .column5 .selling_price{ font-size:18px !important; font-weight:700; color:#c4302b !important; }
+#main-column .ranking .column5 .taxin{ font-size:11px !important; font-weight:500; color:#c4302b !important; margin-left:2px; }
+#main-column .ranking .column5 .ship-free{ display:inline-block; margin-top:7px; background:#fff; color:#9b8e67; border:1.5px solid #9b8e67; font-size:11px; font-weight:700; padding:2px 9px; border-radius:4px; letter-spacing:.03em; }
+</style>
+{/literal}
+{literal}
+<script>
+/* 香典返しe-shop ／ カテゴリ別 説明ボックス（既存のカテゴリ説明文を茶色枠に格納）
+   URLのカテゴリIDで対象判定。.contents-readarea 内の既存説明文テキストを枠の中へ移動（重複防止のため元は除去）。
+   .kg-cat-intro のCSSは head の <style> 側。 */
+(function(){
+  var TITLES={"48711": "お菓子ギフトについて", "173449": "お茶ギフトについて", "173451": "コーヒー・紅茶ギフトについて", "173450": "海苔ギフトについて", "173455": "調味料・食用油ギフトについて", "173457": "そうめんギフトについて", "9998": "タオルギフトについて", "10000": "寝具・マットギフトについて", "10001": "洗剤・石鹸ギフトについて", "173463": "入浴剤ギフトについて", "9999": "食品・詰合せギフトについて", "10483": "カタログギフトについて", "10002": "日用品・雑貨ギフトについて", "173459": "しいたけギフトについて"};
+  function run(){
+    var seg=location.pathname.split('/').filter(Boolean);
+    var id=null; for(var i=0;i<seg.length;i++){ if(TITLES[seg[i]]){ id=seg[i]; break; } }
+    if(!id) return;
+    var area=document.querySelector('.contents-readarea'); if(!area) return;
+    if(area.querySelector('.kg-cat-intro')) return;
+    var h1=area.querySelector('h1.entry_title'); if(!h1) return;
+    var desc=''; var rm=[];
+    area.childNodes.forEach(function(n){ if(n.nodeType===3){ var t=n.textContent.trim(); if(t){ desc+=t; rm.push(n);} } });
+    if(!desc) return;
+    rm.forEach(function(n){ n.parentNode.removeChild(n); });
+    var box=document.createElement('div'); box.className='kg-cat-intro';
+    var tt=document.createElement('div'); tt.className='kg-cat-intro-ttl'; tt.textContent=TITLES[id];
+    var p=document.createElement('p'); p.textContent=desc;
+    box.appendChild(tt); box.appendChild(p);
+    h1.parentNode.insertBefore(box, h1.nextSibling);
+  }
+  if(document.readyState!=='loading') run(); else document.addEventListener('DOMContentLoaded', run);
+})();
+</script>
+{/literal}
+{literal}
+<script>
+/* 香典返しe-shop ／ 並べ替えツールバー（ネイティブselectをタブUIに置換）
+   ③クライアント指示：上＝「〇〇件中1件&#12316;〇〇件を表示」、下＝「全〇〇件 並べ替え」。
+   そのため #pager-top の件数(.quantity)の直後にツールバーを挿入する。 */
+(function(){
+  var MAP={ "osusume":"pickup", "price":"prceup", "name":"nameup" };
+  function activeKey(v){
+    if(v==='prceup'||v==='prcedown') return 'price';
+    if(v==='nameup'||v==='namedown') return 'name';
+    return 'osusume';
+  }
+  function run(){
+    var top=document.querySelector('#pager-top'); if(!top) return;
+    if(top.querySelector('.kg-sortbar')) return;
+    var sel=document.querySelector('select[name=SortKey]'); if(!sel) return;
+    var qel=document.querySelector('#pager-bm .quantity')||document.querySelector('.quantity');
+    var total=''; if(qel){ var m=qel.textContent.replace(/,/g,'').match(/(\d+)\s*件中/); if(m) total=m[1]; }
+    var cur=activeKey(sel.value);
+    var bar=document.createElement('div'); bar.className='kg-sortbar';
+    var html='';
+    if(total) html+='<span class="kg-count">全<b>'+total+'</b>件</span>';
+    html+='<span class="kg-sort-label">並べ替え：</span>';
+    var tabs=[['osusume','おすすめ順'],['price','価格順'],['name','名前順']];
+    tabs.forEach(function(t){ html+='<button type="button" class="kg-tab'+(cur===t[0]?' active':'')+'" data-k="'+t[0]+'">'+t[1]+'</button>'; });
+    bar.innerHTML=html;
+    bar.querySelectorAll('.kg-tab').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var k=btn.getAttribute('data-k'); var v=MAP[k]; if(!v) return;
+        sel.value=v;
+        if(typeof window.changeSort==='function'){ window.changeSort(sel.form); }
+        else { sel.dispatchEvent(new Event('change',{bubbles:true})); }
+      });
+    });
+    var q=top.querySelector('.quantity');
+    if(q){ if(q.nextSibling) top.insertBefore(bar, q.nextSibling); else top.appendChild(bar); }
+    else { top.insertBefore(bar, top.firstChild); }
+  }
+  if(document.readyState!=='loading') run(); else document.addEventListener('DOMContentLoaded', run);
+})();
+</script>
+{/literal}
+{literal}
+<script>
+/* 香典返しe-shop ／ トップページ ランキング 送料無料ラベル
+   .ranking .column5 の商品名【送料無料】を検出し、価格直後にゴールド枠ラベルを挿入。
+   .ship-free 等のCSSは head の <style> 側（ランキング用ルール）。 */
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('#main-column .ranking .column5').forEach(function (card) {
+    var nameEl = card.querySelector('h3 a') || card.querySelector('h3');
+    if (!nameEl || nameEl.textContent.indexOf('【送料無料】') === -1) return;
+    if (card.querySelector('.ship-free')) return;
+    nameEl.innerHTML = nameEl.innerHTML.replace(/【送料無料】/g, '').trim();
+    var price = card.querySelector('.price') || card.querySelector('.sp_price');
+    var label = document.createElement('span');
+    label.className = 'ship-free';
+    label.textContent = '送料無料';
+    if (price && price.parentNode) {
+      price.parentNode.insertBefore(label, price.nextSibling);
+    } else {
+      card.appendChild(label);
+    }
+  });
+});
+</script>
+{/literal}
+{literal}
+<style>
+/* ============================================================
+   香典返しe-shop ／ 商品詳細ページ 注文フォーム＋価格
+   form-design-demo（承認モック）に準拠：価格／定価／注文フォーム／個数／カートボタン
+   ============================================================ */
+/* モックに出さない情報 */
+#pi_cart .publish_point,
+#pi_cart span.publish_point,
+#pi_cart tr.rg_price,
+#pi_cart .point{ display:none !important; }
+/* ----- 価格の表示順を「価格→定価」に並べ替え ----- */
+#pi_cart table:not(.spec) > tbody{ display:flex !important; flex-direction:column !important; }
+#pi_cart tr.price{ order:1 !important; margin:4px 0 4px !important; }
+#pi_cart tr.fx_price{ order:2 !important; margin:0 !important; }
+#pi_cart tr.rg_price{ order:3 !important; }
+/* 価格表の下マージンも詰めて、注文フォームとの隙間を縮める */
+#pi_cart table:not(.spec){ margin-bottom:0 !important; }
+/* ----- 価格行：ラベル直後に金額が並ぶ左寄せレイアウト（table-cellの幅を解除） ----- */
+#pi_cart tr.price,
+#pi_cart tr.fx_price{
+  display:flex !important;
+  align-items:flex-end !important;
+  justify-content:flex-start !important;
+  flex-wrap:wrap !important;
+  gap:8px !important;
+  text-align:left !important;
+}
+#pi_cart tr.fx_price{ align-items:baseline !important; }
+#pi_cart tr.price th,
+#pi_cart tr.fx_price th{
+  display:inline-block !important;
+  width:auto !important;
+  flex:0 0 auto !important;
+  white-space:nowrap !important;
+  padding:0 !important;
+  margin:0 !important;
+  vertical-align:baseline !important;
+  text-align:left !important;
+}
+#pi_cart tr.price td,
+#pi_cart tr.fx_price td{
+  display:inline-block !important;
+  width:auto !important;
+  flex:0 1 auto !important;
+  padding:0 !important;
+  margin:0 !important;
+  vertical-align:baseline !important;
+  text-align:left !important;
+}
+/* ----- 価格ラベル・金額（承認モック準拠：24px / 11px） ----- */
+#pi_cart .selling_price_str,
+#pi_cart .special_price_str{
+  font-size:14px !important;
+  font-weight:700 !important;
+  color:#222 !important;
+}
+#pi_cart tr.fx_price,
+#pi_cart .fx_price{
+  font-size:13px !important;
+  color:#666 !important;
+  font-weight:400 !important;
+}
+#pi_cart .fixed_price{
+  font-size:13px !important;
+  color:#8d8d8d !important;
+  font-weight:400 !important;
+  text-decoration:line-through !important;
+}
+#pi_cart .selling_price{
+  font-size:28px !important;
+  font-weight:700 !important;
+  color:#b52a1f !important;
+  line-height:1 !important;
+  letter-spacing:.01em !important;
+}
+/* (税込)：赤系（価格と揃える） */
+#pi_cart .taxin{
+  font-size:11px !important;
+  font-weight:700 !important;
+  color:#b52a1f !important;
+  margin-left:4px !important;
+}
+#pi_cart tr.fx_price .taxin{
+  font-size:13px !important;
+  font-weight:400 !important;
+  color:#666 !important;
+  margin-left:0 !important;
+}
+#pi_cart .discount_rate:empty{ display:none !important; }
+#pi_cart .discount_rate{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  height:32px !important;
+  background:#b52a1f !important;
+  color:#fff !important;
+  font-size:13px !important;
+  font-weight:700 !important;
+  line-height:1 !important;
+  padding:0 12px !important;
+  border-radius:4px !important;
+  margin-left:12px !important;
+  vertical-align:middle !important;
+}
+/* ----- 注文ブロック全体（価格・フォーム・カート）の最大幅 ----- */
+#pi_cart{
+  max-width:420px !important;
+}
+/* ----- 注文フォーム枠囲い ----- */
+#pi_cart table.spec{
+  background:#F6EFE8 !important;
+  border:1px solid #e3dac6 !important;
+  border-top-left-radius:10px !important;
+  border-top-right-radius:10px !important;
+  border-bottom-left-radius:0 !important;
+  border-bottom-right-radius:0 !important;
+  border-bottom:none !important;
+  padding:14px 16px 8px !important;
+  box-sizing:border-box !important;
+  width:100% !important;
+  border-collapse:separate !important;
+  border-spacing:0 !important;
+  margin-top:12px !important;
+  margin-bottom:0 !important;
+}
+/* ----- カートボタンを枠の中に取り込む（cartAreaを枠の下半分として接続） ----- */
+#pi_cart .cartArea{
+  background:#F6EFE8 !important;
+  border:1px solid #e3dac6 !important;
+  border-top:none !important;
+  border-bottom-left-radius:10px !important;
+  border-bottom-right-radius:10px !important;
+  padding:0 16px 8px !important;
+  margin:0 !important;
+  box-sizing:border-box !important;
+  width:100% !important;
+}
+#pi_cart #cartButton{
+  margin:0 !important;
+  padding:0 !important;
+  text-align:center !important;
+  position:relative !important;
+}
+/* 標準のGIFボタンは非表示（クリック処理は維持） */
+#pi_cart #cartButton input[type=image]{
+  display:none !important;
+}
+/* カスタムカートボタン（モック準拠：グラデーション黒・56px高・16px文字） */
+#pi_cart .kg-cart-btn{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:12px !important;
+  width:100% !important;
+  height:56px !important;
+  padding:0 !important;
+  background:linear-gradient(90deg, #232323 0%, #2c2c2c 50%, #232323 100%) !important;
+  color:#fff !important;
+  border:none !important;
+  border-radius:6px !important;
+  font-size:16px !important;
+  font-weight:700 !important;
+  font-family:メイリオ, Meiryo, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif !important;
+  letter-spacing:.04em !important;
+  cursor:pointer !important;
+  box-sizing:border-box !important;
+  line-height:1 !important;
+}
+#pi_cart .kg-cart-btn:hover{ filter:brightness(1.1) !important; }
+#pi_cart .kg-cart-btn img{
+  width:30px !important;
+  height:28px !important;
+  display:block !important;
+  flex-shrink:0 !important;
+}
+#pi_cart table.spec tr{
+  display:block !important;
+  margin:0 0 9px !important;
+}
+#pi_cart table.spec tr.kg-hide{ display:none !important; }
+#pi_cart table.spec tr:last-child{ margin-bottom:0 !important; }
+#pi_cart table.spec th,
+#pi_cart table.spec td{
+  display:block !important;
+  width:auto !important;
+  text-align:left !important;
+  border:none !important;
+  padding:0 !important;
+  background:none !important;
+}
+#pi_cart table.spec th{
+  font-size:14px !important;
+  font-weight:700 !important;
+  color:#111 !important;
+  margin:0 0 3px !important;
+  letter-spacing:0 !important;
+  line-height:1.4 !important;
+}
+#pi_cart table.spec .kg-note{
+  font-size:11px !important;
+  color:#222 !important;
+  line-height:1.4 !important;
+  margin:0 0 1px !important;
+  font-weight:400 !important;
+}
+#pi_cart table.spec select,
+#pi_cart table.spec input[type=text]{
+  width:100% !important;
+  min-height:30px !important;
+  padding:4px 9px !important;
+  border:1px solid #9ca4b0 !important;
+  border-radius:5px !important;
+  background:#fff !important;
+  font-size:13px !important;
+  font-family:メイリオ, Meiryo, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif !important;
+  color:#111 !important;
+  margin-top:0 !important;
+  box-sizing:border-box !important;
+  line-height:1.4 !important;
+  height:auto !important;
+}
+#pi_cart table.spec input[type=text]::placeholder{ color:#777 !important; opacity:1 !important; }
+/* 通信欄案内：モックと同じく挨拶状の下に表示 */
+#pi_cart .kg-cart-guide{
+  font-size:12px !important;
+  color:#111 !important;
+  line-height:1.5 !important;
+  margin:6px 0 0 !important;
+}
+/* 個数 */
+#pi_cart table.spec tr.kg-qty{
+  display:flex !important;
+  align-items:center !important;
+  gap:6px !important;
+  margin-top:4px !important;
+}
+#pi_cart table.spec tr.kg-qty th,
+#pi_cart table.spec tr.kg-qty td{
+  display:inline-flex !important;
+  align-items:center !important;
+  width:auto !important;
+}
+#pi_cart table.spec tr.kg-qty th{
+  margin:0 4px 0 0 !important;
+  font-size:13px !important;
+}
+#pi_cart table.spec tr.kg-qty input[type=text]{
+  width:50px !important;
+  min-height:26px !important;
+  display:inline-block !important;
+  margin:0 5px 0 0 !important;
+  padding:2px 6px !important;
+  text-align:left !important;
+}
+/* カートボタンは ShopServe 標準ボタン（黒地・白カートアイコン入りの btn_cartl.gif）を
+   そのまま使用する。承認モックと同じ黒ボタンのため、独自ボタンへの置換は行わない
+   （置換するとカート機能を壊すリスクがあるため）。 */
+@media screen and (max-width:768px){
+  #pi_cart table.spec{ padding:18px 16px 20px !important; }
+}
+</style>
+{/literal}
+{literal}
+<script>
+/* 香典返しe-shop ／ 商品詳細
+   - demoに合わせて価格の円マーク（U+00A5 / U+FFE5）を除去し「2,970円」表記に統一
+   - ※ ShopServe管理画面は SJIS で円記号(U+00A5)とバックスラッシュ(U+005C)を同コードで扱うため、
+       JS内では必ずUnicodeエスケープ（\u00A5, \uFFE5）で記述すること。生の半角円記号(U+00A5)は使わない。
+   - フォーム文言、個数、通信欄案内を整形
+   - カートボタンは ShopServe 標準（黒）をそのまま使用、商品名の【送料無料】も保持 */
+document.addEventListener('DOMContentLoaded', function () {
+  var piCart = document.querySelector('#pi_cart');
+  if (!piCart) return;
+  /* 価格表記を「(円記号)2,970」→「2,970円」へ。ShopServeの遅延描画＆再描画の両方に対応。
+     (税込)等の非数値テキストや標準カートボタンには一切触れない。冪等。 */
+  (function(){
+    var YEN = /[\u00A5\uFFE5]/;          /* 円記号（半角・全角どちらも） */
+    var YEN_G = /[\u00A5\uFFE5]\s*/g;
+    var YEN_NUM_G = /[\u00A5\uFFE5]\s*([0-9][0-9,]*)(\u5186)?/g; /* \u5186 = 円 */
+    function convertEl(el){
+      if(!el) return;
+      var raw = el.textContent;
+      /* 円記号が無く既に「円」が付いていればスキップ */
+      if(!YEN.test(raw) && /\u5186/.test(raw)) return;
+      var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+      var nodes = [];
+      while(walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(function(n){
+        var v = n.textContent;
+        if(YEN.test(v)){
+          if(/[\u00A5\uFFE5]\s*[0-9]/.test(v)){
+            v = v.replace(YEN_NUM_G, function(_, num, yen){ return num + (yen ? yen : '\u5186'); });
+          } else {
+            v = v.replace(YEN_G, '');
+          }
+          if(v !== n.textContent) n.textContent = v;
+        }
+      });
+      /* 数字のみで「円」が無ければ末尾に「円」を付与（円記号が別ノードだった場合の保険） */
+      var full = el.textContent;
+      if(/[0-9]/.test(full) && !/\u5186/.test(full) && !YEN.test(full)){
+        var leaf = nodes.filter(function(n){ return /[0-9]/.test(n.textContent); }).pop();
+        if(leaf) leaf.textContent = leaf.textContent.replace(/([0-9])(\s*)$/, '$1\u5186');
+      }
+    }
+    function runConvert(){
+      piCart.querySelectorAll('.selling_price').forEach(convertEl);
+      piCart.querySelectorAll('.fixed_price').forEach(convertEl);
+    }
+    runConvert();
+    /* ポーリング（最初の30秒は250msごと、その後は1秒ごとに永続実行） */
+    var t = 0;
+    var fast = setInterval(function(){
+      runConvert();
+      if(++t >= 120){ clearInterval(fast); setInterval(runConvert, 1000); }
+    }, 250);
+    /* MutationObserverは永続化（disconnectしない）。ShopServeの再描画にも追従。 */
+    if(window.MutationObserver){
+      var mo = new MutationObserver(runConvert);
+      mo.observe(piCart, {childList:true, subtree:true, characterData:true});
+    }
+  })();
+  /* 商品名の【送料無料】は承認モックと同じくそのまま表示（変換しない） */
+  /* 注文フォーム整形 */
+  var tbl = piCart.querySelector('table.spec');
+  if (!tbl) return;
+  if (tbl.getAttribute('data-kg-form') === '1') return;
+  tbl.setAttribute('data-kg-form', '1');
+  var MAP = [
+    [/のし紙/, 'のし紙：', '※分からない方は、「蓮なし（黒白水引）」をお選び下さい。', 'noshi'],
+    [/のし上/, 'のし上：表書き', '※分からない方は、「志」をお選び下さい。', 'noshiue'],
+    [/のし下/, 'のし下：お名前', '※必要な場合のみ、ご記入下さい。', 'noshishita'],
+    [/包装紙/, '包装紙：', '※分からない方は、「菊小紋」をお選び下さい。', 'wrap'],
+    [/挨拶状/, '挨拶状：', '※分からない方は、「香典返し用定型分」をお選び下さい。', 'letter']
+  ];
+  function removeExtraText(td){
+    [].slice.call(td.childNodes).forEach(function(n){
+      if(n.nodeType === 3){
+        if(n.textContent.trim()) td.removeChild(n);
+        return;
+      }
+      if(n.nodeType === 1){
+        if(n.classList && (n.classList.contains('kg-note') || n.classList.contains('kg-cart-guide'))){ n.remove(); return; }
+        if(n.querySelector && n.querySelector('select,input,textarea')) return;
+        if(/^(SELECT|INPUT|TEXTAREA|OPTION)$/.test(n.tagName)) return;
+        td.removeChild(n);
+      }
+    });
+  }
+  function shortenOptions(select, key){
+    if(!select) return;
+    [].slice.call(select.options || []).forEach(function(opt){
+      var txt = opt.textContent.replace(/\s+/g, ' ').trim();
+      if(key === 'noshi'){
+        if(/蓮なし/.test(txt)) opt.textContent = '蓮なし（黒白水引）';
+        else if(/蓮入|蓮あり/.test(txt)) opt.textContent = '蓮あり（黒白水引）';
+        else if(/黄白/.test(txt)) opt.textContent = '黄白水引';
+        else if(/デザイン掛け紙|掛け紙不要/.test(txt)) opt.textContent = '掛け紙不要';
+      }
+      if(key === 'wrap'){
+        if(/菊小紋/.test(txt)) opt.textContent = '菊小紋';
+      }
+      if(key === 'letter'){
+        if(/香典返し用定型文（小）|香典返し用定型文（大）|香典返し用定型分/.test(txt)) opt.textContent = '香典返し用定型分';
+        if(/挨拶状不要|不要/.test(txt)) opt.textContent = '不要';
+      }
+    });
+  }
+  var aisatsuTd = null;
+  tbl.querySelectorAll('tr').forEach(function (tr) {
+    var th = tr.querySelector('th');
+    if (!th) return;
+    var t = th.textContent.replace(/^\s*[0-9０-９]+[\.．、]?\s*/, '');
+    if (/備考|ご要望/.test(t) || /^\s*在庫/.test(t) || /販売期間/.test(t)) {
+      tr.classList.add('kg-hide');
+      return;
+    }
+    if (/数量|個数/.test(t)) {
+      th.textContent = '個数：';
+      tr.classList.add('kg-qty');
+      return;
+    }
+    for (var i = 0; i < MAP.length; i++) {
+      if (MAP[i][0].test(t)) {
+        th.textContent = MAP[i][1];
+        var td = tr.querySelector('td');
+        if (td) {
+          removeExtraText(td);
+          var note = document.createElement('div');
+          note.className = 'kg-note';
+          note.textContent = MAP[i][2];
+          td.insertBefore(note, td.firstChild);
+          shortenOptions(td.querySelector('select'), MAP[i][3]);
+          if (MAP[i][3] === 'noshishita') {
+            var inp = td.querySelector('input[type=text]');
+            if (inp) inp.setAttribute('placeholder', '例：山田');
+          }
+          if (MAP[i][3] === 'letter') aisatsuTd = td;
+        }
+        break;
+      }
+    }
+  });
+  if (aisatsuTd && !tbl.querySelector('.kg-cart-guide')) {
+    var guide = document.createElement('div');
+    guide.className = 'kg-cart-guide';
+    guide.innerHTML = '「宗教別名前入り挨拶状」を選択された方・「手提げ袋」<br>などのご要望は<span style="color:#284bcb;font-weight:700">カート内の通信欄</span>にご記入下さい。';
+    aisatsuTd.appendChild(guide);
+  }
+  /* カスタムカートボタン：標準のGIFは隠して、大きめの黒ボタンを挿入。
+     クリック時は元の input[type=image] を click() して、ShopServeの cartin() を確実に呼び出す。
+     これでカート機能を維持しつつ、見た目だけ承認モック準拠の大きいボタンに置き換え。 */
+  (function(){
+    var origBtn = document.querySelector('#pi_cart #cartButton input[type=image]');
+    if(!origBtn) return;
+    if(document.querySelector('#pi_cart .kg-cart-btn')) return;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'kg-cart-btn';
+    btn.innerHTML = '<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAwCAYAAAC8NUKEAAADHUlEQVR4nM3ZT4gcRRjG4WdFDXgIiBIEkZUoQkA0BsFbbgaEHPQiIkIuOXnyKh5kRY85BW8eoh6Ca1CDIVGRKIpIDOq6s26IBEmiSFgQBSPqLvJ56BkYe3u6e7qqd/YHCztf11f1vlPV9W/mImLBZG7CDvyDD/BZTdmZMxcR0bLs59jfp5hUpjEDD+PrvsSkcsOU5Z/uRUUm5iLi4oRnO3FHKXYFd/eqKIG5mlF2P87hllL8UXzcp6iu1A2zFXxaEX+mHynp1PUMHMKxUuxvnO9LUAduxhd4ucnMLqzitq1QlchLTbPZGk5thZJENjDfZmpe7FtJBjYwaGPmNC71LCaVv7Q0A2/3qSQDv2C5rZlFRVduVy7hWlszS/imPy3JfMd0e7PtPNTOM52ZE7jej5YkfjUcNdOYuYKzvchJ40tcY/ojwPH8WpL5cPRP03amzK2K7U35aDArruNB/Mj0PfOb7bW9OWtohOnNwFv5tCTz2viHaYfZiFXsySKnO0t4aDzQpWfgvVQlGXi1HOjaM3vxleJebRYM8EA52LVnlsx2e/NCVbCrGWa3vXkd71c96DrMYLeiu8u3N31yDo8plohNpJih+IYOlmIDxfy/I6XiCi7gTROMwI2JDZyw2cwGnkustxMp7wycUexax9lnRhfsqWbW8FFF/LDiendLSX1n4Am8UxH/Gf+mVj7GKhYUk0AlOczAZcznqKiBAQ4Ynl/KpA6zEUcz1dPEPbh30sNcZo7g3Ux11THAD5Me5hpmI57F44rDW64vasQyXsH3kwrkNjNTUhfNSezBk7gd6zip/S/VhxS/nVKs+sfVrPr/IyJy/z0fEeuxmTca8u6LiJWKvKsRsb9N27mNPFUhZpyjNbkXa/J+j4g7t9rMaoOZiIj5irzDLfKONLWfc8bZpWYNGGPTCRGPtMjb11Qg9/TZlSw6cppZU1zhNnGhIvZti7yVxhKZ35mmsX9sQt7OiPipJm89InY3tZ/bjIhYiIg/KsQsNuTtjYjlCiOXI+JAm7b7MCOKKfrqUMyfEfFiy7y7IuLkmJFPhiZbtfsfUAZ6jtWcRLMAAAAASUVORK5CYII=" alt="" aria-hidden="true"><span>カートに入れる</span>';
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      /* 元のボタンをクリック → ShopServe標準の onclick="setElapsedTime(this.form); return cartin(this);" が発火 */
+      origBtn.click();
+    });
+    origBtn.parentNode.appendChild(btn);
+  })();
+});
+</script>
+{/literal}
+{literal}
+<style>
+/* ============================================================
+   香典返しe-shop ／ 商品詳細 価格・カート 微調整（v8）
+   ① 価格行：数字・(税込)・OFFバッジを下端で揃える
+   ② 個数&#12316;カートボタンの距離を詰める
+   ③ 読込時の円マークちらつき防止（変換完了まで価格を不可視）
+   ④ のし下「お名前」入力欄の幅を注釈文の幅程度に短縮
+   ============================================================ */
+/* ① 価格セルを下端揃えのflexにする（バッジの vertical-align:middle 浮きを解消） */
+#pi_cart tr.price td{
+  display:flex !important;
+  align-items:flex-end !important;
+  flex-wrap:nowrap !important;
+  gap:0 !important;
+}
+#pi_cart tr.price .taxin{ align-self:flex-end !important; }
+#pi_cart tr.price .discount_rate{ align-self:flex-end !important; vertical-align:baseline !important; }
+/* ② 個数行の下マージンを消し、フォーム枠の下パディングを詰める（一つ前の間隔=10px に戻し） */
+#pi_cart table.spec tr.kg-qty{ margin-bottom:0 !important; }
+#pi_cart table.spec{ padding-bottom:10px !important; }
+@media screen and (max-width:768px){
+  #pi_cart table.spec{ padding-bottom:10px !important; }
+}
+/* ④ のし下「お名前」入力欄の幅を注釈「※必要な場合のみ、ご記入下さい。」程度に */
+#pi_cart table.spec input[placeholder="例：山田"]{
+  width:180px !important;
+  max-width:100% !important;
+}
+/* ③ 円マークのちらつき防止：変換が終わるまで価格を不可視（レイアウトは保持） */
+#pi_cart .selling_price,
+#pi_cart .fixed_price{ visibility:hidden !important; }
+#pi_cart.kg-price-ready .selling_price,
+#pi_cart.kg-price-ready .fixed_price{ visibility:visible !important; }
+</style>
+{/literal}
+{literal}
+<script>
+/* 香典返しe-shop ／ 価格のちらつき防止
+   円マーク除去JSが「2,916円」に整えたら #pi_cart に kg-price-ready を付与して表示する。
+   万一変換が走らなくても2秒後には必ず表示する（価格が消えたままにならない安全策）。 */
+(function(){
+  var YEN=/[\u00A5\uFFE5]/;
+  function ready(){
+    var pc=document.querySelector('#pi_cart'); if(!pc) return false;
+    var els=pc.querySelectorAll('.selling_price'); if(!els.length) return false;
+    for(var i=0;i<els.length;i++){ var t=els[i].textContent;
+      if(!/[0-9]/.test(t)) return false;   /* まだ価格未描画 */
+      if(YEN.test(t)) return false;          /* まだ円マークが残っている */
+    }
+    return true;
+  }
+  function reveal(){ var pc=document.querySelector('#pi_cart'); if(pc) pc.classList.add('kg-price-ready'); }
+  function tick(){ if(ready()){ reveal(); return true; } return false; }
+  function start(){
+    if(tick()) return;
+    var n=0, iv=setInterval(function(){ if(tick()||++n>20){ clearInterval(iv); reveal(); } },100);
+    if(window.MutationObserver){
+      var pc=document.querySelector('#pi_cart');
+      if(pc){ var mo=new MutationObserver(function(){ tick(); }); mo.observe(pc,{childList:true,subtree:true,characterData:true}); }
+    }
+  }
+  if(document.readyState!=='loading') start(); else document.addEventListener('DOMContentLoaded', start);
+})();
+</script>
+{/literal}
+<!-- ▼ サイドバー カテゴリ2階層 アコーディオン ここから（v2：矢印非表示・ドロワー対応） ▼ -->
+{literal}<style>
+/* 子カテゴリは初期状態で折りたたみ（JSでkg-openを付けたときだけ表示） */
+nav.kg-acc ul.sps-itemCategorySub{display:none}
+nav.kg-acc.kg-open ul.sps-itemCategorySub{display:block}
+/* 親行のトグル（＋/－） */
+nav.kg-acc ul.sps-itemCategoryMain li.cat1{position:relative}
+/* テーマ標準の「＞」矢印はトグルと重なるため、アコーディオン対象の親行のみ非表示 */
+nav.kg-acc ul.sps-itemCategoryMain li.cat1 a::after{display:none !important;content:none !important}
+/* テキストがトグルに被らないよう右余白を確保 */
+nav.kg-acc ul.sps-itemCategoryMain li.cat1 a{padding-right:36px !important}
+nav.kg-acc .kg-acc-toggle{
+  position:absolute;right:8px;top:50%;transform:translateY(-50%);
+  width:22px;height:22px;line-height:20px;text-align:center;
+  font-size:16px;font-weight:700;color:#666;cursor:pointer;
+  border:1px solid #ccc;border-radius:3px;background:#fff;box-sizing:border-box;
+  -webkit-user-select:none;user-select:none;
+}
+nav.kg-acc .kg-acc-toggle:hover{background:#f2f2f2}
+</style>{/literal}
+{literal}<script>
+(function(){
+  function initAccordion(root){
+    var navs = (root || document).querySelectorAll('div.category section.tatenarabi nav');
+    navs.forEach(function(nav){
+      if(nav.classList.contains('kg-acc')) return; // 二重適用防止（nav単位）
+      var main = nav.querySelector('ul.sps-itemCategoryMain li.cat1');
+      var sub  = nav.querySelector('ul.sps-itemCategorySub li.cat2');
+      if(!main || !sub) return; // 子を持たない単独リストには触らない
+      nav.classList.add('kg-acc');
+      var btn = document.createElement('span');
+      btn.className = 'kg-acc-toggle';
+      btn.textContent = '＋';
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var open = nav.classList.toggle('kg-open');
+        btn.textContent = open ? '－' : '＋';
+      });
+      main.appendChild(btn);
+    });
+  }
+  function start(){
+    initAccordion();
+    /* サイドバーやドロワーメニューが遅延描画された場合に備えたポーリング（500ms×20回） */
+    var tries = 0;
+    var timer = setInterval(function(){
+      tries++;
+      initAccordion();
+      if(tries >= 20){ clearInterval(timer); }
+    }, 500);
+    /* さらに、後からDOMに追加されたカテゴリツリー（ドロワー等）にも常時対応 */
+    if(window.MutationObserver){
+      var mo = new MutationObserver(function(muts){
+        for(var i=0;i<muts.length;i++){
+          if(muts[i].addedNodes && muts[i].addedNodes.length){ initAccordion(); return; }
+        }
+      });
+      mo.observe(document.body, {childList:true, subtree:true});
+    }
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
+  }
+})();
+</script>{/literal}
+<!-- ▲ サイドバー カテゴリ2階層 アコーディオン ここまで ▲ -->
+<!-- ▼▼ トップページ 中央揃え修正（PC）ここから ▼▼ -->
+{literal}
+<script>
+(function(){
+  var p = location.pathname;
+  if (p === '/' || p === '/index.html' || p === '/index.php') {
+    document.documentElement.className += ' kg-top';
+  }
+})();
+</script>
+<style>
+@media (min-width: 768px) {
+  /* 見出しを中央揃え（カテゴリ・金額セクションと統一） */
+  html.kg-top #center h2,
+  html.kg-top .cont h2,
+  html.kg-top h2.top_h2 { text-align: center !important; }
 
+  /* フリーエリア内のバナー・アイコン群を中央揃え */
+  html.kg-top .freeTop .free-contents { text-align: center !important; }
+  html.kg-top .freeTop .free-contents img { display: inline-block !important; }
+
+  /* バナー・特典ボックスを包むブロック(max-width付き)を中央へ */
+  html.kg-top .freeTop .free-contents .recommend-item,
+  html.kg-top .freeTop .free-contents .toku {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 本文テキストはカテゴリ幅(約738px)に合わせて中央配置・文字は左揃えのまま */
+  html.kg-top .freeTop .free-contents p {
+    text-align: left;
+    max-width: 738px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  html.kg-top section.cont > p,
+  html.kg-top section.cont > div > p {
+    max-width: 738px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ブランドから選ぶ等の720pxグリッドを中央へ */
+  html.kg-top .column-set.top_responsive4 {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  /* ---- 下部の共通エリア(.footer_area)：全ページ（トップ・商品ページ・カート）で中央揃え ---- */
+  .footer_area h2 { text-align: center !important; }
+  .footer_area ul.top_priceList2,
+  .footer_area ul.top_priceList { text-align: center !important; padding-left: 0 !important; }
+  /* カート等の広い本文幅でも4個ずつ2段（4×2）で折り返すよう幅を固定して中央配置 */
+  .footer_area ul.top_priceList {
+    max-width: 864px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .footer_area .recommend-item,
+  .footer_area .toku {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+</style>
+{/literal}
+<!-- ▲▲ トップページ 中央揃え修正（PC）ここまで ▲▲ -->
+<!-- kg-sp 2026-08-28 -->
 <!-- ======== SP改装 2026-08-28 kg ここから ======== -->
 {literal}
 <script>
@@ -474,3 +1497,103 @@ var kgStrip=function(){if(!kgIsTop)return;document.querySelectorAll('.ranking .i
 </script>
 {/literal}
 <!-- ======== SP改装 2026-08-28 kg ここまで ======== -->
+
+
+<!-- kg-fix 2026-08-31 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap">
+{literal}
+<style>
+@media (max-width:768px){
+/* 6大特典をリンク化したことによる文字色・下線の打ち消し */
+html.kg-top a.kg-benefit-item{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
+html.kg-top a.kg-benefit-item:hover,html.kg-top a.kg-benefit-item:visited{color:inherit;text-decoration:none}
+/* ご挨拶（ショップからのお知らせ）を中央揃え */
+html.kg-top section.cont>.news{text-align:center}
+html.kg-top section.cont>.news>h2{text-align:center}
+html.kg-top section.cont>.news .news-box,html.kg-top section.cont>.news .news-box dd{text-align:center}
+/* 人気ランキングの上に、ご挨拶と同じ黒罫を追加 */
+html.kg-top .kg-rankhead{border-top:3px solid #333;margin-left:14px;margin-right:14px}
+}
+</style>
+{/literal}
+<!-- ======== kg-fix 2026-08-31 ここまで ======== -->
+
+<!-- kg-rank 2026-08-31 -->
+{literal}
+<style>
+@media (max-width:768px){
+/* ============ 人気ランキング カードをデモ準拠へ ============
+   No.表示（順位バッジ）の指定には一切触れない。
+   旧テーマ側が #main-column 付きの !important で効いているため、
+   こちらも #main-column を付けて詳細度で上回る必要がある。 */
+
+/* カード枠: 角丸と影をやめ、1px の細枠へ */
+html.kg-top #main-column .ranking .kg-rcard{
+  background:#fff!important;
+  border:1px solid #E9E9E9!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  padding:0 0 9px!important;
+}
+
+/* 商品写真: 全体が見えるよう contain へ */
+html.kg-top #main-column .ranking .itemThumb-wrap{background:#fff!important}
+html.kg-top #main-column .ranking .item-list-span-img img,
+html.kg-top #main-column .ranking .itemThumb img{
+  object-fit:contain!important;
+  max-width:100%!important;
+  max-height:100%!important;
+}
+
+/* 送料無料ラベル */
+html.kg-top #main-column .ranking .ship-free{
+  background:rgba(26,26,26,.62)!important;
+  color:#fff!important;
+  border:0!important;
+  font-size:11px!important;
+  font-weight:400!important;
+  padding:5px 11px!important;
+  left:0!important;
+  bottom:9px!important;
+}
+
+/* 商品名: 上余白は margin で取る（padding だと2行クランプの高さを食う） */
+html.kg-top #main-column .ranking .column5 h3{
+  margin:17px 0 0!important;
+  padding:0 18px!important;
+  font-size:12.5px!important;
+  font-weight:700!important;
+  line-height:19.375px!important;
+  -webkit-line-clamp:2!important;
+}
+html.kg-top #main-column .ranking .column5 h3 a{
+  color:#1A1A1A!important;
+  font-size:12.5px!important;
+  font-weight:700!important;
+  line-height:19.375px!important;
+  -webkit-line-clamp:2!important;
+}
+
+/* 価格: 赤をやめて黒へ */
+html.kg-top #main-column .ranking .column5 .price{
+  margin:0!important;
+  padding:5px 18px 12px!important;
+}
+html.kg-top #main-column .ranking .column5 .selling_price{
+  color:#1A1A1A!important;
+  font-size:17px!important;
+  font-weight:700!important;
+  line-height:28.9px!important;
+}
+html.kg-top #main-column .ranking .column5 .selling_price .taxin,
+html.kg-top #main-column .ranking .column5 .taxin{
+  color:#666!important;
+  font-size:11px!important;
+  font-weight:400!important;
+}
+}
+</style>
+{/literal}
+<!-- ======== kg-rank 2026-08-31 ここまで ======== -->
