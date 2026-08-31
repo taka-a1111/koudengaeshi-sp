@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- BUILD_TAG: 2026-08-31-omo1 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>香典返しe-shop｜スマートフォンデザイン案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pl-deep:#41214B;
+  --pl-main:#5E2E6B;
+  --pl-mid:#7A4489;
+  --pl-soft:#EFE7F2;
+  --pl-line:#D9C9DF;
+  --gy-dark:#3B3B3B;
+  --gy-mid:#6E6E6E;
+  --gy-line:#DDDDDD;
+  --gy-bg:#F6F5F4;
+  --txt:#2B2B2B;
+  --txt-sub:#666666;
+  --wh:#FFFFFF;
+  --gold:#B99A5B;
+  --red:#C0392B;
+  --mincho:"Shippori Mincho","Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","YuMincho","Yu Mincho","游明朝","Noto Serif CJK JP","Source Han Serif JP","MS PMincho",serif;
+  --gothic:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro","YuGothic","Yu Gothic","游ゴシック","Noto Sans CJK JP","Source Han Sans JP","Meiryo","メイリオ",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--gothic);color:var(--txt);background:#E9E7E4;-webkit-text-size-adjust:100%;line-height:1.7}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+
+.stage{max-width:440px;margin:0 auto;background:var(--wh);box-shadow:0 0 24px rgba(0,0,0,.08)}
+
+/* 確認用の見出しラベル（本番には入りません） */
+.note{background:#2F2F2F;color:#fff;font-size:11px;letter-spacing:.06em;padding:9px 14px;font-family:var(--gothic)}
+.note b{color:#E7C87A;font-weight:500}
+.note span{display:block;color:#BDBDBD;font-size:11.5px;margin-top:3px;line-height:1.5}
+
+/* ============ ① ヘッダー ============ */
+.kg-topbar{display:flex;background:var(--pl-deep);color:#fff;font-size:12px;letter-spacing:.02em}
+.kg-topbar div{flex:1;padding:6px 8px;text-align:center;white-space:nowrap}
+.kg-topbar div+div{border-left:1px solid rgba(255,255,255,.22)}
+.kg-header{display:flex;align-items:center;justify-content:space-between;height:59px;box-sizing:border-box;padding:0 8px 0 20px;background:var(--wh);border-bottom:1px solid var(--gy-line)}
+.kg-logo{display:block;flex:none}
+.kg-logo img{height:44px;width:auto;display:block}
+.kg-hnav{display:flex;gap:0}
+.kg-hnav a{width:43px;height:59px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:10px;color:#333333;position:relative}
+.kg-hnav svg{width:27px;height:27px;stroke:#111111;fill:none;stroke-width:1.7;color:#111111}
+.kg-badge{position:absolute;top:3px;right:-2px;background:#B4352F;color:#fff;font-size:11px;width:15px;height:15px;border-radius:50%;display:flex;align-items:center;justify-content:center;line-height:1}
+
+/* 検索 */
+.kg-search{padding:9px 14px;background:#F2F2F2;display:flex}
+.kg-search input{flex:1;border:1px solid #DCDCDC;border-right:0;padding:9px 11px;font-size:13px;background:#fff;border-radius:3px 0 0 3px;font-family:var(--gothic)}
+.kg-search button{width:50px;border:0;background:var(--pl-main);border-radius:0 3px 3px 0;display:flex;align-items:center;justify-content:center}
+.kg-search svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2}
+
+/* グローバルナビ */
+.kg-gnav{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:#E7E7E7;border-bottom:1px solid #E7E7E7}
+.kg-gnav a{background:#F8F8F8;height:52px;padding:8px 6px 5px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:2px;font-size:11.2px;color:#3A3A3A;text-align:center;line-height:1.3;font-weight:500;white-space:nowrap;box-sizing:border-box}
+.kg-gnav img{height:25px;width:auto;display:block}
+
+/* ============ ② メインビジュアル ============ */
+.kg-hero{display:block;line-height:0}
+.kg-hero img{width:100%;height:auto;display:block}
+.kg-hero-band{background:#42234D;color:#fff;font-family:var(--mincho);font-size:13px;line-height:1.65;letter-spacing:.01em;text-align:center;padding:12px 14px;margin-top:-1px}
+
+/* ============ 見出し ============ */
+.kg-h2{text-align:center;padding:28px 16px 16px}
+.kg-h2 .ja{font-family:var(--mincho);font-size:19px;font-weight:600;letter-spacing:.14em;color:var(--pl-deep);display:block;line-height:1.4}
+.kg-h2 .en{display:block;font-size:11px;letter-spacing:.34em;color:var(--gy-mid);margin-top:5px}
+.kg-h2::after{content:"";display:block;width:34px;height:2px;background:var(--gold);margin:11px auto 0}
+.kg-h2.no-en .en{display:none}
+
+/* ============ ③ 挨拶状バナー（穂乃香風） ============ */
+.kg-banners{padding:0 14px}
+.kg-banners a{display:block;border-radius:5px;overflow:hidden;border:1px solid var(--pl-line)}
+.kg-banners a+a{margin-top:8px}          /* ← 間隔を狭めた指定 */
+.kg-bnr{display:flex;align-items:center;gap:11px;padding:13px 14px;background:linear-gradient(105deg,#FBF9FC 0%,#F2EBF5 100%)}
+.kg-bnr-ico{width:46px;height:46px;flex:none;border-radius:50%;background:var(--pl-main);display:flex;align-items:center;justify-content:center}
+.kg-bnr-ico svg{width:23px;height:23px;stroke:#fff;fill:none;stroke-width:1.6}
+.kg-bnr-body{flex:1;min-width:0}
+.kg-bnr-tag{display:inline-block;background:var(--pl-deep);color:#fff;font-size:11px;padding:2px 8px;border-radius:2px;letter-spacing:.05em}
+.kg-bnr-ttl{font-family:var(--mincho);font-size:16.5px;font-weight:600;color:var(--pl-deep);letter-spacing:.05em;margin-top:5px;line-height:1.35}
+.kg-bnr-tags{display:flex;gap:5px;margin-top:6px;flex-wrap:wrap}
+.kg-bnr-tags span{font-size:11px;color:var(--pl-main);border:1px solid var(--pl-line);border-radius:99px;padding:2px 9px;background:#fff}
+.kg-bnr-arw{flex:none;color:var(--pl-main);font-size:15px}
+
+/* ============ ④ ランキング（カード型） ============ */
+.kg-rank{padding:0 14px}
+.kg-rank-item.is-hidden{display:none}
+.kg-rank-more{margin:22px auto 0;display:block;width:min(220px,72%);padding:12px 0;background:#fff;border:1px solid #561D4C;border-radius:999px;color:#561D4C;font-family:var(--mincho);font-size:clamp(13px,3.9vw,15px);font-weight:700;letter-spacing:.08em;text-align:center;cursor:pointer;-webkit-appearance:none;appearance:none}
+.kg-rank-more:after{content:"";display:inline-block;width:6px;height:6px;margin:0 0 2px 8px;border-right:1.5px solid #561D4C;border-bottom:1.5px solid #561D4C;transform:rotate(45deg);vertical-align:middle}
+.kg-rank-more.is-open:after{transform:rotate(-135deg);margin-bottom:-2px}
+.kg-rank-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px 12px}
+.kg-rank-no{font-size:clamp(17px,5.1vw,20px);font-weight:700;color:#9E9E9E;letter-spacing:.02em;margin:0 0 7px 2px}
+.kg-rank-item:nth-child(1) .kg-rank-no{color:#A18A3C}
+.kg-rank-item:nth-child(2) .kg-rank-no{color:#8E9AA3}
+.kg-rank-item:nth-child(3) .kg-rank-no{color:#9C6B3E}
+.kg-card{display:block;background:#fff;border:1px solid #E9E9E9;color:var(--txt)}
+.kg-card-img{position:relative;aspect-ratio:1/1;background:#fff;overflow:hidden}
+.kg-card-img img{width:100%;height:100%;object-fit:contain;display:block}
+
+.kg-card:nth-child(1) .kg-card-no{background:#A8892F}
+.kg-card:nth-child(2) .kg-card-no{background:#8A8A8A}
+.kg-card:nth-child(3) .kg-card-no{background:#96633C}
+.kg-card-body{padding:7px 8px 9px}
+.kg-card-name{font-size:12.5px;font-weight:700;color:#1A1A1A;line-height:1.55;padding:10px 10px 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:49px}
+.kg-card-price{font-size:17px;font-weight:700;color:#1A1A1A;padding:5px 10px 12px}
+.kg-card-price small{font-size:11px;font-family:var(--gothic);font-weight:400;color:var(--txt-sub)}
+.kg-card-free{position:absolute;left:0;bottom:9px;background:rgba(26,26,26,.62);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);color:#fff;font-size:11px;letter-spacing:.04em;padding:5px 11px}
+
+/* ============ ④-b カテゴリーから選ぶ（現行サイト準拠） ============ */
+.kg-cats{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:2px 8px 0}
+.kg-cats a{display:block;background:#fff;border:1px solid #DCDCDC;padding:11px 11px 0;color:#333;box-sizing:border-box}
+.kg-cats img{width:100%;height:auto;aspect-ratio:157/105;object-fit:cover;display:block}
+.kg-cats span{display:flex;align-items:center;justify-content:center;height:42px;font-size:14px;font-weight:500;color:#333;text-align:center;padding:0 4px}
+
+/* ============ ⑤ 金額から選ぶ（現行サイト準拠） ============ */
+.kg-price-grid{display:grid;grid-template-columns:1fr 1fr;gap:23px 16px;padding:2px 11px 0}
+.kg-price-grid a{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;height:60px;background:#fff;border:1px solid #B5B5B5;box-sizing:border-box;transition:background .15s}
+.kg-price-grid a::before{content:"";position:absolute;left:11px;top:50%;transform:translateY(-50%);border-left:9px solid #4A4A4A;border-top:6px solid transparent;border-bottom:6px solid transparent}
+.kg-price-grid a:active{background:#4A4A4A;border-color:#4A4A4A}
+.kg-price-grid a:active .lbl,.kg-price-grid a:active .val{color:#fff}
+.kg-price-grid a:active::before{border-left-color:#fff}
+.kg-price-grid .lbl{display:block;font-size:12px;line-height:1;color:#8A8A8A;letter-spacing:.02em;margin-bottom:4px}
+.kg-price-grid .val{display:block;font-size:16px;font-weight:500;line-height:1;color:#4A4A4A;letter-spacing:.04em}
+
+/* ============ ⑥ 電話バナー ============ */
+.kg-tel{padding:22px 16px 4px;text-align:center}
+.kg-tel-lead{font-size:13px;color:var(--txt-sub);letter-spacing:.10em;margin-bottom:9px}
+.kg-tel-btn{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;background:var(--pl-main);border-radius:99px;padding:12px 16px;box-shadow:0 3px 10px rgba(94,46,107,.22)}
+.kg-tel-btn svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:38px;height:38px;stroke:#fff;fill:none;stroke-width:1.5}
+.kg-tel-num{font-size:33px;font-weight:700;color:#fff;letter-spacing:.03em;line-height:1.15;font-family:var(--gothic)}
+.kg-tel-time{font-size:11.5px;color:rgba(255,255,255,.92);margin-top:1px}
+
+/* ============ 商品ページ サービス説明（6枠） ============ */
+.kg-svc{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:0 14px}
+.kg-svc a{position:relative;display:block;border:1.5px solid var(--gy-dark);background:#fff;overflow:hidden}
+.kg-svc-fig{height:104px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:8px;text-align:center}
+.kg-svc-fig svg{width:42px;height:42px;fill:var(--gy-dark)}
+.kg-svc-lead{font-size:11.5px;color:var(--gy-mid);letter-spacing:.02em}
+.kg-svc-big{font-size:15px;font-weight:700;color:var(--gy-dark);letter-spacing:.02em;line-height:1.3}
+.kg-svc-lbl{background:var(--gy-dark);color:#fff;font-size:11.5px;font-weight:500;text-align:center;padding:8px 6px;line-height:1.4;letter-spacing:.02em}
+.kg-svc a.is-out .kg-svc-lbl{background:#fff;color:var(--gy-dark);border-top:1.5px solid var(--gy-dark)}
+.kg-svc-corner{position:absolute;right:0;bottom:0;width:0;height:0;border-style:solid;border-width:0 0 15px 15px;border-color:transparent transparent #fff transparent;z-index:2}
+.kg-svc a.is-out .kg-svc-corner{border-color:transparent transparent var(--gy-dark) transparent}
+.kg-svc-badge{position:absolute;top:7px;right:7px;width:34px;height:34px;border-radius:50%;background:var(--gy-dark);color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;z-index:2;letter-spacing:.02em}
+
+/* ============ ⑦ 購入までの流れ ============ */
+.kg-flow{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:0 14px}
+.kg-flow-item{background:var(--gy-bg);padding:15px 6px 14px;text-align:center;border-radius:4px}
+.kg-flow-step{font-family:var(--mincho);font-size:14.5px;font-weight:600;color:var(--pl-main);letter-spacing:.05em}
+.kg-flow-ttl{font-size:12.5px;font-weight:700;margin-top:5px;color:var(--txt);line-height:1.4}
+.kg-flow-ico{height:54px;display:flex;align-items:center;justify-content:center;margin:9px 0 8px}
+.kg-flow-ico svg{width:44px;height:44px;fill:var(--gy-dark)}
+.kg-flow-txt{font-size:11px;color:var(--txt-sub);line-height:1.6;letter-spacing:-.02em}
+
+/* ============ ⑧-0 6大特典バナー／大口キャッシュバック ============ */
+.kg-tokuten{margin:0 14px 12px;border-radius:5px;overflow:hidden;background:linear-gradient(180deg,#5E2E6B 0%,#41214B 100%);color:#fff;text-align:center;padding:13px 12px 15px}
+.kg-tokuten .lead{font-size:11.5px;letter-spacing:.06em;color:#E9DCEF;margin-bottom:8px}
+.kg-tokuten .main{font-family:var(--mincho);font-size:15px;line-height:1.45;letter-spacing:.02em}
+.kg-tokuten .big{display:inline-block;font-size:23px;font-weight:700;color:#F0D389;letter-spacing:.02em;margin:0 2px;text-shadow:0 1px 0 rgba(0,0,0,.25)}
+.kg-tokuten .rule{width:46px;height:1px;background:rgba(240,211,137,.6);margin:9px auto 0}
+
+.kg-cash{display:block;margin:18px 14px 0;border:1px solid #E2D6E7;border-radius:5px;overflow:hidden;background:#fff}
+.kg-cash-top{display:flex;align-items:center;gap:10px;padding:11px 12px;background:#F7F3F9}
+.kg-cash-off{flex:none;width:56px;height:56px;border-radius:50%;background:#B4352F;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1}
+.kg-cash-off b{font-size:19px;font-weight:700}
+.kg-cash-off span{font-size:9.5px;letter-spacing:.02em}
+.kg-cash-top div.tx{font-size:11.5px;color:var(--txt);line-height:1.5}
+.kg-cash-top div.tx strong{display:block;font-family:var(--mincho);font-size:14px;color:#B4352F;font-weight:700;margin-top:2px}
+.kg-cash-btm{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;background:linear-gradient(180deg,#5E2E6B 0%,#41214B 100%);color:#fff}
+.kg-cash-btm em{font-style:normal;font-size:10.5px;background:#F0D389;color:#41214B;border-radius:10px;padding:2px 8px;font-weight:700;flex:none}
+.kg-cash-btm b{font-family:var(--mincho);font-size:16px;font-weight:700;letter-spacing:.02em}
+.kg-cash-note{font-size:10.5px;color:var(--txt-sub);text-align:center;padding:8px 14px 0;line-height:1.5}
+
+/* ============ ⑧ 特典 ============ */
+.kg-benefit{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:16px 11px 18px;background:#F4F4F4}
+.kg-benefit-item{position:relative;background:#fff;border-radius:3px;box-shadow:0 3px 10px rgba(0,0,0,.16);overflow:hidden;text-align:center;display:flex;flex-direction:column;min-height:clamp(105px,calc(26.81vw + 15px),122px);box-sizing:border-box}
+.kg-ben-band{position:relative;background:#561D4C;color:#fff;font-size:clamp(13px,4.05vw,16px);letter-spacing:.12em;padding:4px 0 3px;flex:none}
+.kg-ben-band::after{content:"";position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);border-top:7px solid #561D4C;border-left:8px solid transparent;border-right:8px solid transparent}
+.kg-ben-body{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:5px 7px}
+.kg-benefit-ttl{position:relative;font-family:var(--mincho);font-size:clamp(14px,5.8vw,23px);font-weight:700;color:#1A1A1A;letter-spacing:.02em;line-height:1.16;white-space:nowrap}
+.kg-benefit-ttl.nk{letter-spacing:-.05em}
+.kg-benefit-ttl.mid{font-size:clamp(11.5px,4.45vw,19px);letter-spacing:-.02em}
+.kg-benefit-ttl .kg-nk{margin:0 -.32em}
+.kg-benefit-ttl.mid5{font-size:clamp(14px,5.25vw,21px);letter-spacing:-.02em}
+.kg-benefit-ttl.long{font-size:clamp(12.8px,5vw,20px);letter-spacing:0}
+.kg-ben-note{position:relative;font-size:clamp(6.4px,2.0vw,7.8px);color:#5A5A5A;margin-top:3px;letter-spacing:0;max-width:calc(100% - 14px)}
+.kg-ben-coin{position:absolute;right:3px;bottom:3px;width:clamp(28px,8.8vw,34px);height:clamp(28px,8.8vw,34px);border-radius:50%;background:radial-gradient(circle at 34% 30%,#D8BC6F 0%,#B79035 58%,#967122 100%);color:#fff;font-family:var(--mincho);font-size:clamp(11.5px,3.45vw,13.5px);font-weight:700;display:flex;align-items:center;justify-content:center;letter-spacing:.05em}
+
+/* ============ ⑨ フッター ============ */
+.kg-foot{background:var(--pl-deep);color:#fff;margin-top:30px;padding:22px 14px 16px}
+.kg-foot-logo{text-align:center;font-family:var(--mincho);font-size:17px;letter-spacing:.14em;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.2)}
+.kg-acc{border-bottom:1px solid rgba(255,255,255,.16)}
+.kg-acc-hd{display:flex;justify-content:space-between;align-items:center;padding:13px 2px;font-size:13px;letter-spacing:.06em;cursor:pointer;font-weight:500}
+.kg-acc-hd::after{content:"＋";font-size:14px;color:rgba(255,255,255,.75)}
+.kg-acc.open .kg-acc-hd::after{content:"－"}
+.kg-acc-bd{display:none;padding:0 2px 13px}
+.kg-acc.open .kg-acc-bd{display:block}
+.kg-acc-bd ul{display:flex;flex-wrap:wrap;gap:7px}
+.kg-acc-bd a{font-size:11.5px;color:rgba(255,255,255,.86);border:1px solid rgba(255,255,255,.28);border-radius:3px;padding:5px 10px}
+.kg-foot-tel{margin-top:18px;background:rgba(255,255,255,.09);border-radius:5px;padding:15px 12px;text-align:center}
+.kg-foot-tel .lbl{font-size:11px;letter-spacing:.1em;color:rgba(255,255,255,.8)}
+.kg-foot-tel .num{font-size:24px;font-weight:700;margin-top:4px;letter-spacing:.03em}
+.kg-foot-tel .time{font-size:12px;color:rgba(255,255,255,.8);margin-top:2px}
+.kg-foot-links{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 12px;margin-top:18px;font-size:12px;color:rgba(255,255,255,.8)}
+.kg-copy{text-align:center;font-size:11.5px;color:rgba(255,255,255,.55);margin-top:16px;letter-spacing:.04em}
+
+.sp-tight{height:8px}
+.gap{height:22px}
+
+/* ============ おもてなしサービス ============ */
+.kg-omo{margin:0;padding:0;background:#fff}
+.kg-omo-head{background:#fff;text-align:center;padding:30px 16px 20px;
+  border-bottom:7px solid #1A1A1A}
+.kg-omo-mk{display:block;width:52px;height:38px;margin:0 auto 10px;fill:#1A1A1A}
+.kg-omo-band{display:inline-block;background:#1A1A1A;color:#D8B863;
+  font-family:var(--mincho);font-size:14px;font-weight:600;letter-spacing:.16em;
+  padding:5px 22px 6px;margin-bottom:14px}
+.kg-omo-h2{margin:0;font-family:var(--mincho);font-size:24px;font-weight:600;
+  line-height:1.5;letter-spacing:.04em;color:#C08A2E}
+
+.kg-omo-body{
+  background:
+    radial-gradient(120% 60% at 50% 0%,rgba(255,255,255,.9) 0%,rgba(255,255,255,0) 60%),
+    repeating-linear-gradient(122deg,rgba(0,0,0,.030) 0 2px,rgba(255,255,255,0) 2px 7px),
+    repeating-linear-gradient(58deg,rgba(0,0,0,.022) 0 3px,rgba(255,255,255,0) 3px 9px),
+    linear-gradient(180deg,#F2F1EF 0%,#E4E3E1 46%,#EDECEA 100%);
+  padding:6px 0 26px}
+
+.kg-omo-item{padding:26px 16px 30px;text-align:center;
+  border-bottom:1px solid rgba(0,0,0,.10)}
+.kg-omo-item:last-child{border-bottom:0}
+
+/* 月桂冠と番号 */
+.kg-omo-no{position:relative;width:132px;height:142px;margin:0 auto 2px}
+.kg-omo-wr{position:absolute;left:0;top:22px;width:132px;height:120px}
+.kg-omo-lbl{position:absolute;left:0;right:0;top:0;
+  font-family:var(--mincho);font-size:12px;font-weight:600;line-height:1.35;
+  letter-spacing:.06em;color:#B08A3C}
+.kg-omo-num{position:absolute;left:0;right:0;top:54px;
+  font-family:var(--mincho);font-size:54px;font-weight:700;line-height:1;
+  color:#C9A75B}
+
+/* 見出し */
+.kg-omo-name{margin:2px 0 12px;font-family:var(--mincho);font-size:23px;
+  font-weight:600;line-height:1.45;letter-spacing:.02em;color:#1A1A1A}
+.kg-omo-name em{font-style:normal;color:#C08A2E}
+
+/* 本文 */
+.kg-omo-txt{margin:0 0 16px;font-family:var(--mincho);font-size:15px;
+  line-height:1.95;letter-spacing:.01em;color:#2B2B2B;text-align:justify;
+  text-justify:inter-character}
+
+/* バナー */
+.kg-omo-bnr{display:block;margin:0 auto;max-width:347px}
+.kg-omo-bnr img{display:block;width:100%;height:auto;border:1px solid rgba(0,0,0,.10)}
+
+</style>
+</head>
+<body lang="ja">
+<div class="stage">
+
+
+<div class="kg-topbar">
+  <div>香典返し・弔事ギフト専門店</div>
+  <div>全国送料無料</div>
+</div>
+<header class="kg-header">
+  <a class="kg-logo" href="#"><img src="logo.png" alt="香典返し e-shop 感謝の気持ちを、丁寧にお届けします" width="482" height="140"></a>
+  <nav class="kg-hnav">
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18" stroke-linecap="round"/></svg>MENU</a>
+    <a href="#"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21" stroke-linecap="round"/></svg>検索</a>
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M3 4h2.2l2.4 12h10.5l2.1-9H6.2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="9.5" cy="19.5" r="1.4"/><circle cx="17.5" cy="19.5" r="1.4"/></svg>カート<span class="kg-badge">0</span></a>
+  </nav>
+</header>
+<div class="kg-search">
+  <input type="text" placeholder="商品名・カテゴリで探す">
+  <button aria-label="検索"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21" stroke-linecap="round"/></svg></button>
+</div>
+<nav class="kg-gnav">
+  <a href="#"><img src="cat-dk.png" alt="">カテゴリーから選ぶ</a>
+  <a href="#"><img src="price-dk.png" alt="">価格から選ぶ</a>
+  <a href="#"><img src="multi-dk.png" alt="">複数配送も簡単注文</a>
+  <a href="#"><img src="letter-dk.png" alt="">挨拶状の無料作成</a>
+  <a href="#"><img src="voice-dk.png" alt="">お客様の声</a>
+  <a href="#"><img src="faq-dk.png" alt="">問合せ・資料請求</a>
+</nav>
+
+
+<section class="kg-hero">
+  <img src="hero-main.jpg?v=2" alt="故人を偲び、感謝の気持ちを伝えるお香典返し。真心のこもったお香典返し、専門店がお手伝いいたします。疑問や不安の多いお香典返し、専門スタッフが寄り添い、お手伝いさせていただきます。" width="1448" height="1086">
+</section>
+<div class="kg-hero-band">疑問や不安の多いお香典返し、<br>専門スタッフが寄り添い、お手伝いさせていただきます。</div>
+
+
+<div class="gap"></div>
+
+
+<div class="kg-h2"><span class="ja">人気ランキング</span><span class="en">R A N K I N G</span></div>
+<div class="kg-rank">
+<div class="kg-rank-grid" id="kgRankGrid">
+  <div class="kg-rank-item"><div class="kg-rank-no">No.1</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/2131.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/c7171078.jpg" alt="スターバックスコーヒー&amp;彩りミニバウム C7171-078" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">スターバックスコーヒー&amp;彩りミニバウム C7171-078</div><div class="kg-card-price">¥3,180<small> (税込)</small></div></div></a></div>
+  <div class="kg-rank-item"><div class="kg-rank-no">No.2</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/48091.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/sion-2025N.jpg" alt="カタログギフト マイハート紫苑-しおん-" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">カタログギフト マイハート紫苑-しおん-</div><div class="kg-card-price">¥16,474<small> (税込)</small></div></div></a></div>
+  <div class="kg-rank-item"><div class="kg-rank-no">No.3</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/1556.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/L1064-064-1.jpg" alt="ヤマサ絹しょうゆバラエティギフト L1064-064" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">ヤマサ絹しょうゆバラエティギフト L1064-064</div><div class="kg-card-price">¥9,720<small> (税込)</small></div></div></a></div>
+  <div class="kg-rank-item"><div class="kg-rank-no">No.4</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/537.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/B2097-106-1.jpg" alt="優雅亭 かりんとうギフト B2097-106" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">優雅亭 かりんとうギフト B2097-106</div><div class="kg-card-price">¥3,078<small> (税込)</small></div></div></a></div>
+  <div class="kg-rank-item is-hidden"><div class="kg-rank-no">No.5</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/1764.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/L1093-064-1.jpg" alt="廣川昆布御昆布 10品佃煮詰合せ L1093-064" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">廣川昆布御昆布 10品佃煮詰合せ L1093-064</div><div class="kg-card-price">¥3,888<small> (税込)</small></div></div></a></div>
+  <div class="kg-rank-item is-hidden"><div class="kg-rank-no">No.6</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/48101.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/akane-2025N.jpg" alt="カタログギフト マイハート茜-あかね-" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">カタログギフト マイハート茜-あかね-</div><div class="kg-card-price">¥20,847<small> (税込)</small></div></div></a></div>
+  <div class="kg-rank-item is-hidden"><div class="kg-rank-no">No.7</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/1817.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/L1099-100-1.jpg" alt="静岡茶 茶師こだわりの銘茶詰合せ（木箱入） L1099-100" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">静岡茶 茶師こだわりの銘茶詰合せ（木箱入） L1099-100</div><div class="kg-card-price">¥14,580<small> (税込)</small></div></div></a></div>
+  <div class="kg-rank-item is-hidden"><div class="kg-rank-no">No.8</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/775.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/B2125-066-1.jpg" alt="三味逸選 こだわり味付海苔詰合せ B2125-066" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">三味逸選 こだわり味付海苔詰合せ B2125-066</div><div class="kg-card-price">¥4,860<small> (税込)</small></div></div></a></div>
+  <div class="kg-rank-item is-hidden"><div class="kg-rank-no">No.9</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/2000.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/L1126-066-1.jpg" alt="ギフト工房アリエール抗菌除菌ギフト L1126-066" loading="lazy"><span class="kg-card-free">送料無料</span></div><div class="kg-card-body"><div class="kg-card-name">ギフト工房アリエール抗菌除菌ギフト L1126-066</div><div class="kg-card-price">¥8,800<small> (税込)</small></div></div></a></div>
+  <div class="kg-rank-item is-hidden"><div class="kg-rank-no">No.10</div><a class="kg-card" href="https://koudengaesi-e-shop.net/SHOP/269.html"><div class="kg-card-img"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/llimg/B2064-054-1.jpg" alt="【一括お届け】揖保乃糸 上級品 B2064-054" loading="lazy"></div><div class="kg-card-body"><div class="kg-card-name">【一括お届け】揖保乃糸 上級品 B2064-054</div><div class="kg-card-price">¥2,160<small> (税込)</small></div></div></a></div>
+</div>
+<button type="button" class="kg-rank-more" id="kgRankMore" aria-expanded="false" aria-controls="kgRankGrid">もっと見る</button>
+</div>
+
+
+<div class="kg-h2"><span class="ja">カテゴリーから選ぶ</span><span class="en">C A T E G O R Y</span></div>
+<div class="kg-cats">
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/48711/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre01.jpg" alt="お菓子" loading="lazy" width="640" height="386"><span>お菓子</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/173451/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre02.jpg" alt="コーヒー・紅茶" loading="lazy" width="640" height="640"><span>コーヒー・紅茶</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/173449/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre03.jpg" alt="お茶" loading="lazy" width="640" height="449"><span>お茶</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/173450/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre04.jpg" alt="海苔" loading="lazy" width="640" height="535"><span>海苔</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/173455/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre05.jpg" alt="調味料・食用油" loading="lazy" width="640" height="426"><span>調味料・食用油</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/10001/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre06.jpg" alt="洗剤・石鹸" loading="lazy" width="640" height="426"><span>洗剤・石鹸</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/9998/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre07.jpg" alt="タオル" loading="lazy" width="640" height="413"><span>タオル</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/10000/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre08.jpg" alt="寝具・マット" loading="lazy" width="640" height="400"><span>寝具・マット</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/9999/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre09.jpg" alt="食品・詰合せ" loading="lazy" width="640" height="535"><span>食品・詰合せ</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/9997/316705/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre10.jpg" alt="カタログギフト" loading="lazy" width="640" height="431"><span>カタログギフト</span></a>
+</div>
+
+<div class="kg-h2"><span class="ja">金額から選ぶ</span><span class="en">P R I C E</span></div>
+<div class="kg-price-grid">
+  <a href="https://koudengaesi-e-shop.net/SHOP/315927/list.html"><span class="lbl">メーカー小売価格</span><span class="val">〜1,000円</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315928/list.html"><span class="lbl">メーカー小売価格</span><span class="val">〜1,500円</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315929/list.html"><span class="lbl">メーカー小売価格</span><span class="val">〜2,000円</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315930/list.html"><span class="lbl">メーカー小売価格</span><span class="val">〜2,500円</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315931/list.html"><span class="lbl">メーカー小売価格</span><span class="val">〜3,000円</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315932/list.html"><span class="lbl">メーカー小売価格</span><span class="val">〜3,500円</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315933/list.html"><span class="lbl">メーカー小売価格</span><span class="val">〜4,000円</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315934/list.html"><span class="lbl">メーカー小売価格</span><span class="val">〜5,000円</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/315935/list.html"><span class="lbl">メーカー小売価格</span><span class="val">〜10,000円</span></a>
+  <a href="https://koudengaesi-e-shop.net/SHOP/316453/list.html"><span class="lbl">メーカー小売価格</span><span class="val">10,001円〜</span></a>
+</div>
+
+
+<div class="kg-h2"><span class="ja">購入までの流れ</span><span class="en">F L O W</span></div>
+<div class="kg-flow">
+  <div class="kg-flow-item"><div class="kg-flow-step">Step 1</div><div class="kg-flow-ttl">商品をカートに入れる</div><div class="kg-flow-ico"><svg viewBox="0 0 48 48" class="solid"><path d="M4 7h5.4a2 2 0 0 1 1.95 1.55L12 11.4h27.2a1.6 1.6 0 0 1 1.55 2l-3.3 12.5a3 3 0 0 1-2.9 2.25H16.4a3 3 0 0 1-2.93-2.36L9.06 10.4a.4.4 0 0 0-.4-.32H4z"/><circle cx="18" cy="37.5" r="3.4"/><circle cx="34" cy="37.5" r="3.4"/><path d="M31.6 1.5h3v5h5v3h-5v5h-3v-5h-5v-3h5z"/></svg></div><div class="kg-flow-txt">ご希望の商品を選び、<br>カートへ追加します。</div></div>
+  <div class="kg-flow-item"><div class="kg-flow-step">Step 2</div><div class="kg-flow-ttl">注文画面へ進む</div><div class="kg-flow-ico"><svg viewBox="0 0 48 48" class="solid"><path d="M6 21.4h25.9l-8.6-8.6 2.55-2.55L39.4 23.4 25.85 36.95l-2.55-2.55 8.6-8.6H6z"/></svg></div><div class="kg-flow-txt">カート内の商品と金額を確認し、<br>注文手続きへ進みます。</div></div>
+  <div class="kg-flow-item"><div class="kg-flow-step">Step 3</div><div class="kg-flow-ttl">お客様情報を入力</div><div class="kg-flow-ico"><svg viewBox="0 0 48 48" class="solid"><circle cx="24" cy="15" r="8.4"/><path d="M24 26.4c8.3 0 15.1 5.6 16.6 13.2a1.6 1.6 0 0 1-1.57 1.9H8.97a1.6 1.6 0 0 1-1.57-1.9C8.9 32 15.7 26.4 24 26.4z"/></svg></div><div class="kg-flow-txt">お名前・ご住所・連絡先など、<br>必要事項をご入力ください。</div></div>
+  <div class="kg-flow-item"><div class="kg-flow-step">Step 4</div><div class="kg-flow-ttl">お支払い方法の選択</div><div class="kg-flow-ico"><svg viewBox="0 0 48 48" class="solid"><path d="M7 10h34a3 3 0 0 1 3 3v3H4v-3a3 3 0 0 1 3-3z"/><path d="M4 21h40v14a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z" opacity=".92"/><rect x="9" y="29" width="11" height="3.4" rx="1.7" fill="#fff"/></svg></div><div class="kg-flow-txt">ご希望の決済方法を<br>お選びください。</div></div>
+  <div class="kg-flow-item"><div class="kg-flow-step">Step 5</div><div class="kg-flow-ttl">ご注文内容を確認する</div><div class="kg-flow-ico"><svg viewBox="0 0 48 48" class="solid"><path d="M11 4h19.5L40 13.5V44a2 2 0 0 1-2 2H11a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M30 4l10 9.5h-8a2 2 0 0 1-2-2z" fill="#fff" opacity=".55"/><rect x="15" y="17" width="14" height="3" rx="1.5" fill="#fff"/><rect x="15" y="24" width="14" height="3" rx="1.5" fill="#fff"/><path d="M15.5 33.6l2.4-2.4 3.1 3.1 6.4-6.4 2.4 2.4-8.8 8.8z" fill="#fff"/></svg></div><div class="kg-flow-txt">入力した内容を最終確認し、<br>注文を確定します。</div></div>
+  <div class="kg-flow-item"><div class="kg-flow-step">Step 6</div><div class="kg-flow-ttl">商品の発送</div><div class="kg-flow-ico"><svg viewBox="0 0 48 48" class="solid"><path d="M3 11h23a2 2 0 0 1 2 2v20H5a2 2 0 0 1-2-2z"/><path d="M30 18h7.6a3 3 0 0 1 2.4 1.2l4.4 5.9a3 3 0 0 1 .6 1.8V33H30z"/><circle cx="13" cy="37" r="4"/><circle cx="35" cy="37" r="4"/></svg></div><div class="kg-flow-txt">ご注文の商品を準備し、<br>お届け先へ発送いたします。</div></div>
+</div>
+
+
+
+<div class="kg-h2"><span class="ja">ご注文方法・無料サービス</span><span class="en">S U P P O R T</span></div>
+<div class="kg-svc">
+  <a href="#"><div class="kg-svc-fig"><div class="kg-svc-lead">手書きで簡単</div><div class="kg-svc-big">FAX注文</div><svg viewBox="0 0 48 48" class="solid"><path d="M13 4h22v9H13z"/><path d="M6 16h36a3 3 0 0 1 3 3v13a3 3 0 0 1-3 3h-3V26H9v9H6a3 3 0 0 1-3-3V19a3 3 0 0 1 3-3z"/><circle cx="38" cy="21.5" r="2.2" fill="#fff"/><path d="M12 29h24v13a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2z"/><rect x="16" y="33" width="16" height="2.6" rx="1.3" fill="#fff"/><rect x="16" y="38" width="11" height="2.6" rx="1.3" fill="#fff"/></svg></div><div class="kg-svc-lbl">注文用紙のダウンロードは<br>こちらから</div><span class="kg-svc-corner"></span></a>
+  <a href="#"><div class="kg-svc-fig"><div class="kg-svc-lead">Excelで一括</div><div class="kg-svc-big">メール注文</div><svg viewBox="0 0 48 48" class="solid"><path d="M4 12.5A2.5 2.5 0 0 1 6.5 10h25a2.5 2.5 0 0 1 2.5 2.5v.6L19 23.4 4 13.1z"/><path d="M4 17.3l14.1 9.7a1.6 1.6 0 0 0 1.8 0L34 17.3V33a2.5 2.5 0 0 1-2.5 2.5h-25A2.5 2.5 0 0 1 4 33z"/><circle cx="37" cy="35" r="9.5"/><path d="M33.4 31.4l2.1-2.1 5.1 5.1-2.1 2.1z" fill="#fff"/><path d="M40.6 31.4l2.1 2.1-5.1 5.1-2.1-2.1z" fill="#fff"/></svg></div><div class="kg-svc-lbl">注文用紙のダウンロードは<br>こちらから</div><span class="kg-svc-corner"></span></a>
+  <a href="#" class="is-out"><span class="kg-svc-badge">無料</span><div class="kg-svc-fig"><svg viewBox="0 0 48 48" class="solid"><path d="M9 4h21.5L41 14.5V44a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M30 4l11 10.5h-9a2 2 0 0 1-2-2z" fill="#fff" opacity=".55"/><rect x="14" y="20" width="20" height="2.8" rx="1.4" fill="#fff"/><rect x="14" y="27" width="20" height="2.8" rx="1.4" fill="#fff"/><rect x="14" y="34" width="13" height="2.8" rx="1.4" fill="#fff"/></svg></div><div class="kg-svc-lbl">挨拶状作成</div><span class="kg-svc-corner"></span></a>
+  <a href="#" class="is-out"><span class="kg-svc-badge">無料</span><div class="kg-svc-fig"><svg viewBox="0 0 48 48" class="solid"><path d="M5 18h38v6H5z"/><path d="M7 26h34v16a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2z"/><rect x="21" y="18" width="6" height="26" fill="#fff"/><path d="M24 16c-1.6-4.4-4.4-7-7.6-7a4.6 4.6 0 0 0 0 9.2h4.2M24 16c1.6-4.4 4.4-7 7.6-7a4.6 4.6 0 0 1 0 9.2h-4.2" fill="none" stroke="#3B3B3B" stroke-width="3.2" stroke-linecap="round"/></svg></div><div class="kg-svc-lbl">のし・包装紙</div><span class="kg-svc-corner"></span></a>
+  <a href="#" class="is-out"><span class="kg-svc-badge">無料</span><div class="kg-svc-fig"><svg viewBox="0 0 48 48" class="solid"><rect x="4" y="9" width="40" height="30" rx="2.4"/><rect x="10" y="16" width="15" height="2.8" rx="1.4" fill="#fff"/><rect x="10" y="22.5" width="15" height="2.8" rx="1.4" fill="#fff"/><rect x="10" y="29" width="10" height="2.8" rx="1.4" fill="#fff"/><path d="M34.5 15.5l2.05 4.15 4.58.67-3.32 3.23.79 4.56-4.1-2.15-4.1 2.15.79-4.56-3.32-3.23 4.58-.67z" fill="#fff"/></svg></div><div class="kg-svc-lbl">喪中はがき<br>寒中見舞い</div><span class="kg-svc-corner"></span></a>
+  <a href="#" class="is-out"><div class="kg-svc-fig"><svg viewBox="0 0 48 48" class="solid"><path d="M6 7h30a3 3 0 0 1 3 3v19a3 3 0 0 1-3 3H20.5L9 42.5V32H6a3 3 0 0 1-3-3V10a3 3 0 0 1 3-3z"/><path d="M17.2 15.6a4.9 4.9 0 0 1 8.9 2.9c0 2.6-2.1 3.6-3.1 4.3-.8.55-1 1-1 2.1h-3.4c0-2.2.7-3.3 2-4.3 1.1-.85 2.1-1.4 2.1-2.6a1.9 1.9 0 0 0-3.65-.75z" fill="#fff"/><circle cx="21.4" cy="28.6" r="2" fill="#fff"/></svg></div><div class="kg-svc-lbl">よくあるご質問</div><span class="kg-svc-corner"></span></a>
+</div>
+
+<div class="kg-tel">
+  <div class="kg-tel-lead">お気軽にお問い合わせください</div>
+  <a class="kg-tel-btn" href="tel:0120994527">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.4 7.6c1.6-.4 2 .6 2.4 1.6.3.8-.6 1.2-.7 1.8-.1.9 2.2 3.2 3.1 3.1.6-.1 1-1 1.8-.7 1 .4 2 .8 1.6 2.4-.3 1.2-1.9 1.6-3.2 1.2-2.7-.8-5.6-3.7-6.4-6.4-.4-1.3 0-2.9 1.4-3z" stroke-linejoin="round"/></svg>
+    <div>
+      <div class="kg-tel-num">0120-994-527</div>
+      <div class="kg-tel-time">平日9:00〜17:00</div>
+    </div>
+  </a>
+</div>
+
+
+<!-- ▼ おもてなしサービス ここから ▼ -->
+<section class="kg-omo">
+  <div class="kg-omo-head">
+    <svg class="kg-omo-mk" viewBox="0 0 64 46" aria-hidden="true" focusable="false"><path d="M32 2 60 12 32 22 4 12z"/><path d="M32 16 60 26 32 36 4 26z"/><path d="M32 30 60 40 32 50 4 40z"/></svg>
+    <div class="kg-omo-band">お得なのに高品質</div>
+    <h2 class="kg-omo-h2">香典返し e-shopの<br>おもてなしサービス</h2>
+  </div>
+  <div class="kg-omo-body">
+  <article class="kg-omo-item">
+    <div class="kg-omo-no"><svg class="kg-omo-wr" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><g fill="#C9A75B"><path d="M43.1 88.3 L33.7 84.6 L26.0 78.2 L20.5 69.9 L17.8 60.2 L18.1 50.3 L21.5 41.0 L27.4 33.1 L35.5 27.5" fill="none" stroke="#C9A75B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="41.9" cy="94.0" rx="9.40" ry="3.80" transform="rotate(38.0 41.9 94.0)"/><ellipse cx="30.9" cy="89.6" rx="8.95" ry="3.64" transform="rotate(55.6 30.9 89.6)"/><ellipse cx="21.7" cy="82.2" rx="8.50" ry="3.47" transform="rotate(73.2 21.7 82.2)"/><ellipse cx="15.2" cy="72.3" rx="8.05" ry="3.31" transform="rotate(90.9 15.2 72.3)"/><ellipse cx="12.0" cy="61.0" rx="7.60" ry="3.15" transform="rotate(108.5 12.0 61.0)"/><ellipse cx="12.4" cy="49.3" rx="7.15" ry="2.99" transform="rotate(126.1 12.4 49.3)"/><ellipse cx="16.3" cy="38.3" rx="6.70" ry="2.83" transform="rotate(143.8 16.3 38.3)"/><ellipse cx="23.4" cy="29.0" rx="6.25" ry="2.66" transform="rotate(161.4 23.4 29.0)"/><ellipse cx="32.8" cy="22.3" rx="5.80" ry="2.50" transform="rotate(179.0 32.8 22.3)"/></g><g fill="#C9A75B" transform="translate(100,0) scale(-1,1)"><path d="M43.1 88.3 L33.7 84.6 L26.0 78.2 L20.5 69.9 L17.8 60.2 L18.1 50.3 L21.5 41.0 L27.4 33.1 L35.5 27.5" fill="none" stroke="#C9A75B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="41.9" cy="94.0" rx="9.40" ry="3.80" transform="rotate(38.0 41.9 94.0)"/><ellipse cx="30.9" cy="89.6" rx="8.95" ry="3.64" transform="rotate(55.6 30.9 89.6)"/><ellipse cx="21.7" cy="82.2" rx="8.50" ry="3.47" transform="rotate(73.2 21.7 82.2)"/><ellipse cx="15.2" cy="72.3" rx="8.05" ry="3.31" transform="rotate(90.9 15.2 72.3)"/><ellipse cx="12.0" cy="61.0" rx="7.60" ry="3.15" transform="rotate(108.5 12.0 61.0)"/><ellipse cx="12.4" cy="49.3" rx="7.15" ry="2.99" transform="rotate(126.1 12.4 49.3)"/><ellipse cx="16.3" cy="38.3" rx="6.70" ry="2.83" transform="rotate(143.8 16.3 38.3)"/><ellipse cx="23.4" cy="29.0" rx="6.25" ry="2.66" transform="rotate(161.4 23.4 29.0)"/><ellipse cx="32.8" cy="22.3" rx="5.80" ry="2.50" transform="rotate(179.0 32.8 22.3)"/></g></svg><span class="kg-omo-lbl">おもてなし<br>サービス</span><span class="kg-omo-num">1</span></div>
+    <h3 class="kg-omo-name">挨拶状・のし・包装紙<br><em>無料サービス。</em></h3>
+    <p class="kg-omo-txt">香典返し用の定型分だけではなく宗教別や家族葬用など用途に応じた挨拶状を全部で17種類ご用意しております。また四十九日・一周忌などの法事にも対応しております。</p>
+    <a class="kg-omo-bnr" href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/31.html"><img src="https://koudengaesi-e-shop.net/pic-labo/aisatsu_251114.jpg" alt="挨拶状・お礼状の無料作成" loading="lazy" width="1200" height="628"></a>
+  </article>
+  <article class="kg-omo-item">
+    <div class="kg-omo-no"><svg class="kg-omo-wr" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><g fill="#C9A75B"><path d="M43.1 88.3 L33.7 84.6 L26.0 78.2 L20.5 69.9 L17.8 60.2 L18.1 50.3 L21.5 41.0 L27.4 33.1 L35.5 27.5" fill="none" stroke="#C9A75B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="41.9" cy="94.0" rx="9.40" ry="3.80" transform="rotate(38.0 41.9 94.0)"/><ellipse cx="30.9" cy="89.6" rx="8.95" ry="3.64" transform="rotate(55.6 30.9 89.6)"/><ellipse cx="21.7" cy="82.2" rx="8.50" ry="3.47" transform="rotate(73.2 21.7 82.2)"/><ellipse cx="15.2" cy="72.3" rx="8.05" ry="3.31" transform="rotate(90.9 15.2 72.3)"/><ellipse cx="12.0" cy="61.0" rx="7.60" ry="3.15" transform="rotate(108.5 12.0 61.0)"/><ellipse cx="12.4" cy="49.3" rx="7.15" ry="2.99" transform="rotate(126.1 12.4 49.3)"/><ellipse cx="16.3" cy="38.3" rx="6.70" ry="2.83" transform="rotate(143.8 16.3 38.3)"/><ellipse cx="23.4" cy="29.0" rx="6.25" ry="2.66" transform="rotate(161.4 23.4 29.0)"/><ellipse cx="32.8" cy="22.3" rx="5.80" ry="2.50" transform="rotate(179.0 32.8 22.3)"/></g><g fill="#C9A75B" transform="translate(100,0) scale(-1,1)"><path d="M43.1 88.3 L33.7 84.6 L26.0 78.2 L20.5 69.9 L17.8 60.2 L18.1 50.3 L21.5 41.0 L27.4 33.1 L35.5 27.5" fill="none" stroke="#C9A75B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="41.9" cy="94.0" rx="9.40" ry="3.80" transform="rotate(38.0 41.9 94.0)"/><ellipse cx="30.9" cy="89.6" rx="8.95" ry="3.64" transform="rotate(55.6 30.9 89.6)"/><ellipse cx="21.7" cy="82.2" rx="8.50" ry="3.47" transform="rotate(73.2 21.7 82.2)"/><ellipse cx="15.2" cy="72.3" rx="8.05" ry="3.31" transform="rotate(90.9 15.2 72.3)"/><ellipse cx="12.0" cy="61.0" rx="7.60" ry="3.15" transform="rotate(108.5 12.0 61.0)"/><ellipse cx="12.4" cy="49.3" rx="7.15" ry="2.99" transform="rotate(126.1 12.4 49.3)"/><ellipse cx="16.3" cy="38.3" rx="6.70" ry="2.83" transform="rotate(143.8 16.3 38.3)"/><ellipse cx="23.4" cy="29.0" rx="6.25" ry="2.66" transform="rotate(161.4 23.4 29.0)"/><ellipse cx="32.8" cy="22.3" rx="5.80" ry="2.50" transform="rotate(179.0 32.8 22.3)"/></g></svg><span class="kg-omo-lbl">おもてなし<br>サービス</span><span class="kg-omo-num">2</span></div>
+    <h3 class="kg-omo-name">送料無料<br><em>サービス。</em></h3>
+    <p class="kg-omo-txt">当店では、【送料無料】マークの付いた約1,200商品以上を送料無料でお届けしております。送り先が多いお客様にも、お得にご利用いただけます。また【一括お届け】マークの商品も、1回のご注文金額が税込11,000円以上の場合は送料無料となります。</p>
+    <a class="kg-omo-bnr" href="https://koudengaesi-e-shop.net/SHOP/9997/list.html"><img src="https://koudengaesi-e-shop.net/pic-labo/b02_souryou2.jpg" alt="全国送料無料の商品はこちらから" loading="lazy" width="730" height="210"></a>
+  </article>
+  <article class="kg-omo-item">
+    <div class="kg-omo-no"><svg class="kg-omo-wr" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><g fill="#C9A75B"><path d="M43.1 88.3 L33.7 84.6 L26.0 78.2 L20.5 69.9 L17.8 60.2 L18.1 50.3 L21.5 41.0 L27.4 33.1 L35.5 27.5" fill="none" stroke="#C9A75B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="41.9" cy="94.0" rx="9.40" ry="3.80" transform="rotate(38.0 41.9 94.0)"/><ellipse cx="30.9" cy="89.6" rx="8.95" ry="3.64" transform="rotate(55.6 30.9 89.6)"/><ellipse cx="21.7" cy="82.2" rx="8.50" ry="3.47" transform="rotate(73.2 21.7 82.2)"/><ellipse cx="15.2" cy="72.3" rx="8.05" ry="3.31" transform="rotate(90.9 15.2 72.3)"/><ellipse cx="12.0" cy="61.0" rx="7.60" ry="3.15" transform="rotate(108.5 12.0 61.0)"/><ellipse cx="12.4" cy="49.3" rx="7.15" ry="2.99" transform="rotate(126.1 12.4 49.3)"/><ellipse cx="16.3" cy="38.3" rx="6.70" ry="2.83" transform="rotate(143.8 16.3 38.3)"/><ellipse cx="23.4" cy="29.0" rx="6.25" ry="2.66" transform="rotate(161.4 23.4 29.0)"/><ellipse cx="32.8" cy="22.3" rx="5.80" ry="2.50" transform="rotate(179.0 32.8 22.3)"/></g><g fill="#C9A75B" transform="translate(100,0) scale(-1,1)"><path d="M43.1 88.3 L33.7 84.6 L26.0 78.2 L20.5 69.9 L17.8 60.2 L18.1 50.3 L21.5 41.0 L27.4 33.1 L35.5 27.5" fill="none" stroke="#C9A75B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="41.9" cy="94.0" rx="9.40" ry="3.80" transform="rotate(38.0 41.9 94.0)"/><ellipse cx="30.9" cy="89.6" rx="8.95" ry="3.64" transform="rotate(55.6 30.9 89.6)"/><ellipse cx="21.7" cy="82.2" rx="8.50" ry="3.47" transform="rotate(73.2 21.7 82.2)"/><ellipse cx="15.2" cy="72.3" rx="8.05" ry="3.31" transform="rotate(90.9 15.2 72.3)"/><ellipse cx="12.0" cy="61.0" rx="7.60" ry="3.15" transform="rotate(108.5 12.0 61.0)"/><ellipse cx="12.4" cy="49.3" rx="7.15" ry="2.99" transform="rotate(126.1 12.4 49.3)"/><ellipse cx="16.3" cy="38.3" rx="6.70" ry="2.83" transform="rotate(143.8 16.3 38.3)"/><ellipse cx="23.4" cy="29.0" rx="6.25" ry="2.66" transform="rotate(161.4 23.4 29.0)"/><ellipse cx="32.8" cy="22.3" rx="5.80" ry="2.50" transform="rotate(179.0 32.8 22.3)"/></g></svg><span class="kg-omo-lbl">おもてなし<br>サービス</span><span class="kg-omo-num">3</span></div>
+    <h3 class="kg-omo-name">大口限定特典<br><em>ご用意しております。</em></h3>
+    <p class="kg-omo-txt">10万円以上のご購入をお考えのお客様には、キャッシュバックの他に安心してご利用頂けるよう専用のコンシェルジュがサポートさせて頂きます。その他にもさまざまな特典をご用意しておりますのでご確認下さい。</p>
+    <a class="kg-omo-bnr" href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/233.html"><img src="https://koudengaesi-e-shop.net/pic-labo/20260516_oguti_top.jpg" alt="10万円以上ご注文のお客様限定特典" loading="lazy" width="1200" height="628"></a>
+  </article>
+  <article class="kg-omo-item">
+    <div class="kg-omo-no"><svg class="kg-omo-wr" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><g fill="#C9A75B"><path d="M43.1 88.3 L33.7 84.6 L26.0 78.2 L20.5 69.9 L17.8 60.2 L18.1 50.3 L21.5 41.0 L27.4 33.1 L35.5 27.5" fill="none" stroke="#C9A75B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="41.9" cy="94.0" rx="9.40" ry="3.80" transform="rotate(38.0 41.9 94.0)"/><ellipse cx="30.9" cy="89.6" rx="8.95" ry="3.64" transform="rotate(55.6 30.9 89.6)"/><ellipse cx="21.7" cy="82.2" rx="8.50" ry="3.47" transform="rotate(73.2 21.7 82.2)"/><ellipse cx="15.2" cy="72.3" rx="8.05" ry="3.31" transform="rotate(90.9 15.2 72.3)"/><ellipse cx="12.0" cy="61.0" rx="7.60" ry="3.15" transform="rotate(108.5 12.0 61.0)"/><ellipse cx="12.4" cy="49.3" rx="7.15" ry="2.99" transform="rotate(126.1 12.4 49.3)"/><ellipse cx="16.3" cy="38.3" rx="6.70" ry="2.83" transform="rotate(143.8 16.3 38.3)"/><ellipse cx="23.4" cy="29.0" rx="6.25" ry="2.66" transform="rotate(161.4 23.4 29.0)"/><ellipse cx="32.8" cy="22.3" rx="5.80" ry="2.50" transform="rotate(179.0 32.8 22.3)"/></g><g fill="#C9A75B" transform="translate(100,0) scale(-1,1)"><path d="M43.1 88.3 L33.7 84.6 L26.0 78.2 L20.5 69.9 L17.8 60.2 L18.1 50.3 L21.5 41.0 L27.4 33.1 L35.5 27.5" fill="none" stroke="#C9A75B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="41.9" cy="94.0" rx="9.40" ry="3.80" transform="rotate(38.0 41.9 94.0)"/><ellipse cx="30.9" cy="89.6" rx="8.95" ry="3.64" transform="rotate(55.6 30.9 89.6)"/><ellipse cx="21.7" cy="82.2" rx="8.50" ry="3.47" transform="rotate(73.2 21.7 82.2)"/><ellipse cx="15.2" cy="72.3" rx="8.05" ry="3.31" transform="rotate(90.9 15.2 72.3)"/><ellipse cx="12.0" cy="61.0" rx="7.60" ry="3.15" transform="rotate(108.5 12.0 61.0)"/><ellipse cx="12.4" cy="49.3" rx="7.15" ry="2.99" transform="rotate(126.1 12.4 49.3)"/><ellipse cx="16.3" cy="38.3" rx="6.70" ry="2.83" transform="rotate(143.8 16.3 38.3)"/><ellipse cx="23.4" cy="29.0" rx="6.25" ry="2.66" transform="rotate(161.4 23.4 29.0)"/><ellipse cx="32.8" cy="22.3" rx="5.80" ry="2.50" transform="rotate(179.0 32.8 22.3)"/></g></svg><span class="kg-omo-lbl">おもてなし<br>サービス</span><span class="kg-omo-num">4</span></div>
+    <h3 class="kg-omo-name">エクセルで<br><em>簡単注文。</em></h3>
+    <p class="kg-omo-txt">贈り先が多いお客様でも、当店専用のエクセル注文を使用すれば100件の配送先も簡単にご注文頂けます。またカード決済・電子決済・大口特典も使用可能ですのでご安心ください。ご不明点がございましたらお気軽にお問い合わせください。</p>
+    <a class="kg-omo-bnr" href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/224.html"><img src="https://koudengaesi-e-shop.net/pic-labo/excel_top251114.jpg" alt="エクセル一括注文" loading="lazy" width="1200" height="628"></a>
+  </article>
+  <article class="kg-omo-item">
+    <div class="kg-omo-no"><svg class="kg-omo-wr" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><g fill="#C9A75B"><path d="M43.1 88.3 L33.7 84.6 L26.0 78.2 L20.5 69.9 L17.8 60.2 L18.1 50.3 L21.5 41.0 L27.4 33.1 L35.5 27.5" fill="none" stroke="#C9A75B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="41.9" cy="94.0" rx="9.40" ry="3.80" transform="rotate(38.0 41.9 94.0)"/><ellipse cx="30.9" cy="89.6" rx="8.95" ry="3.64" transform="rotate(55.6 30.9 89.6)"/><ellipse cx="21.7" cy="82.2" rx="8.50" ry="3.47" transform="rotate(73.2 21.7 82.2)"/><ellipse cx="15.2" cy="72.3" rx="8.05" ry="3.31" transform="rotate(90.9 15.2 72.3)"/><ellipse cx="12.0" cy="61.0" rx="7.60" ry="3.15" transform="rotate(108.5 12.0 61.0)"/><ellipse cx="12.4" cy="49.3" rx="7.15" ry="2.99" transform="rotate(126.1 12.4 49.3)"/><ellipse cx="16.3" cy="38.3" rx="6.70" ry="2.83" transform="rotate(143.8 16.3 38.3)"/><ellipse cx="23.4" cy="29.0" rx="6.25" ry="2.66" transform="rotate(161.4 23.4 29.0)"/><ellipse cx="32.8" cy="22.3" rx="5.80" ry="2.50" transform="rotate(179.0 32.8 22.3)"/></g><g fill="#C9A75B" transform="translate(100,0) scale(-1,1)"><path d="M43.1 88.3 L33.7 84.6 L26.0 78.2 L20.5 69.9 L17.8 60.2 L18.1 50.3 L21.5 41.0 L27.4 33.1 L35.5 27.5" fill="none" stroke="#C9A75B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="41.9" cy="94.0" rx="9.40" ry="3.80" transform="rotate(38.0 41.9 94.0)"/><ellipse cx="30.9" cy="89.6" rx="8.95" ry="3.64" transform="rotate(55.6 30.9 89.6)"/><ellipse cx="21.7" cy="82.2" rx="8.50" ry="3.47" transform="rotate(73.2 21.7 82.2)"/><ellipse cx="15.2" cy="72.3" rx="8.05" ry="3.31" transform="rotate(90.9 15.2 72.3)"/><ellipse cx="12.0" cy="61.0" rx="7.60" ry="3.15" transform="rotate(108.5 12.0 61.0)"/><ellipse cx="12.4" cy="49.3" rx="7.15" ry="2.99" transform="rotate(126.1 12.4 49.3)"/><ellipse cx="16.3" cy="38.3" rx="6.70" ry="2.83" transform="rotate(143.8 16.3 38.3)"/><ellipse cx="23.4" cy="29.0" rx="6.25" ry="2.66" transform="rotate(161.4 23.4 29.0)"/><ellipse cx="32.8" cy="22.3" rx="5.80" ry="2.50" transform="rotate(179.0 32.8 22.3)"/></g></svg><span class="kg-omo-lbl">おもてなし<br>サービス</span><span class="kg-omo-num">5</span></div>
+    <h3 class="kg-omo-name">カタログギフト<br><em>人気の商品です。</em></h3>
+    <p class="kg-omo-txt">贈り先様が、お好みの商品をお選び頂けるカタログギフトは人気の商品の1つです。価格も3,000円〜50,000円まで幅広い価格の商品をご用意しておりますので、ご予算や頂いた香典の金額に合わせてお選び頂けます。</p>
+    <a class="kg-omo-bnr" href="https://koudengaesi-e-shop.net/SHOP/10483/list.html"><img src="https://koudengaesi-e-shop.net/pic-labo/katarogu_top251114.jpg" alt="カタログギフト・マイハート" loading="lazy" width="1200" height="628"></a>
+  </article>
+  </div>
+</section>
+<!-- ▲ おもてなしサービス ここまで ▲ -->
+
+<div class="kg-h2"><span class="ja">6大特典無料サービス</span><span class="en">B E N E F I T</span></div>
+<div class="kg-benefit">
+  <div class="kg-benefit-item"><div class="kg-ben-band">特典 1</div><div class="kg-ben-body"><div class="kg-benefit-ttl">挨拶状</div></div><span class="kg-ben-coin">無料</span></div>
+  <div class="kg-benefit-item"><div class="kg-ben-band">特典 2</div><div class="kg-ben-body"><div class="kg-benefit-ttl nk">のし<span class="kg-nk">・</span>包装</div></div><span class="kg-ben-coin">無料</span></div>
+  <div class="kg-benefit-item"><div class="kg-ben-band">特典 3</div><div class="kg-ben-body"><div class="kg-benefit-ttl">手提げ袋</div></div><span class="kg-ben-coin">無料</span></div>
+  <div class="kg-benefit-item"><div class="kg-ben-band">特典 4</div><div class="kg-ben-body"><div class="kg-benefit-ttl">配送料</div></div><span class="kg-ben-coin">無料</span></div>
+  <div class="kg-benefit-item"><div class="kg-ben-band">特典 5</div><div class="kg-ben-body"><div class="kg-benefit-ttl long">完全自由文挨拶状</div><div class="kg-ben-note">※10万円以上注文の場合</div></div><span class="kg-ben-coin">無料</span></div>
+  <div class="kg-benefit-item"><div class="kg-ben-band">特典 6</div><div class="kg-ben-body"><div class="kg-benefit-ttl mid5">喪中はがき</div><div class="kg-ben-note">※10万円以上注文の場合</div></div><span class="kg-ben-coin">無料</span></div>
+</div></div>
+</div>
+
+
+
+
+<footer class="kg-foot">
+  <div class="kg-foot-logo">香典返し e-shop</div>
+
+  <div class="kg-acc open">
+    <div class="kg-acc-hd">カテゴリーから選ぶ</div>
+    <div class="kg-acc-bd"><ul>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/9997/48711/list.html">お菓子</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/9997/173449/list.html">お茶</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/9997/173450/list.html">海苔</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/9997/173451/list.html">コーヒー・紅茶</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/9997/173455/list.html">調味料・食用油</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/9997/173457/list.html">そうめん</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/9997/173459/list.html">しいたけ</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/9997/9999/list.html">詰合せ・その他の食品</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/9997/10001/list.html">洗剤・石けん</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/9997/173463/list.html">入浴剤</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/9997/9998/list.html">タオル</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/9997/10000/list.html">寝具・マット</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/9997/10002/list.html">日用品・雑貨</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/list.php?Search=カタログギフト　送料無料">カタログギフト</a></li>
+    </ul></div>
+  </div>
+
+  <div class="kg-acc">
+    <div class="kg-acc-hd">金額から選ぶ</div>
+    <div class="kg-acc-bd"><ul>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/315927/list.html">〜1,000円</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/315928/list.html">〜1,500円</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/315929/list.html">〜2,000円</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/315930/list.html">〜2,500円</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/315931/list.html">〜3,000円</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/315932/list.html">〜3,500円</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/315933/list.html">〜4,000円</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/315934/list.html">〜5,000円</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/315935/list.html">〜10,000円</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/316453/list.html">10,001円〜</a></li>
+    </ul></div>
+  </div>
+
+  <div class="kg-acc">
+    <div class="kg-acc-hd">アイテムから選ぶ</div>
+    <div class="kg-acc-bd"><ul>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/173451/316434/list.html">スターバックス</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/173449/315897/list.html">宇治茶詰合せ</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/315885/315911/list.html">バウムクーヘン</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/9999/315993/list.html">スープ・味噌汁</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/9998/315887/list.html">今治タオル</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/316705/316706/list.html">カタログギフト 舞妓</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/316705/316707/list.html">カタログギフト マイハート</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/9999/316001/list.html">お米ギフト</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/173455/316278/list.html">調味料ギフト</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/315886/315940/list.html">かりんとうギフト</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/9997/173457/list.html">素麺（そうめん）</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/10001/315895/list.html">アリエール ギフトセット</a></li>
+    </ul></div>
+  </div>
+
+  <div class="kg-acc">
+    <div class="kg-acc-hd">ブランドから選ぶ</div>
+    <div class="kg-acc-bd"><ul>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/list.php?Search=%E5%A4%A7%E6%A3%AE%E5%B1%8B">大森屋</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/list.php?Search=%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%95%E3%82%A7">モンカフェ</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/list.php?Search=%E3%83%89%E3%83%88%E3%83%BC%E3%83%AB">ドトール</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/list.php?Search=AGF">AGF</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/list.php?Search=%E6%97%A5%E6%B8%85%E3%82%AA%E3%82%A4%E3%83%AA%E3%82%AA">日清オイリオ</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/list.php?Search=%E3%82%AD%E3%83%83%E3%82%B3%E3%83%BC%E3%83%9E%E3%83%B3">キッコーマン</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/list.php?Search=%E6%8F%96%E4%BF%9D%E4%B9%83%E7%B3%B8">揖保乃糸</a><a href="https://koudengaesi-e-shop.net/SHOP/list.php?Search=%E6%B0%B8%E8%B0%B7%E5%9C%92">永谷園</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/list.php?Search=%E3%82%A2%E3%83%9E%E3%83%8E%E3%83%95%E3%83%BC%E3%82%BA">アマノフーズ</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/list.php?Search=%E3%82%A6%E3%82%A7%E3%83%83%E3%82%B8%E3%82%A6%E3%83%83%E3%83%89">ウェッジウッド</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/list.php?Search=%E4%BB%8A%E6%B2%BB">今治</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/list.php?Search=%E8%A5%BF%E5%B7%9D">西川</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/list.php?Search=%E3%82%A2%E3%82%BF%E3%83%83%E3%82%AF">アタック</a></li>
+      <li><a href="https://koudengaesi-e-shop.net/SHOP/list.php?Search=%E3%82%A2%E3%83%AA%E3%82%A8%E3%83%BC%E3%83%AB">アリエール</a></li>
+    </ul></div>
+  </div>
+
+  <div class="kg-acc">
+    <div class="kg-acc-hd">ご注文のご案内</div>
+    <div class="kg-acc-bd"><ul>
+      <li><a href="#">選べる4種の注文方法</a></li><li><a href="#">複数配送もカンタン注文</a></li>
+      <li><a href="#">ご注文の流れ</a></li><li><a href="#">お支払い方法</a></li>
+      <li><a href="#">納期について</a></li><li><a href="#">送料について</a></li>
+      <li><a href="#">よくあるご質問</a></li>
+    </ul></div>
+  </div>
+
+  <div class="kg-acc">
+    <div class="kg-acc-hd">香典返しのお役立ち情報</div>
+    <div class="kg-acc-bd"><ul>
+      <li><a href="#">香典返しのマナーガイド</a></li><li><a href="#">日本の三大宗教</a></li>
+      <li><a href="#">宗教別葬儀の流れ</a></li><li><a href="#">忌明法要までの流れ</a></li>
+    </ul></div>
+  </div>
+
+  <div class="kg-foot-tel">
+    <div class="lbl">お気軽にお問い合わせください</div>
+    <div class="num">0120-994-527</div>
+    <div class="time">平日9:00〜17:00</div>
+  </div>
+
+  <div class="kg-foot-links">
+    <a href="#">会社概要</a><a href="#">運営理念</a><a href="#">個人情報の取り扱いについて</a>
+    <a href="#">特定商取引法に関する表示</a><a href="#">サイトマップ</a>
+  </div>
+  <div class="kg-copy">© 香典返し e-shop</div>
+</footer>
+
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('kgRankMore');
+  if(!btn) return;
+  var items=document.querySelectorAll('.kg-rank-item.is-hidden');
+  if(!items.length){btn.style.display='none';return;}
+  btn.addEventListener('click',function(){
+    var open=btn.classList.toggle('is-open');
+    document.querySelectorAll('.kg-rank-item').forEach(function(el,i){
+      if(i>=4) el.classList.toggle('is-hidden',!open);
+    });
+    btn.textContent=open?'閉じる':'もっと見る';
+    btn.setAttribute('aria-expanded',open?'true':'false');
+  });
+})();
+console.log("BUILD_TAG: 2026-08-28m");
+document.querySelectorAll('.kg-acc-hd').forEach(function(h){
+  h.addEventListener('click',function(){h.parentElement.classList.toggle('open');});
+});
+</script>
+</body>
+</html>
