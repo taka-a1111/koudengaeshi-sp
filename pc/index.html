@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<!-- BUILD v5.7 2026-09-30 -->
+<!-- BUILD v5.8 2026-09-30 -->
 <title>香典返しe-shop PC版デザイン案</title>
 <meta name="robots" content="noindex,nofollow">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
@@ -124,13 +124,12 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
 .cat img{width:100%;height:104px;object-fit:cover;display:block}
 .cat span{display:block;text-align:center;font-size:13px;color:var(--ink);margin-top:9px}
 
-/* 価格帯 */
-.prices{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.price{height:60px;border:1px solid #B5B5B5;background:#fff;display:flex;align-items:center;
-  padding:0 18px;text-decoration:none;gap:10px}
-.price::before{content:"";width:0;height:0;border-left:8px solid #7A4489;border-top:5px solid transparent;border-bottom:5px solid transparent}
-.price .lbl{font-size:12px;color:#6E6E6E}
-.price .amt{font-size:16px;color:#4A4A4A;font-weight:700;margin-left:auto}
+/* 金額から選ぶ（本番PCトップの現行デザインをそのまま移植） */
+.kg-price-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:0}
+.kg-price-btn{position:relative;display:flex;align-items:center;justify-content:center;height:64px;background:#f2f2f2;border:1px solid #ececec;border-radius:3px;box-shadow:0 2px 3px rgba(0,0,0,.10);color:#1a1a1a;font-family:"Shippori Mincho","Yu Mincho","游明朝","Hiragino Mincho ProN",serif;font-size:34px;font-weight:700;letter-spacing:.01em;transition:background .15s;box-sizing:border-box;text-decoration:none}
+.kg-price-btn:hover{background:#eaeaea}
+.kg-price-btn .kg-yen{font-size:.55em;margin:0 .02em;position:relative;top:.4em}
+.kg-price-btn::after{content:"";position:absolute;right:18px;top:50%;width:10px;height:10px;border-top:2.6px solid #333;border-right:2.6px solid #333;transform:translateY(-50%) rotate(45deg)}
 
 .cal{padding:12px 12px 14px}
 .calm{text-align:center;font-size:12.5px;color:var(--ink2);margin-bottom:8px}
@@ -261,8 +260,8 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
     <div class="h2s" id="cate_link"><span class="ja">カテゴリーから選ぶ</span><span class="en">CATEGORY</span></div>
     <div class="cats"><a class="cat" href="https://koudengaesi-e-shop.net/SHOP/9997/48711/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre01.jpg" alt=""><span>お菓子</span></a><a class="cat" href="https://koudengaesi-e-shop.net/SHOP/9997/173451/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre02.jpg" alt=""><span>コーヒー・紅茶</span></a><a class="cat" href="https://koudengaesi-e-shop.net/SHOP/9997/173449/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre03.jpg" alt=""><span>お茶</span></a><a class="cat" href="https://koudengaesi-e-shop.net/SHOP/9997/173450/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre04.jpg" alt=""><span>海苔</span></a><a class="cat" href="https://koudengaesi-e-shop.net/SHOP/9997/173455/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre05.jpg" alt=""><span>調味料・食用油</span></a><a class="cat" href="https://koudengaesi-e-shop.net/SHOP/9997/10001/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre06.jpg" alt=""><span>洗剤・石鹸</span></a><a class="cat" href="https://koudengaesi-e-shop.net/SHOP/9997/9998/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre07.jpg" alt=""><span>タオル</span></a><a class="cat" href="https://koudengaesi-e-shop.net/SHOP/9997/10000/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre08.jpg" alt=""><span>寝具・マット</span></a><a class="cat" href="https://koudengaesi-e-shop.net/SHOP/9997/9999/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre09.jpg" alt=""><span>食品・詰合せ</span></a><a class="cat" href="https://koudengaesi-e-shop.net/SHOP/9997/316705/list.html"><img src="https://image1.shopserve.jp/koudengaesi-e-shop.net/pic-labo/genre10.jpg" alt=""><span>カタログギフト</span></a></div>
 
-    <div class="h2s" id="price_link"><span class="ja">価格から選ぶ</span><span class="en">PRICE</span></div>
-    <div class="prices"><a class="price" href="https://koudengaesi-e-shop.net/SHOP/315927/list.html"><span class="lbl">メーカー小売価格</span><span class="amt">〜1,000円</span></a><a class="price" href="https://koudengaesi-e-shop.net/SHOP/315928/list.html"><span class="lbl">メーカー小売価格</span><span class="amt">〜1,500円</span></a><a class="price" href="https://koudengaesi-e-shop.net/SHOP/315929/list.html"><span class="lbl">メーカー小売価格</span><span class="amt">〜2,000円</span></a><a class="price" href="https://koudengaesi-e-shop.net/SHOP/315930/list.html"><span class="lbl">メーカー小売価格</span><span class="amt">〜2,500円</span></a><a class="price" href="https://koudengaesi-e-shop.net/SHOP/315931/list.html"><span class="lbl">メーカー小売価格</span><span class="amt">〜3,000円</span></a><a class="price" href="https://koudengaesi-e-shop.net/SHOP/315932/list.html"><span class="lbl">メーカー小売価格</span><span class="amt">〜3,500円</span></a><a class="price" href="https://koudengaesi-e-shop.net/SHOP/315933/list.html"><span class="lbl">メーカー小売価格</span><span class="amt">〜4,000円</span></a><a class="price" href="https://koudengaesi-e-shop.net/SHOP/315934/list.html"><span class="lbl">メーカー小売価格</span><span class="amt">〜5,000円</span></a><a class="price" href="https://koudengaesi-e-shop.net/SHOP/315935/list.html"><span class="lbl">メーカー小売価格</span><span class="amt">〜10,000円</span></a><a class="price" href="https://koudengaesi-e-shop.net/SHOP/316453/list.html"><span class="lbl">メーカー小売価格</span><span class="amt">10,001円〜</span></a></div>
+    <div class="h2s" id="price_link"><span class="ja">金額から選ぶ</span><span class="en">PRICE</span></div>
+    <div class="kg-price-grid"><a class="kg-price-btn" href="https://koudengaesi-e-shop.net/SHOP/315927/list.html">&#12316;1,000<span class="kg-yen">円</span></a><a class="kg-price-btn" href="https://koudengaesi-e-shop.net/SHOP/315928/list.html">&#12316;1,500<span class="kg-yen">円</span></a><a class="kg-price-btn" href="https://koudengaesi-e-shop.net/SHOP/315929/list.html">&#12316;2,000<span class="kg-yen">円</span></a><a class="kg-price-btn" href="https://koudengaesi-e-shop.net/SHOP/315930/list.html">&#12316;2,500<span class="kg-yen">円</span></a><a class="kg-price-btn" href="https://koudengaesi-e-shop.net/SHOP/315931/list.html">&#12316;3,000<span class="kg-yen">円</span></a><a class="kg-price-btn" href="https://koudengaesi-e-shop.net/SHOP/315932/list.html">&#12316;3,500<span class="kg-yen">円</span></a><a class="kg-price-btn" href="https://koudengaesi-e-shop.net/SHOP/315933/list.html">&#12316;4,000<span class="kg-yen">円</span></a><a class="kg-price-btn" href="https://koudengaesi-e-shop.net/SHOP/315934/list.html">&#12316;5,000<span class="kg-yen">円</span></a><a class="kg-price-btn" href="https://koudengaesi-e-shop.net/SHOP/315935/list.html">&#12316;10,000<span class="kg-yen">円</span></a><a class="kg-price-btn" href="https://koudengaesi-e-shop.net/SHOP/316453/list.html">10,001<span class="kg-yen">円</span>&#12316;</a></div>
 
 
   </div>
