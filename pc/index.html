@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<!-- BUILD v5.9 2026-09-30 -->
+<!-- BUILD v5.10 2026-09-30 -->
 <title>香典返しe-shop PC版デザイン案</title>
 <meta name="robots" content="noindex,nofollow">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
@@ -139,22 +139,18 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
 .fullsec{padding:56px 0 0}
 .fullsec .cats{margin-bottom:0}
 
-/* おもてなしサービス（スマホ版 kg-omo 準拠） */
-.omo{--omo-mincho:"Shippori Mincho","Noto Serif JP","游明朝","Yu Mincho","MS P明朝",serif;margin-top:64px}
-.omo-head{text-align:center;padding:26px 16px 22px;border-bottom:5px solid #1A1A1A}
-.omo-h2{font-family:var(--omo-mincho);font-size:30px;font-weight:600;line-height:1.42;letter-spacing:.03em;color:#C08A2E}
-.omo-body{background:url("https://koudengaesi-e-shop.net/pic-labo/omo_washi.jpg") repeat top center;padding:34px 0 40px}
-.omo-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:28px 20px}
-.omo-item{width:386px;background:rgba(255,255,255,.55);padding:22px 14px 24px;text-align:center}
-.omo-no{position:relative;width:109px;height:70px;margin:0 auto 6px}
-.omo-wr{position:absolute;left:0;top:0;width:109px;height:auto}
-.omo-lbl{position:absolute;left:0;right:0;top:1px;z-index:2;font-family:"Noto Serif JP","Shippori Mincho",serif;font-weight:700;font-size:11.5px;line-height:1.22;color:#B08535}
-.omo-num{position:absolute;left:0;right:0;top:24px;z-index:1;font-family:"Noto Serif JP","Shippori Mincho",serif;font-weight:700;font-size:47px;line-height:1;color:#E8B95C}
-.omo-name{margin:0 0 10px;font-family:var(--omo-mincho);font-size:21px;font-weight:600;line-height:1.42;letter-spacing:.02em;color:#1A1A1A;min-height:60px;display:flex;flex-direction:column;justify-content:center}
-.omo-name em{font-style:normal;color:#C08A2E}
-.omo-txt{margin:0 6px 18px;font-family:var(--omo-mincho);font-size:14px;line-height:22px;color:#2B2B2B;text-align:center;min-height:110px}
-.omo-bnr{display:block;margin:0 auto;max-width:357px}
-.omo-bnr img{display:block;width:100%;height:auto;border:1px solid rgba(0,0,0,.10)}
+/* ご注文方法・無料サービス（スマホ版 kg-svc 準拠） */
+.svc{--gy-dark:#3B3B3B;--gy-mid:#6E6E6E;display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.svc a{position:relative;display:block;border:1.5px solid var(--gy-dark);background:#fff;overflow:hidden;text-decoration:none}
+.svc-fig{height:118px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:8px;text-align:center}
+.svc-fig svg{width:42px;height:42px;fill:var(--gy-dark)}
+.svc-lead{font-size:12px;color:var(--gy-mid);letter-spacing:.02em}
+.svc-big{font-size:16px;font-weight:700;color:var(--gy-dark);letter-spacing:.02em;line-height:1.3}
+.svc-lbl{background:var(--gy-dark);color:#fff;font-size:12px;font-weight:500;text-align:center;padding:8px 6px;line-height:1.4;letter-spacing:.02em;min-height:50px;display:flex;align-items:center;justify-content:center}
+.svc a.is-out .svc-lbl{background:#fff;color:var(--gy-dark);border-top:1.5px solid var(--gy-dark)}
+.svc-corner{position:absolute;right:0;bottom:0;width:0;height:0;border-style:solid;border-width:0 0 15px 15px;border-color:transparent transparent #fff transparent;z-index:2}
+.svc a.is-out .svc-corner{border-color:transparent transparent var(--gy-dark) transparent}
+.svc-badge{position:absolute;top:7px;right:7px;width:34px;height:34px;border-radius:50%;background:var(--gy-dark);color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;z-index:2}
 
 /* アイテムから選ぶ（2列） */
 .h2s .sub{display:block;font-size:13px;color:#6E6E6E;margin-top:10px;letter-spacing:.04em}
@@ -303,10 +299,17 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
   <div class="pgrid"><a href="https://koudengaesi-e-shop.net/SHOP/315927/list.html"><span class="lbl">メーカー小売価格</span><span class="val">&#12316;1,000円</span></a><a href="https://koudengaesi-e-shop.net/SHOP/315928/list.html"><span class="lbl">メーカー小売価格</span><span class="val">&#12316;1,500円</span></a><a href="https://koudengaesi-e-shop.net/SHOP/315929/list.html"><span class="lbl">メーカー小売価格</span><span class="val">&#12316;2,000円</span></a><a href="https://koudengaesi-e-shop.net/SHOP/315930/list.html"><span class="lbl">メーカー小売価格</span><span class="val">&#12316;2,500円</span></a><a href="https://koudengaesi-e-shop.net/SHOP/315931/list.html"><span class="lbl">メーカー小売価格</span><span class="val">&#12316;3,000円</span></a><a href="https://koudengaesi-e-shop.net/SHOP/315932/list.html"><span class="lbl">メーカー小売価格</span><span class="val">&#12316;3,500円</span></a><a href="https://koudengaesi-e-shop.net/SHOP/315933/list.html"><span class="lbl">メーカー小売価格</span><span class="val">&#12316;4,000円</span></a><a href="https://koudengaesi-e-shop.net/SHOP/315934/list.html"><span class="lbl">メーカー小売価格</span><span class="val">&#12316;5,000円</span></a><a href="https://koudengaesi-e-shop.net/SHOP/315935/list.html"><span class="lbl">メーカー小売価格</span><span class="val">&#12316;10,000円</span></a><a href="https://koudengaesi-e-shop.net/SHOP/316453/list.html"><span class="lbl">メーカー小売価格</span><span class="val">10,001円&#12316;</span></a></div>
 </div>
 
-<section class="omo">
-  <div class="omo-head"><h2 class="omo-h2">香典返し e-shopの<br>おもてなしサービス</h2></div>
-  <div class="omo-body"><div class="wrap omo-grid"><article class="omo-item"><div class="omo-no"><img class="omo-wr" src="https://koudengaesi-e-shop.net/pic-labo/omo_laurel.png" alt=""><span class="omo-lbl">おもてなし<br>サービス</span><span class="omo-num">1</span></div><h3 class="omo-name">挨拶状・のし・包装紙<br><em>無料サービス</em></h3><p class="omo-txt">香典返し用の定型分だけではなく宗教別や家族葬用など用途に応じた挨拶状を全部で17種類ご用意しております。また四十九日・一周忌などの法事にも対応しております。</p><a class="omo-bnr" href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/31.html"><img src="https://koudengaesi-e-shop.net/pic-labo/aisatsu_251114.jpg" alt="挨拶状・お礼状の無料作成"></a></article><article class="omo-item"><div class="omo-no"><img class="omo-wr" src="https://koudengaesi-e-shop.net/pic-labo/omo_laurel.png" alt=""><span class="omo-lbl">おもてなし<br>サービス</span><span class="omo-num">2</span></div><h3 class="omo-name">送料無料<br><em>1200商品以上対象</em></h3><p class="omo-txt">当店では、【送料無料】マークの付いた約1,200商品以上を送料無料でお届けしております。送り先が多いお客様にも、お得にご利用いただけます。また【一括お届け】マークの商品も、1回のご注文金額が税込11,000円以上の場合は送料無料となります。</p><a class="omo-bnr" href="https://koudengaesi-e-shop.net/SHOP/9997/list.html"><img src="https://koudengaesi-e-shop.net/pic-labo/b02_souryou2.jpg" alt="全国送料無料の商品はこちらから"></a></article><article class="omo-item"><div class="omo-no"><img class="omo-wr" src="https://koudengaesi-e-shop.net/pic-labo/omo_laurel.png" alt=""><span class="omo-lbl">おもてなし<br>サービス</span><span class="omo-num">3</span></div><h3 class="omo-name">大口限定特典<br><em>10万円以上ご注文のお客様へ</em></h3><p class="omo-txt">10万円以上のご購入をお考えのお客様には、キャッシュバックの他に安心してご利用頂けるよう専用のコンシェルジュがサポートさせて頂きます。その他にもさまざまな特典をご用意しておりますのでご確認下さい。</p><a class="omo-bnr" href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/233.html"><img src="https://koudengaesi-e-shop.net/pic-labo/20260516_oguti_top.jpg" alt="10万円以上ご注文のお客様限定特典"></a></article><article class="omo-item"><div class="omo-no"><img class="omo-wr" src="https://koudengaesi-e-shop.net/pic-labo/omo_laurel.png" alt=""><span class="omo-lbl">おもてなし<br>サービス</span><span class="omo-num">4</span></div><h3 class="omo-name">エクセルで簡単注文</h3><p class="omo-txt">贈り先が多いお客様でも、当店専用のエクセル注文を使用すれば100件の配送先も簡単にご注文頂けます。またカード決済・電子決済・大口特典も使用可能ですのでご安心ください。ご不明点がございましたらお気軽にお問い合わせください。</p><a class="omo-bnr" href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/224.html"><img src="https://koudengaesi-e-shop.net/pic-labo/excel_top251114.jpg" alt="エクセル一括注文"></a></article><article class="omo-item"><div class="omo-no"><img class="omo-wr" src="https://koudengaesi-e-shop.net/pic-labo/omo_laurel.png" alt=""><span class="omo-lbl">おもてなし<br>サービス</span><span class="omo-num">5</span></div><h3 class="omo-name">カタログギフト</h3><p class="omo-txt">贈り先様が、お好みの商品をお選び頂けるカタログギフトは人気の商品の1つです。価格も3,000円&#12316;50,000円まで幅広い価格の商品をご用意しておりますので、ご予算や頂いた香典の金額に合わせてお選び頂けます。</p><a class="omo-bnr" href="https://koudengaesi-e-shop.net/SHOP/10483/list.html"><img src="https://koudengaesi-e-shop.net/pic-labo/katarogu_top251114.jpg" alt="カタログギフト・マイハート"></a></article></div></div>
-</section>
+<div class="wrap fullsec">
+  <div class="h2s"><span class="ja">ご注文方法・無料サービス</span><span class="en">SUPPORT</span></div>
+  <div class="svc">
+  <a href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/8.html#fax"><div class="svc-fig"><div class="svc-lead">手書きで簡単</div><div class="svc-big">FAX注文</div><svg viewBox="0 0 48 48" class="solid"><path d="M13 4h22v9H13z"/><path d="M6 16h36a3 3 0 0 1 3 3v13a3 3 0 0 1-3 3h-3V26H9v9H6a3 3 0 0 1-3-3V19a3 3 0 0 1 3-3z"/><circle cx="38" cy="21.5" r="2.2" fill="#fff"/><path d="M12 29h24v13a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2z"/><rect x="16" y="33" width="16" height="2.6" rx="1.3" fill="#fff"/><rect x="16" y="38" width="11" height="2.6" rx="1.3" fill="#fff"/></svg></div><div class="svc-lbl">注文用紙のダウンロードは<br>こちらから</div><span class="svc-corner"></span></a>
+  <a href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/8.html#excel"><div class="svc-fig"><div class="svc-lead">Excelで一括</div><div class="svc-big">メール注文</div><svg viewBox="0 0 48 48" class="solid"><path d="M4 12.5A2.5 2.5 0 0 1 6.5 10h25a2.5 2.5 0 0 1 2.5 2.5v.6L19 23.4 4 13.1z"/><path d="M4 17.3l14.1 9.7a1.6 1.6 0 0 0 1.8 0L34 17.3V33a2.5 2.5 0 0 1-2.5 2.5h-25A2.5 2.5 0 0 1 4 33z"/><circle cx="37" cy="35" r="9.5"/><path d="M33.4 31.4l2.1-2.1 5.1 5.1-2.1 2.1z" fill="#fff"/><path d="M40.6 31.4l2.1 2.1-5.1 5.1-2.1-2.1z" fill="#fff"/></svg></div><div class="svc-lbl">注文用紙のダウンロードは<br>こちらから</div><span class="svc-corner"></span></a>
+  <a href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/31.html" class="is-out"><span class="svc-badge">無料</span><div class="svc-fig"><svg viewBox="0 0 48 48" class="solid"><path d="M9 4h21.5L41 14.5V44a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M30 4l11 10.5h-9a2 2 0 0 1-2-2z" fill="#fff" opacity=".55"/><rect x="14" y="20" width="20" height="2.8" rx="1.4" fill="#fff"/><rect x="14" y="27" width="20" height="2.8" rx="1.4" fill="#fff"/><rect x="14" y="34" width="13" height="2.8" rx="1.4" fill="#fff"/></svg></div><div class="svc-lbl">挨拶状作成</div><span class="svc-corner"></span></a>
+  <a href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/31.html" class="is-out"><span class="svc-badge">無料</span><div class="svc-fig"><svg viewBox="0 0 48 48" class="solid"><path d="M5 18h38v6H5z"/><path d="M7 26h34v16a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2z"/><rect x="21" y="18" width="6" height="26" fill="#fff"/><path d="M24 16c-1.6-4.4-4.4-7-7.6-7a4.6 4.6 0 0 0 0 9.2h4.2M24 16c1.6-4.4 4.4-7 7.6-7a4.6 4.6 0 0 1 0 9.2h-4.2" fill="none" stroke="#3B3B3B" stroke-width="3.2" stroke-linecap="round"/></svg></div><div class="svc-lbl">のし・包装紙</div><span class="svc-corner"></span></a>
+  <a href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/31.html" class="is-out"><span class="svc-badge">無料</span><div class="svc-fig"><svg viewBox="0 0 48 48" class="solid"><rect x="4" y="9" width="40" height="30" rx="2.4"/><rect x="10" y="16" width="15" height="2.8" rx="1.4" fill="#fff"/><rect x="10" y="22.5" width="15" height="2.8" rx="1.4" fill="#fff"/><rect x="10" y="29" width="10" height="2.8" rx="1.4" fill="#fff"/><path d="M34.5 15.5l2.05 4.15 4.58.67-3.32 3.23.79 4.56-4.1-2.15-4.1 2.15.79-4.56-3.32-3.23 4.58-.67z" fill="#fff"/></svg></div><div class="svc-lbl">喪中はがき<br>寒中見舞い</div><span class="svc-corner"></span></a>
+  <a href="https://koudengaesi-e-shop.net/ENQ/enquete.cgi?PAGE=2&amp;SHOPURL=" class="is-out"><div class="svc-fig"><svg viewBox="0 0 48 48" class="solid"><path d="M6 7h30a3 3 0 0 1 3 3v19a3 3 0 0 1-3 3H20.5L9 42.5V32H6a3 3 0 0 1-3-3V10a3 3 0 0 1 3-3z"/><path d="M17.2 15.6a4.9 4.9 0 0 1 8.9 2.9c0 2.6-2.1 3.6-3.1 4.3-.8.55-1 1-1 2.1h-3.4c0-2.2.7-3.3 2-4.3 1.1-.85 2.1-1.4 2.1-2.6a1.9 1.9 0 0 0-3.65-.75z" fill="#fff"/><circle cx="21.4" cy="28.6" r="2" fill="#fff"/></svg></div><div class="svc-lbl">よくあるご質問</div><span class="svc-corner"></span></a>
+</div>
+</div>
 
 <div class="wrap cols">
   <aside class="side">
