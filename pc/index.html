@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<!-- BUILD v5.13 2026-09-30 -->
+<!-- BUILD v5.14 2026-09-30 -->
 <title>香典返しe-shop PC版デザイン案</title>
 <meta name="robots" content="noindex,nofollow">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
@@ -64,7 +64,7 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
   font-family:var(--mincho);font-size:19px;letter-spacing:.06em}
 
 /* 6大特典 */
-.benefit{background:#F4F4F4;padding:62px 0 70px}
+.benefit{background:#F4F4F4;padding:40px 0 44px}
 .h2{text-align:center;margin-bottom:38px}
 .h2 .ja{font-family:var(--mincho);font-size:31px;color:var(--pl-mid);letter-spacing:.09em;display:block}
 .h2 .en{font-size:12px;letter-spacing:.42em;color:#796C80;margin-top:9px;display:block}
@@ -94,7 +94,7 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
 
 /* 2カラム開始 */
 .cols{display:flex;gap:40px;align-items:flex-start;padding:56px 0 70px}
-.side{width:260px;flex:0 0 260px}
+.side{width:260px;flex:0 0 260px;margin-top:var(--omo-head-h,95px)}
 .main{width:900px;flex:0 0 900px}
 
 /* サイドバー */
@@ -168,12 +168,9 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
 /* サイドバー横に置くための調整（v5.11） */
 .main .omo{margin-top:0}
 .main .omo-grid{width:auto}
-.main .omo-grid{flex-direction:column;flex-wrap:nowrap;gap:20px;padding:0 24px}
-.main .omo-item{width:auto;display:grid;grid-template-columns:110px 1fr 300px;grid-template-rows:auto 1fr;column-gap:22px;align-items:center;text-align:left;padding:24px 24px}
-.main .omo-no{grid-column:1;grid-row:1 / span 2;margin:0;align-self:center;text-align:center}
-.main .omo-name{grid-column:2;grid-row:1;min-height:0;margin:0 0 8px;display:block;font-size:20px}
-.main .omo-txt{grid-column:2;grid-row:2;min-height:0;margin:0;text-align:left;align-self:start}
-.main .omo-bnr{grid-column:3;grid-row:1 / span 2;max-width:300px;margin:0;align-self:center}
+.main .omo-grid{flex-direction:column;flex-wrap:nowrap;align-items:center;gap:24px}
+.main .omo-item{width:600px;padding:26px 30px 28px}
+.main .omo-txt{min-height:0}
 /* ご注文方法・無料サービス（スマホ版 kg-svc 準拠） */
 .svc{--gy-dark:#3B3B3B;--gy-mid:#6E6E6E;display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
 .svc a{position:relative;display:block;border:1.5px solid var(--gy-dark);background:#fff;overflow:hidden;text-decoration:none}
