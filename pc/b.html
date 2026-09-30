@@ -55,7 +55,7 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
 /* メインビジュアル（全幅） */
 .hero{background:#fff;padding:0}
 .hero .wrap{padding:0}
-.hero img{width:1200px;height:470px;object-fit:cover;object-position:center;display:block;margin:0 auto}
+.hero img{width:100%;min-width:1200px;height:auto;max-height:560px;object-fit:cover;object-position:center;display:block}
 
 
 /* 紫帯（全幅） */
@@ -261,24 +261,12 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
 .sample b{display:block;font-size:14px;color:var(--pl-mid);margin-bottom:2px}
 .sample a{display:block;margin-top:8px;text-align:center;background:var(--pl-mid);color:#fff;text-decoration:none;padding:7px 0;border-radius:2px}
 
-/* 案1：見出しの飾りを統一 */
-.h2::after,.h2s::after{display:none}
-.h2 .en,.h2s .en{order:-1}
-.h2,.h2s{display:flex;flex-direction:column;align-items:center}
-.h2 .en,.h2s .en{margin:0 0 8px;color:#9A7BA6;letter-spacing:.42em}
-.h2 .ja,.h2s .ja{display:flex;align-items:center;gap:20px}
-.h2 .ja::before,.h2 .ja::after,.h2s .ja::before,.h2s .ja::after{content:"";width:56px;height:1px;background:#B99A5B}
-.h2 .ja::before,.h2s .ja::before{box-shadow:0 0 0 0 transparent}
-.h2 .ja span.dot{display:none}
-.h2s .sub{order:3}
-.band{position:relative;box-shadow:inset 0 5px 0 var(--pl-band),inset 0 6px 0 #B99A5B,inset 0 -5px 0 var(--pl-band),inset 0 -6px 0 #B99A5B}
-.bcard{border-top:3px solid #B99A5B}
-.greet{padding:56px 0 10px}
-.greet .gbox{width:860px;margin:0 auto;border:1px solid #CDBFD2;padding:6px}
-.greet .gin{border:1px solid #E4DAE7;padding:40px 60px 42px;position:relative;background:#fff}
-.greet .gin::before,.greet .gin::after{content:"";position:absolute;width:22px;height:22px;border-color:#B99A5B;border-style:solid}
-.greet .gin::before{left:-7px;top:-7px;border-width:2px 0 0 2px}
-.greet .gin::after{right:-7px;bottom:-7px;border-width:0 2px 2px 0}
+/* 案2：セクションごとに背景色を変える */
+.benefit{background:#F5F0F6}
+.bnrsec{background:#fff;padding:56px 0 56px}
+.bnrsec .sec{padding:0}
+.greetsec{background:#F7F3EC;padding:54px 0 56px;border-top:1px solid #EDE4D3;border-bottom:1px solid #EDE4D3}
+.greetsec .greet{padding:0}
 </style>
 </head>
 <body>
@@ -307,7 +295,7 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
   <a href="https://koudengaesi-e-shop.net/ENQ/enquete.cgi?PAGE=2&amp;SHOPURL="><img src="https://koudengaesi-e-shop.net/pic-labo/kg_faq_dk.png" alt="">問合せ・資料請求</a>
 </div></div>
 
-<div class="hero"><div class="wrap"><img src="kg_hero_wide.jpg" width="1200" height="470" alt="想いを包み、感謝の気持ちを届ける お香典返し"></div></div>
+<div class="hero"><img src="kg_hero_wide.jpg" width="1200" height="400" alt="想いを包み、感謝の気持ちを届ける お香典返し"></div>
 
 <div class="band">疑問や不安の多いお香典返し、専門スタッフが寄り添い、お手伝いさせていただきます。</div>
 
@@ -323,6 +311,7 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
   </div>
 </div></div>
 
+<div class="bnrsec">
 <div class="sec"><div class="wrap narrow">
   <a class="bnr" href="https://koudengaesi-e-shop.net/SHOP/54262/list.html"><img src="https://koudengaesi-e-shop.net/pic-labo/kg_bnr_40off.jpg" alt="最大40%OFF"></a>
 </div></div>
@@ -330,14 +319,15 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
 <div class="sec" style="padding-top:26px"><div class="wrap">
   <a class="bnr native" href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/7.html"><img src="https://koudengaesi-e-shop.net/pic-labo/cashback.jpg" alt="大口キャッシュバック"></a>
 </div></div>
+</div>
 
-<div class="wrap greet"><div class="gbox"><div class="gin">
+<div class="greetsec"><div class="wrap greet">
   <div class="h2s"><span class="ja">ご挨拶</span><span class="en">GREETING</span></div>
   <p>香典返しe-shopにご来店いただき、誠にありがとうございます。<br>
   当店では葬儀や法事の際にいただいた返礼品を通して、感謝のお気持ちを贈り先様へ丁寧にお伝えできるようお手伝いしております。<br>
   喪主様やご家族のご負担を少しでも軽減できるようスタッフ一同、真心を込めて対応いたします。<br>
   何卒よろしくお願いいたします。</p>
-</div></div></div>
+</div></div>
 
 <div class="wrap ranksec">
   <div class="h2s"><span class="ja">人気ランキング</span><span class="en">RANKING</span></div>
@@ -401,5 +391,5 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
   </div>
 </footer>
 
-<div class="sample"><b>見本A</b>メインビジュアル：今の横幅のまま高さを上げる<br>デザイン：見出しの飾りを統一<a href="b.html">見本Bを見る</a></div>
+<div class="sample"><b>見本B</b>メインビジュアル：画面の横幅いっぱいに広げる<br>デザイン：セクションごとに背景色を変える<a href="./">見本Aを見る</a></div>
 </body></html>
