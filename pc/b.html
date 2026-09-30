@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<!-- BUILD v5.11 2026-09-30 -->
+<!-- BUILD v5.12 2026-09-30 -->
 <title>香典返しe-shop PC版デザイン案</title>
 <meta name="robots" content="noindex,nofollow">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
@@ -55,7 +55,7 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
 /* メインビジュアル（全幅） */
 .hero{background:#fff;padding:0}
 .hero .wrap{padding:0}
-.hero img{width:100%;min-width:1200px;height:auto;max-height:560px;object-fit:cover;object-position:center;display:block}
+.hero img{width:100%;min-width:1200px;height:clamp(470px,33.35vw,560px);object-fit:cover;object-position:center;display:block}
 
 
 /* 紫帯（全幅） */
@@ -257,9 +257,9 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
 
 
 /* 見本の切替（プレビュー専用・本番には入れない） */
-.sample{position:fixed;right:16px;bottom:16px;z-index:50;background:#fff;border:2px solid var(--pl-mid);border-radius:4px;box-shadow:0 4px 14px rgba(0,0,0,.18);padding:12px 16px;font-size:12px;line-height:1.7;color:var(--ink);width:350px}
-.sample b{display:block;font-size:14px;color:var(--pl-mid);margin-bottom:2px}
-.sample a{display:block;margin-top:8px;text-align:center;background:var(--pl-mid);color:#fff;text-decoration:none;padding:7px 0;border-radius:2px}
+.sample{position:fixed;right:12px;bottom:12px;z-index:50;display:flex;align-items:center;gap:10px;background:#fff;border:2px solid var(--pl-mid);border-radius:4px;box-shadow:0 3px 10px rgba(0,0,0,.18);padding:6px 6px 6px 12px;font-size:12px;color:var(--ink)}
+.sample b{font-size:13px;color:var(--pl-mid)}
+.sample a{background:var(--pl-mid);color:#fff;text-decoration:none;padding:6px 12px;border-radius:2px;white-space:nowrap}
 
 /* 案2：セクションごとに背景色を変える */
 .benefit{background:#F5F0F6}
@@ -391,5 +391,5 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
   </div>
 </footer>
 
-<div class="sample"><b>見本B</b>メインビジュアル：画面の横幅いっぱいに広げる<br>デザイン：セクションごとに背景色を変える<a href="./">見本Aを見る</a></div>
+<div class="sample"><b>見本B</b><span>MV：画面の横幅いっぱい／背景色を交互</span><a href="./">見本Aを見る</a></div>
 </body></html>
