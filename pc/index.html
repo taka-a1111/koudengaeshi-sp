@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<!-- BUILD v5.14 2026-09-30 -->
+<!-- BUILD v5.15 2026-10-01 -->
 <title>香典返しe-shop PC版デザイン案</title>
 <meta name="robots" content="noindex,nofollow">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
@@ -169,8 +169,12 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
 .main .omo{margin-top:0}
 .main .omo-grid{width:auto}
 .main .omo-grid{flex-direction:column;flex-wrap:nowrap;align-items:center;gap:24px}
-.main .omo-item{width:600px;padding:26px 30px 28px}
-.main .omo-txt{min-height:0}
+.main .omo-item{width:840px;padding:34px 48px 38px}
+.main .omo-no{transform:scale(1.25);transform-origin:center top;margin:0 auto 24px}
+.main .omo-name{font-size:26px;min-height:0;margin-bottom:14px}
+.main .omo-txt{min-height:0;font-size:16px;line-height:28px;margin:0 0 22px}
+.main .omo-bnr{max-width:500px}
+.main .omo-h2{font-size:34px}
 /* ご注文方法・無料サービス（スマホ版 kg-svc 準拠） */
 .svc{--gy-dark:#3B3B3B;--gy-mid:#6E6E6E;display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
 .svc a{position:relative;display:block;border:1.5px solid var(--gy-dark);background:#fff;overflow:hidden;text-decoration:none}
@@ -279,6 +283,34 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
 .h2s .sub{order:3}
 .band{position:relative;box-shadow:inset 0 5px 0 var(--pl-band),inset 0 6px 0 #B99A5B,inset 0 -5px 0 var(--pl-band),inset 0 -6px 0 #B99A5B}
 .bcard{border-top:3px solid #B99A5B}
+
+/* レビュー欄（平均・件数＋1件ずつ切替）v5.15 */
+.revsec{background:#fff;padding:56px 0 60px}
+.rev{width:900px;margin:0 auto}
+.rev-head{display:flex;align-items:center;justify-content:space-between;padding:0 6px 18px;border-bottom:2px solid #DDD}
+.rev-ttl{font-size:30px;color:#222;letter-spacing:.04em;line-height:1.2}
+.rev-avg{font-size:32px;font-weight:700;color:#666;margin-left:14px;letter-spacing:0}
+.rev-sum2{display:flex;align-items:center;gap:14px;margin-top:6px}
+.stars{position:relative;display:inline-block;font-size:28px;line-height:1;letter-spacing:3px;color:#DDD;white-space:nowrap}
+.stars::before{content:"★★★★★"}
+.stars::after{content:"★★★★★";position:absolute;left:0;top:0;width:calc(var(--r) / 5 * 100%);overflow:hidden;color:#F5B83D}
+.rev-cnt{font-size:26px;color:#777}
+.rev-nav{display:flex;gap:18px}
+.rev-nav button{width:52px;height:52px;border:0;background:none;cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center}
+.rev-nav svg{width:30px;height:30px;stroke:#111;stroke-width:2.6;fill:none}
+.rev-nav button:hover svg{stroke:var(--pl-mid)}
+.rev-body{padding:40px 60px 10px;min-height:300px}
+.rev-body .stars{font-size:34px;--r:5}
+.rev-txt{margin:22px 0 0;font-size:17px;line-height:1.95;color:#333;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.rev-txt.open{display:block}
+.rev-more{background:none;border:0;padding:0;margin-top:2px;font-size:17px;color:#4A6FA5;cursor:pointer;font-family:var(--gothic)}
+.rev-name{margin-top:26px;font-size:17px;color:#333}
+.rev-date{margin-left:16px;font-size:13px;color:#888}
+.rev-item{display:flex;align-items:center;gap:20px;margin-top:22px}
+.rev-item img{width:110px;height:auto;max-height:110px;object-fit:contain}
+.rev-pos{font-size:13px;color:#999;text-align:center;margin-top:18px}
+.rev-btn{display:block;width:340px;margin:34px auto 0;padding:24px 0;text-align:center;border:2px solid #111;color:#444;font-size:18px;letter-spacing:.08em;text-decoration:none}
+.rev-btn:hover{background:#111;color:#fff}
 </style>
 </head>
 <body>
@@ -377,10 +409,47 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
   </div>
 </div>
 
+<section class="revsec"><div class="rev">
+  <div class="rev-head">
+    <div><div class="rev-ttl">レビュー<span class="rev-avg">4.77</span></div>
+      <div class="rev-sum2"><span class="stars" style="--r:4.77" role="img" aria-label="5点中4.77点"></span><span class="rev-cnt">291件</span></div></div>
+    <div class="rev-nav"><button type="button" class="rev-prev" aria-label="前のレビュー"><svg viewBox="0 0 24 24"><path d="M15 4l-8 8 8 8"/></svg></button><button type="button" class="rev-next" aria-label="次のレビュー"><svg viewBox="0 0 24 24"><path d="M9 4l8 8-8 8"/></svg></button></div>
+  </div>
+  <div class="rev-body"></div>
+  <a class="rev-btn" href="https://koudengaesi-e-shop.net/SHOP/rating_list.html">お客様の声一覧はこちら</a>
+</div></section>
 <div class="voicesec"><div class="wrap">
 <div class="h2s"><span class="ja">お客様の声</span><span class="en">VOICE</span></div><div class="voice"><div class="vcard"><div class="vthumb"><img src="https://koudengaesi-e-shop.net/pic-labo/llimg/B2098-100-1.jpg" alt=""></div><div class="vbody"><div class="vstar">★★★★★</div><div class="vmeta">ななし 様　投稿日：2026年09月25日</div><p class="vtxt">急な注文でしたが、迅速に対応していただき余裕を持って受け取る事が出来ました。 発送予定や発送連絡等、こまめにメール連絡をいただいたので、状況が分かり安心できました。 梱包も丁寧でとても満足です。 この度はどうも有難うございました。</p></div></div><div class="vcard"><div class="vthumb"><img src="https://koudengaesi-e-shop.net/pic-labo/llimg/yamabuki-2025N.jpg" alt=""></div><div class="vbody"><div class="vstar">★★★★<i>★</i></div><div class="vmeta">ビビ 様　投稿日：2026年09月10日</div><p class="vtxt">早急にご対応いただき助かりました。注文もしやすかったです</p></div></div><div class="vcard"><div class="vthumb"><img src="https://koudengaesi-e-shop.net/pic-labo/llimg/L1116-018-1.jpg" alt=""></div><div class="vbody"><div class="vstar">★★★★★</div><div class="vmeta">感謝 様　投稿日：2026年07月15日</div><p class="vtxt">オリジナルの挨拶状、商品の対応、ご提案等、色々お気遣い頂きました。香典お礼のシチュエーションはそうそう発生しないので、非常に助かりました。ありがとうございました。</p></div></div><div class="vcard"><div class="vthumb"><img src="https://koudengaesi-e-shop.net/pic-labo/llimg/kessai_yuri.jpg" alt=""></div><div class="vbody"><div class="vstar">★★★★★</div><div class="vmeta">高橋 様　投稿日：2026年06月23日</div><p class="vtxt">迅速かつ丁寧な対応でした。 急な変更などにも柔軟に対応して頂けて助かりました。 また機会があれば利用したいと思います。</p></div></div><div class="vcard"><div class="vthumb"><img src="https://koudengaesi-e-shop.net/pic-labo/llimg/kessai_yuri.jpg" alt=""></div><div class="vbody"><div class="vstar">★★★★★</div><div class="vmeta">ゆきーた 様　投稿日：2026年06月04日</div><p class="vtxt">送料無料で個別に送付でき、また、一括注文もとても簡単にできてよかったです。 お店の対応もとても丁寧で、きちんと発送前、発送後の連絡も入り、状況がわかり良かったです。 ぜひ次回も利用したいです。</p></div></div><div class="vcard"><div class="vthumb"><img src="https://koudengaesi-e-shop.net/pic-labo/llimg/B2061-098-1.jpg" alt=""></div><div class="vbody"><div class="vstar">★★★★★</div><div class="vmeta">まーさ 様　投稿日：2026年05月28日</div><p class="vtxt">迅速丁寧に対応していただき、本当に助かりました、時間もない中、楽に手続きできる仕組みで、便利に使うことができました。またの機会にもお願いしたいと思います。</p></div></div><div class="vcard"><div class="vthumb"><img src="https://koudengaesi-e-shop.net/pic-labo/llimg/B2061-060-1.jpg" alt=""></div><div class="vbody"><div class="vstar">★★★★★</div><div class="vmeta">銀次郎丸 様　投稿日：2026年05月19日</div><p class="vtxt">急な入り用でしたが丁寧な対応、配送をしていただけてありがたく思います。また、利用したいと思います。</p></div></div><div class="vcard"><div class="vthumb"><img src="https://koudengaesi-e-shop.net/pic-labo/llimg/L1073-059-1.jpg" alt=""></div><div class="vbody"><div class="vstar">★★★★<i>★</i></div><div class="vmeta">ぴぐぴぐ 様　投稿日：2026年04月20日</div><p class="vtxt">母の一周忌の香典返しに、品物を探していましたが、考えている値段でのなかなかこれ！といったものが見つからず、ネットで検索していたら貴社のサイトに出会いました。 今回、フリーズドライ味噌汁の詰め合わせにしましたが、普段でも重宝する品で重くなく持ち帰りにも便利なよいお返しになりました。当日法要後の会食会場まで届けるように手配お願いしましたが、間違いなく丁寧なお仕事で、確認メールも届きさすがの仕事ぶりに感謝いたします。ネット申し込みでの手続きが、私にとって少し難しく何回かやり直ししたので星は4つにさせていただきましたが、とても満足しております。ありがとうございました。</p></div></div><div class="vcard"><div class="vthumb"><img src="https://koudengaesi-e-shop.net/pic-labo/llimg/kessai_yuri.jpg" alt=""></div><div class="vbody"><div class="vstar">★★★★★</div><div class="vmeta">たけちゃん 様　投稿日：2026年03月19日</div><p class="vtxt">この度は電話での対応、丁寧にわかりやすく接していただき、ありがとうございました。送付先の方からも喜んでいただきました。</p></div></div><div class="vcard"><div class="vthumb"><img src="https://koudengaesi-e-shop.net/pic-labo/llimg/kessai_yuri.jpg" alt=""></div><div class="vbody"><div class="vstar">★★★★★</div><div class="vmeta">kiyoka 様　投稿日：2026年03月10日</div><p class="vtxt">この度は、迅速に丁寧な対応をしていただきありがとうございました。わからない点は、電話でも対応していただけるので、安心できました。またの機会にもにもお願いしたいと思います。</p></div></div></div><a class="vmore" href="https://koudengaesi-e-shop.net/SHOP/rating_list.html">お客様の声をもっと見る</a>
 </div></div>
 
+<script>
+(function(){
+  /* 下の「お客様の声」一覧（最新10件）から1件ずつ表示する */
+  var cards=[].slice.call(document.querySelectorAll('.voice .vcard'));
+  var body=document.querySelector('.rev-body'); if(!cards.length||!body) return;
+  var list=cards.map(function(c){
+    var st=c.querySelector('.vstar'); var off=st.querySelectorAll('i').length; var on=(st.textContent.match(/★/g)||[]).length-off;
+    var meta=c.querySelector('.vmeta').textContent.split('投稿日：');
+    return {r:on,txt:c.querySelector('.vtxt').textContent.trim(),name:meta[0].trim(),date:(meta[1]||'').trim(),img:c.querySelector('.vthumb img').getAttribute('src')};
+  });
+  var i=0;
+  function esc(t){return t.replace(/[&<>"]/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]})}
+  function show(){
+    var d=list[i];
+    body.innerHTML='<span class="stars" style="--r:'+d.r+'" role="img" aria-label="5点中'+d.r+'点"></span>'+
+      '<p class="rev-txt">'+esc(d.txt)+'</p><button type="button" class="rev-more">もっと見る</button>'+
+      '<div class="rev-name">'+esc(d.name)+'<span class="rev-date">'+esc(d.date)+'</span></div>'+
+      '<div class="rev-item"><img src="'+d.img+'" alt=""></div>'+
+      '<div class="rev-pos">'+(i+1)+' / '+list.length+'</div>';
+    var p=body.querySelector('.rev-txt'), m=body.querySelector('.rev-more');
+    if(p.scrollHeight<=p.clientHeight+2){m.style.display='none'}
+    m.onclick=function(){p.classList.add('open');m.style.display='none'};
+  }
+  document.querySelector('.rev-prev').onclick=function(){i=(i-1+list.length)%list.length;show()};
+  document.querySelector('.rev-next').onclick=function(){i=(i+1)%list.length;show()};
+  show();
+})();
+</script>
 <footer class="foot">
   <div class="wrap">
     <div class="fhead">
