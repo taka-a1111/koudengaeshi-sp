@@ -2,10 +2,11 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<!-- BUILD v5.16 2026-10-01 -->
+<!-- BUILD v5.19 2026-10-02 横幅比較 ?w=980 / ?w=1080 -->
 <title>香典返しe-shop PC版デザイン案</title>
 <meta name="robots" content="noindex,nofollow">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
+<script>(function(){var m=/[?&]w=(980|1080)(&|$)/.exec(location.search);if(m)document.documentElement.classList.add("w"+m[1]);})();</script>
 <style>
 :root{
   --pl-deep:#41214B; --pl-band:#42234D; --pl-mid:#561D4C;
@@ -314,6 +315,28 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
 .rev-item img{width:84px;height:84px;object-fit:contain;display:block;background:#FAFAFA}
 .rev-btn{display:block;width:320px;margin:30px auto 0;padding:20px 0;text-align:center;border:2px solid #111;color:#444;font-size:16px;letter-spacing:.08em;text-decoration:none}
 .rev-btn:hover{background:#111;color:#fff}
+
+/* ===== 横幅の比較（プレビュー専用 v5.19）?w=980＝穂乃香 / ?w=1080＝シャディ ===== */
+html.w980{--cw:980px;--sw:230px}
+html.w1080{--cw:1080px;--sw:260px}
+html:is(.w980,.w1080) .benefit .wrap,
+html:is(.w980,.w1080) .bnrsec .wrap,
+html:is(.w980,.w1080) .greetsec .wrap,
+html:is(.w980,.w1080) .wrap.ranksec,
+html:is(.w980,.w1080) .wrap.fullsec,
+html:is(.w980,.w1080) .wrap.cols,
+html:is(.w980,.w1080) .rev{width:var(--cw)}
+html:is(.w980,.w1080) .rev-card{flex:0 0 calc((var(--cw) - 48px) / 3)}
+html:is(.w980,.w1080) .side{width:var(--sw);flex:0 0 var(--sw)}
+html:is(.w980,.w1080) .main{width:calc(var(--cw) - var(--sw) - 40px);flex:0 0 calc(var(--cw) - var(--sw) - 40px)}
+html:is(.w980,.w1080) .main .omo-item{width:calc(var(--cw) - var(--sw) - 100px)}
+
+/* 幅の切替ボタン（プレビュー専用・本番には入れない） */
+.wsw{position:fixed;right:12px;bottom:12px;z-index:60;display:flex;align-items:center;gap:6px;background:#fff;border:2px solid var(--pl-mid);border-radius:4px;box-shadow:0 3px 10px rgba(0,0,0,.18);padding:6px 6px 6px 12px;font-size:12px;color:var(--ink);font-family:var(--gothic)}
+.wsw b{font-size:12.5px;color:var(--pl-mid);font-weight:700;margin-right:4px}
+.wsw a{display:block;padding:6px 10px;border:1px solid var(--pl-mid);border-radius:2px;color:var(--pl-mid);text-decoration:none;white-space:nowrap;line-height:1.3;text-align:center}
+.wsw a small{display:block;font-size:10.5px;opacity:.85}
+html:not(.w980):not(.w1080) .wsw a.w0,html.w980 .wsw a.w980,html.w1080 .wsw a.w1080{background:var(--pl-mid);color:#fff}
 </style>
 </head>
 <body>
@@ -472,4 +495,5 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
   </div>
 </footer>
 
+<div class="wsw" aria-label="横幅の切替"><b>横幅</b><a class="w0" href="./">1200px<small>現在の案</small></a><a class="w1080" href="./?w=1080">1080px<small>シャディと同じ</small></a><a class="w980" href="./?w=980">980px<small>穂乃香と同じ</small></a></div>
 </body></html>
