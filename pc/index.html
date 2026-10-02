@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<!-- BUILD v5.19 2026-10-02 横幅比較 ?w=980 / ?w=1080 -->
+<!-- BUILD v5.19b 2026-10-02 横幅比較 ?w=980 / ?w=1080 -->
 <title>香典返しe-shop PC版デザイン案</title>
 <meta name="robots" content="noindex,nofollow">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
@@ -330,6 +330,7 @@ html:is(.w980,.w1080) .rev-card{flex:0 0 calc((var(--cw) - 48px) / 3)}
 html:is(.w980,.w1080) .side{width:var(--sw);flex:0 0 var(--sw)}
 html:is(.w980,.w1080) .main{width:calc(var(--cw) - var(--sw) - 40px);flex:0 0 calc(var(--cw) - var(--sw) - 40px)}
 html:is(.w980,.w1080) .main .omo-item{width:calc(var(--cw) - var(--sw) - 100px)}
+html:is(.w980,.w1080) :is(.omo-txt,.rev-txt.open,.greet p){text-wrap:pretty}
 
 /* 幅の切替ボタン（プレビュー専用・本番には入れない） */
 .wsw{position:fixed;right:12px;bottom:12px;z-index:60;display:flex;align-items:center;gap:6px;background:#fff;border:2px solid var(--pl-mid);border-radius:4px;box-shadow:0 3px 10px rgba(0,0,0,.18);padding:6px 6px 6px 12px;font-size:12px;color:var(--ink);font-family:var(--gothic)}
