@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<!-- BUILD v5.19b 2026-10-02 横幅比較 ?w=980 / ?w=1080 -->
+<!-- BUILD v5.19c 2026-10-02 横幅比較 ?w=980 / ?w=1080 -->
 <title>香典返しe-shop PC版デザイン案</title>
 <meta name="robots" content="noindex,nofollow">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
@@ -497,4 +497,30 @@ html:not(.w980):not(.w1080) .wsw a.w0,html.w980 .wsw a.w980,html.w1080 .wsw a.w1
 </footer>
 
 <div class="wsw" aria-label="横幅の切替"><b>横幅</b><a class="w0" href="./">1200px<small>現在の案</small></a><a class="w1080" href="./?w=1080">1080px<small>シャディと同じ</small></a><a class="w980" href="./?w=980">980px<small>穂乃香と同じ</small></a></div>
+<script>
+(function(){
+  var html=document.documentElement, btns=document.querySelectorAll('.wsw a');
+  function anchorEl(){
+    // 画面上から3割の位置にある要素を目印にする（切替ボタン自体は除く）
+    var x=Math.round(html.clientWidth/2), y=Math.round(innerHeight*0.3), el=document.elementFromPoint(x,y);
+    while(el&&el.closest&&el.closest('.wsw'))el=el.parentElement;
+    return (el&&el!==html&&el!==document.body)?el:null;
+  }
+  function revState(){var t=document.querySelector('.rev-track'),c=t&&t.children[0];if(!t||!c)return null;
+    var m=new DOMMatrixReadOnly(getComputedStyle(t).transform), w=c.getBoundingClientRect().width+24;return {t:t,n:Math.round(-m.m41/w)};}
+  function revFix(s){if(!s)return;var c=s.t.children[0],w=c.getBoundingClientRect().width+24;
+    s.t.style.transition='none';s.t.style.transform='translateX('+(-s.n*w)+'px)';void s.t.offsetWidth;s.t.style.transition='';
+    [].forEach.call(s.t.querySelectorAll('.rev-card'),function(d){var p=d.querySelector('.rev-txt'),m=d.querySelector('.rev-more');
+      if(!p||!m||p.classList.contains('open'))return;m.style.display='';if(p.scrollHeight<=p.clientHeight+2)m.style.display='none';});}
+  [].forEach.call(btns,function(a){a.addEventListener('click',function(e){
+    e.preventDefault();
+    var w=a.classList.contains('w980')?'980':a.classList.contains('w1080')?'1080':'';
+    var el=anchorEl(), top=el?el.getBoundingClientRect().top:0, rs=revState();
+    html.classList.remove('w980','w1080'); if(w)html.classList.add('w'+w);
+    revFix(rs);
+    if(el){var d=el.getBoundingClientRect().top-top; if(Math.abs(d)>0.5)window.scrollBy(0,d);}
+    history.replaceState(null,'',location.pathname+(w?'?w='+w:''));
+  });});
+})();
+</script>
 </body></html>
