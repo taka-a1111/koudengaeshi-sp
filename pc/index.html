@@ -2,11 +2,11 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<!-- BUILD v5.19c 2026-10-02 横幅比較 ?w=980 / ?w=1080 -->
+<!-- BUILD v5.20 2026-10-05 本文980（穂乃香）・ホバー・サイドバーにカテゴリー/金額・フッターとお客様の声980の切替 -->
 <title>香典返しe-shop PC版デザイン案</title>
 <meta name="robots" content="noindex,nofollow">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
-<script>(function(){var m=/[?&]w=(980|1080)(&|$)/.exec(location.search);if(m)document.documentElement.classList.add("w"+m[1]);})();</script>
+<script>(function(){if(/[?&]fw=980(&|$)/.test(location.search))document.documentElement.classList.add("fw980");})();</script>
 <style>
 :root{
   --pl-deep:#41214B; --pl-band:#42234D; --pl-mid:#561D4C;
@@ -316,28 +316,32 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
 .rev-btn{display:block;width:320px;margin:30px auto 0;padding:20px 0;text-align:center;border:2px solid #111;color:#444;font-size:16px;letter-spacing:.08em;text-decoration:none}
 .rev-btn:hover{background:#111;color:#fff}
 
-/* ===== 横幅の比較（プレビュー専用 v5.19）?w=980＝穂乃香 / ?w=1080＝シャディ ===== */
-html.w980{--cw:980px;--sw:230px}
-html.w1080{--cw:1080px;--sw:260px}
-html:is(.w980,.w1080) .benefit .wrap,
-html:is(.w980,.w1080) .bnrsec .wrap,
-html:is(.w980,.w1080) .greetsec .wrap,
-html:is(.w980,.w1080) .wrap.ranksec,
-html:is(.w980,.w1080) .wrap.fullsec,
-html:is(.w980,.w1080) .wrap.cols,
-html:is(.w980,.w1080) .rev{width:var(--cw)}
-html:is(.w980,.w1080) .rev-card{flex:0 0 calc((var(--cw) - 48px) / 3)}
-html:is(.w980,.w1080) .side{width:var(--sw);flex:0 0 var(--sw)}
-html:is(.w980,.w1080) .main{width:calc(var(--cw) - var(--sw) - 40px);flex:0 0 calc(var(--cw) - var(--sw) - 40px)}
-html:is(.w980,.w1080) .main .omo-item{width:calc(var(--cw) - var(--sw) - 100px)}
-html:is(.w980,.w1080) :is(.omo-txt,.rev-txt.open,.greet p){text-wrap:pretty}
-
-/* 幅の切替ボタン（プレビュー専用・本番には入れない） */
+/* ===== 本文の横幅を穂乃香に合わせる（v5.20：6大特典〜おもてなしサービスを980） ===== */
+.benefit .wrap,.bnrsec .wrap,.greetsec .wrap,.wrap.ranksec,.wrap.fullsec,.wrap.cols,.rev{width:980px}
+.rev-card{flex:0 0 calc((980px - 48px) / 3)}
+.side{width:230px;flex:0 0 230px}
+.main{width:710px;flex:0 0 710px}
+.main .omo-item{width:650px}
+:is(.omo-txt,.rev-txt.open,.greet p){text-wrap:pretty}
+/* フッター・お客様の声も980にした版（?fw=980／右下ボタン） */
+html.fw980 .voicesec .wrap,html.fw980 .foot .wrap{width:980px}
+/* 切替ボタン（プレビュー専用・本番には入れない） */
 .wsw{position:fixed;right:12px;bottom:12px;z-index:60;display:flex;align-items:center;gap:6px;background:#fff;border:2px solid var(--pl-mid);border-radius:4px;box-shadow:0 3px 10px rgba(0,0,0,.18);padding:6px 6px 6px 12px;font-size:12px;color:var(--ink);font-family:var(--gothic)}
-.wsw b{font-size:12.5px;color:var(--pl-mid);font-weight:700;margin-right:4px}
+.wsw b{font-size:12px;color:var(--pl-mid);font-weight:700;margin-right:4px;line-height:1.35}
 .wsw a{display:block;padding:6px 10px;border:1px solid var(--pl-mid);border-radius:2px;color:var(--pl-mid);text-decoration:none;white-space:nowrap;line-height:1.3;text-align:center}
 .wsw a small{display:block;font-size:10.5px;opacity:.85}
-html:not(.w980):not(.w1080) .wsw a.w0,html.w980 .wsw a.w980,html.w1080 .wsw a.w1080{background:var(--pl-mid);color:#fff}
+html:not(.fw980) .wsw a.f0,html.fw980 .wsw a.f980{background:var(--pl-mid);color:#fff}
+
+/* ===== ホバー（v5.20：穂乃香同様に薄く白く。カテゴリー・金額はダークグレー） ===== */
+.logo a,.htel,.horder,.hutil a,.hsearch button,.gnav a,.bcard,.bnr,.ritem,.stel,.sbnr,.sbox li a,.omo-bnr,.rev-btn,.rev-nav button,.rev-more,.vmore,.pcard{transition:opacity .2s}
+.logo a:hover,.htel:hover,.horder:hover,.hutil a:hover,.hsearch button:hover,.gnav a:hover,.bcard:hover,.bnr:hover,.ritem:hover,.stel:hover,.sbnr:hover,.sbox li a:hover,.omo-bnr:hover,.rev-btn:hover,.rev-nav button:hover,.rev-more:hover,.vmore:hover,.pcard:hover{opacity:.7}
+.horder:hover{background:transparent;color:var(--pl-mid)}
+.horder:hover svg{fill:var(--pl-mid)}
+.rev-btn:hover{background:transparent;color:#444}
+.rev-nav button:hover svg{stroke:#111}
+.cat{transition:background .15s,border-color .15s}
+.cat:hover{background:#4A4A4A;border-color:#4A4A4A}
+.cat:hover span{color:#fff}
 </style>
 </head>
 <body>
@@ -427,6 +431,8 @@ html:not(.w980):not(.w1080) .wsw a.w0,html.w980 .wsw a.w980,html.w1080 .wsw a.w1
 <div class="wrap cols">
   <aside class="side">
     <a class="stel" href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/8.html#tel"><img src="https://koudengaesi-e-shop.net/pic-labo/freedial_banner_new.jpg" alt="0120-994-527"></a>
+    <div class="sbox"><h4>カテゴリーから選ぶ</h4><ul><li><a href="https://koudengaesi-e-shop.net/SHOP/9997/48711/list.html">お菓子</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/9997/173449/list.html">お茶</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/9997/173450/list.html">海苔</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/9997/173451/list.html">コーヒー・紅茶</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/9997/173455/list.html">調味料・食用油</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/9997/173457/list.html">そうめん</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/9997/173459/list.html">しいたけ</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/9997/9999/list.html">詰合せ・その他の食品</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/9997/10001/list.html">洗剤・石けん</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/9997/173463/list.html">入浴剤</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/9997/9998/list.html">タオル</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/9997/10000/list.html">寝具・マット</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/9997/10002/list.html">日用品・雑貨</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/list.php?Search=%E3%82%AB%E3%82%BF%E3%83%AD%E3%82%B0%E3%82%AE%E3%83%95%E3%83%88%E3%80%80%E9%80%81%E6%96%99%E7%84%A1%E6%96%99">カタログギフト</a></li></ul></div>
+    <div class="sbox"><h4>金額から選ぶ</h4><ul><li><a href="https://koudengaesi-e-shop.net/SHOP/315927/list.html">〜1,000円</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/315928/list.html">〜1,500円</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/315929/list.html">〜2,000円</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/315930/list.html">〜2,500円</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/315931/list.html">〜3,000円</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/315932/list.html">〜3,500円</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/315933/list.html">〜4,000円</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/315934/list.html">〜5,000円</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/315935/list.html">〜10,000円</a></li><li><a href="https://koudengaesi-e-shop.net/SHOP/316453/list.html">10,001円〜</a></li></ul></div>
     <div class="sbox"><h4>お得な無料サービス・特典</h4><ul><li><a href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/29.html">のし（掛け紙）・包装紙</a></li><li><a href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/31.html">挨拶状の無料作成</a></li><li><a href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/36.html">手提げ袋・紙袋</a></li><li><a href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/33.html">メッセージカード</a></li><li><a href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/34.html">喪中ハガキの無料作成</a></li><li><a href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/232.html">完全自由文挨拶状</a></li><li><a href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/7.html">キャッシュバックサービス</a></li><li><a href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/227.html">ポイント還元</a></li></ul></div>
     <div class="sbox"><h4>運営会社について</h4><ul>
       <li><a href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/4.html">会社概要</a></li><li><a href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/230.html">運営理念</a></li><li><a href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/231.html">当店の特徴・サービス</a></li><li><a href="https://koudengaesi-e-shop.net/hpgen/HPB/shop/business.html">特定商取引法に関する表示</a></li></ul></div>
@@ -496,30 +502,19 @@ html:not(.w980):not(.w1080) .wsw a.w0,html.w980 .wsw a.w980,html.w1080 .wsw a.w1
   </div>
 </footer>
 
-<div class="wsw" aria-label="横幅の切替"><b>横幅</b><a class="w0" href="./">1200px<small>現在の案</small></a><a class="w1080" href="./?w=1080">1080px<small>シャディと同じ</small></a><a class="w980" href="./?w=980">980px<small>穂乃香と同じ</small></a></div>
+<div class="wsw" aria-label="フッター・お客様の声の横幅"><b>フッター・<br>お客様の声</b><a class="f0" href="./">1200px<small>現在の幅</small></a><a class="f980" href="./?fw=980">980px<small>穂乃香と同じ</small></a></div>
 <script>
 (function(){
-  var html=document.documentElement, btns=document.querySelectorAll('.wsw a');
-  function anchorEl(){
-    // 画面上から3割の位置にある要素を目印にする（切替ボタン自体は除く）
-    var x=Math.round(html.clientWidth/2), y=Math.round(innerHeight*0.3), el=document.elementFromPoint(x,y);
-    while(el&&el.closest&&el.closest('.wsw'))el=el.parentElement;
-    return (el&&el!==html&&el!==document.body)?el:null;
-  }
-  function revState(){var t=document.querySelector('.rev-track'),c=t&&t.children[0];if(!t||!c)return null;
-    var m=new DOMMatrixReadOnly(getComputedStyle(t).transform), w=c.getBoundingClientRect().width+24;return {t:t,n:Math.round(-m.m41/w)};}
-  function revFix(s){if(!s)return;var c=s.t.children[0],w=c.getBoundingClientRect().width+24;
-    s.t.style.transition='none';s.t.style.transform='translateX('+(-s.n*w)+'px)';void s.t.offsetWidth;s.t.style.transition='';
-    [].forEach.call(s.t.querySelectorAll('.rev-card'),function(d){var p=d.querySelector('.rev-txt'),m=d.querySelector('.rev-more');
-      if(!p||!m||p.classList.contains('open'))return;m.style.display='';if(p.scrollHeight<=p.clientHeight+2)m.style.display='none';});}
-  [].forEach.call(btns,function(a){a.addEventListener('click',function(e){
+  var html=document.documentElement;
+  [].forEach.call(document.querySelectorAll('.wsw a'),function(a){a.addEventListener('click',function(e){
     e.preventDefault();
-    var w=a.classList.contains('w980')?'980':a.classList.contains('w1080')?'1080':'';
-    var el=anchorEl(), top=el?el.getBoundingClientRect().top:0, rs=revState();
-    html.classList.remove('w980','w1080'); if(w)html.classList.add('w'+w);
-    revFix(rs);
-    if(el){var d=el.getBoundingClientRect().top-top; if(Math.abs(d)>0.5)window.scrollBy(0,d);}
-    history.replaceState(null,'',location.pathname+(w?'?w='+w:''));
+    var on=a.classList.contains('f980');
+    var el=document.elementFromPoint(Math.round(html.clientWidth/2),Math.round(innerHeight*0.3));
+    while(el&&el.closest&&el.closest('.wsw'))el=el.parentElement;
+    var top=el?el.getBoundingClientRect().top:0;
+    html.classList.toggle('fw980',on);
+    if(el){var d=el.getBoundingClientRect().top-top;if(Math.abs(d)>0.5)window.scrollBy(0,d);}
+    history.replaceState(null,'',location.pathname+(on?'?fw=980':''));
   });});
 })();
 </script>
