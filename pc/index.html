@@ -2,11 +2,10 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<!-- BUILD v5.20 2026-10-05 本文980（穂乃香）・ホバー・サイドバーにカテゴリー/金額・フッターとお客様の声980の切替 -->
+<!-- BUILD v5.21 2026-10-06 フッター・お客様の声1200固定・お客様の声ボタンを前回デザインに・バナー配置（40%OFF下に4枚／キャッシュバック横にカタログ請求） -->
 <title>香典返しe-shop PC版デザイン案</title>
 <meta name="robots" content="noindex,nofollow">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
-<script>(function(){if(/[?&]fw=980(&|$)/.test(location.search))document.documentElement.classList.add("fw980");})();</script>
 <style>
 :root{
   --pl-deep:#41214B; --pl-band:#42234D; --pl-mid:#561D4C;
@@ -323,25 +322,24 @@ body{font-family:var(--gothic);color:var(--ink);background:#fff;-webkit-font-smo
 .main{width:710px;flex:0 0 710px}
 .main .omo-item{width:650px}
 :is(.omo-txt,.rev-txt.open,.greet p){text-wrap:pretty}
-/* フッター・お客様の声も980にした版（?fw=980／右下ボタン） */
-html.fw980 .voicesec .wrap,html.fw980 .foot .wrap{width:980px}
-/* 切替ボタン（プレビュー専用・本番には入れない） */
-.wsw{position:fixed;right:12px;bottom:12px;z-index:60;display:flex;align-items:center;gap:6px;background:#fff;border:2px solid var(--pl-mid);border-radius:4px;box-shadow:0 3px 10px rgba(0,0,0,.18);padding:6px 6px 6px 12px;font-size:12px;color:var(--ink);font-family:var(--gothic)}
-.wsw b{font-size:12px;color:var(--pl-mid);font-weight:700;margin-right:4px;line-height:1.35}
-.wsw a{display:block;padding:6px 10px;border:1px solid var(--pl-mid);border-radius:2px;color:var(--pl-mid);text-decoration:none;white-space:nowrap;line-height:1.3;text-align:center}
-.wsw a small{display:block;font-size:10.5px;opacity:.85}
-html:not(.fw980) .wsw a.f0,html.fw980 .wsw a.f980{background:var(--pl-mid);color:#fff}
 
 /* ===== ホバー（v5.20：穂乃香同様に薄く白く。カテゴリー・金額はダークグレー） ===== */
-.logo a,.htel,.horder,.hutil a,.hsearch button,.gnav a,.bcard,.bnr,.ritem,.stel,.sbnr,.sbox li a,.omo-bnr,.rev-btn,.rev-nav button,.rev-more,.vmore,.pcard{transition:opacity .2s}
-.logo a:hover,.htel:hover,.horder:hover,.hutil a:hover,.hsearch button:hover,.gnav a:hover,.bcard:hover,.bnr:hover,.ritem:hover,.stel:hover,.sbnr:hover,.sbox li a:hover,.omo-bnr:hover,.rev-btn:hover,.rev-nav button:hover,.rev-more:hover,.vmore:hover,.pcard:hover{opacity:.7}
+.logo a,.htel,.horder,.hutil a,.hsearch button,.gnav a,.bcard,.bnr,.ritem,.stel,.sbnr,.sbox li a,.omo-bnr,.rev-nav button,.pcard{transition:opacity .2s}
+.logo a:hover,.htel:hover,.horder:hover,.hutil a:hover,.hsearch button:hover,.gnav a:hover,.bcard:hover,.bnr:hover,.ritem:hover,.stel:hover,.sbnr:hover,.sbox li a:hover,.omo-bnr:hover,.rev-nav button:hover,.pcard:hover{opacity:.7}
 .horder:hover{background:transparent;color:var(--pl-mid)}
 .horder:hover svg{fill:var(--pl-mid)}
-.rev-btn:hover{background:transparent;color:#444}
 .rev-nav button:hover svg{stroke:#111}
 .cat{transition:background .15s,border-color .15s}
 .cat:hover{background:#4A4A4A;border-color:#4A4A4A}
 .cat:hover span{color:#fff}
+
+/* ===== バナー配置（v5.21：40%OFFの下に4枚／キャッシュバックの横にカタログ請求） ===== */
+.bgrid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:20px}
+.bgrid4 .bnr{margin:0}
+.brow2{display:flex;justify-content:space-between;align-items:flex-start}
+.brow2 .bnr{margin:0}
+.brow2 .bnr.native img{width:730px;height:210px}
+.brow2 .bside img{width:auto;height:210px}
 </style>
 </head>
 <body>
@@ -389,10 +387,11 @@ html:not(.fw980) .wsw a.f0,html.fw980 .wsw a.f980{background:var(--pl-mid);color
 <div class="bnrsec">
 <div class="sec"><div class="wrap narrow">
   <a class="bnr" href="https://koudengaesi-e-shop.net/SHOP/54262/list.html"><img src="https://koudengaesi-e-shop.net/pic-labo/kg_bnr_40off.jpg" alt="最大40%OFF"></a>
+  <div class="bgrid4"><a class="bnr" href="javascript:void(0)" title="リンクは後日設定"><img src="bnr_soryo.webp" alt="1200商品以上 送料無料" width="230" height="230"></a><a class="bnr" href="javascript:void(0)" title="リンクは後日設定"><img src="bnr_catalog.webp" alt="香典返し カタログギフト" width="230" height="230"></a><a class="bnr" href="javascript:void(0)" title="リンクは後日設定"><img src="bnr_kogaku40.webp" alt="高額返礼品 最大40%OFF" width="230" height="230"></a><a class="bnr" href="javascript:void(0)" title="リンクは後日設定"><img src="bnr_pay.webp" alt="楽天・Amazon Payで簡単ショッピング" width="230" height="230"></a></div>
 </div></div>
 
-<div class="sec" style="padding-top:26px"><div class="wrap">
-  <a class="bnr native" href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/7.html"><img src="https://koudengaesi-e-shop.net/pic-labo/cashback.jpg" alt="大口キャッシュバック"></a>
+<div class="sec" style="padding-top:20px"><div class="wrap">
+  <div class="brow2"><a class="bnr native" href="https://koudengaesi-e-shop.net/hpgen/HPB/entries/7.html"><img src="https://koudengaesi-e-shop.net/pic-labo/cashback.jpg" alt="大口キャッシュバック"></a><a class="bnr bside" href="javascript:void(0)" title="リンクは後日設定"><img src="bnr_seikyu.webp" alt="無料 カタログ請求" width="211" height="210"></a></div>
 </div></div>
 </div>
 
@@ -502,20 +501,4 @@ html:not(.fw980) .wsw a.f0,html.fw980 .wsw a.f980{background:var(--pl-mid);color
   </div>
 </footer>
 
-<div class="wsw" aria-label="フッター・お客様の声の横幅"><b>フッター・<br>お客様の声</b><a class="f0" href="./">1200px<small>現在の幅</small></a><a class="f980" href="./?fw=980">980px<small>穂乃香と同じ</small></a></div>
-<script>
-(function(){
-  var html=document.documentElement;
-  [].forEach.call(document.querySelectorAll('.wsw a'),function(a){a.addEventListener('click',function(e){
-    e.preventDefault();
-    var on=a.classList.contains('f980');
-    var el=document.elementFromPoint(Math.round(html.clientWidth/2),Math.round(innerHeight*0.3));
-    while(el&&el.closest&&el.closest('.wsw'))el=el.parentElement;
-    var top=el?el.getBoundingClientRect().top:0;
-    html.classList.toggle('fw980',on);
-    if(el){var d=el.getBoundingClientRect().top-top;if(Math.abs(d)>0.5)window.scrollBy(0,d);}
-    history.replaceState(null,'',location.pathname+(on?'?fw=980':''));
-  });});
-})();
-</script>
 </body></html>
