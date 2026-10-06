@@ -1,0 +1,7 @@
+<!-- kg-pc 2026-10-06 ftfix start -->
+{literal}<style>
+@media (min-width:769px){
+html.kg-pc body:has(.kgp-ft) #main-column>section:has(>.footer_area),html.kg-pc body:has(.kgp-ft) #main-column-full section:has(>.footer_area),html.kg-pc body:has(.kgp-ft) .enquete-section:has(>.footer_area),html.kg-pc body:has(.kgp-ft) .footer_area{display:none!important}
+}
+</style>{/literal}
+<!-- kg-pc 2026-10-06 ftfix end -->
