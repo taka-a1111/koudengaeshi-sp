@@ -1,0 +1,7 @@
+<script>(function(){var d=document.documentElement,off=false,pc=true;
+try{var q=location.search,s=window.sessionStorage;
+if(/[?&]kgpc=0(&|$)/.test(q))s.setItem('kgpc','0');
+if(/[?&]kgpc=1(&|$)/.test(q))s.removeItem('kgpc');
+off=s.getItem('kgpc')==='0';}catch(e){}
+try{pc=window.matchMedia('(min-width:769px)').matches;}catch(e){}
+if(pc&&!off)d.classList.add('kg-pc');})();</script>

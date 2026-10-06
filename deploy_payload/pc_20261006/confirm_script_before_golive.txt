@@ -1,0 +1,4 @@
+<script>(function(){try{var q=location.search,s=window.sessionStorage;
+if(/[?&]kgpc=1(&|$)/.test(q))s.setItem('kgpc','1');
+if(/[?&]kgpc=0(&|$)/.test(q))s.removeItem('kgpc');
+if(s.getItem('kgpc')==='1')document.documentElement.classList.add('kg-pc');}catch(e){}})();</script>
