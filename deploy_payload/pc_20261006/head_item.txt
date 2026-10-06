@@ -234,7 +234,7 @@ function run(){
    if(n>=5)return;var a=cd.querySelector('h2 a');if(!a)return;var hr=a.getAttribute('href')||'';var id=(hr.match(/SHOP\/([^\/]+)\.html/)||[])[1];
    if(!id||id===itemNo)return;var nm=a.getAttribute('title')||txt(a);var im=cd.querySelector('.itemThumb img');var pr=cd.querySelector('.selling_price');var dc=cd.querySelector('.discount_rate');
    var free=/【送料無料】/.test(nm);nm=nm.replace(/【送料無料】\s*/g,'');
-   out+='<a class="kgi-pcard" href="https://koudengaesi-e-shop.net/SHOP/'+esc(id)+'.html"><div class="kgi-ph"><img src="'+esc(im?(im.getAttribute('src')||'').replace(/\?t=\d+$/,''):'')+'" alt="'+esc(nm)+'" loading="lazy"><\/div><div class="kgi-nm">'+esc(nm)+'<\/div><div class="kgi-pr"><span class="kgi-yen">¥'+num(txt(pr))+'<small>(税込)<\/small><\/span>'+(txt(dc)?'<span class="kgi-poff">'+esc(txt(dc))+'<\/span>':'')+'<\/div>'+(free?'<span class="kgi-pfree">送料無料<\/span>':'')+'<\/a>';n++;});
+   out+='<a class="kgi-pcard" href="https://koudengaesi-e-shop.net/SHOP/'+esc(id)+'.html"><div class="kgi-ph"><img src="'+esc(im?(im.getAttribute('src')||'').replace(/\?t=\d+$/,''):'')+'" alt="'+esc(nm)+'" loading="lazy"><\/div><div class="kgi-nm">'+esc(nm)+'<\/div><div class="kgi-pr"><span class="kgi-yen">\u00A5'+num(txt(pr))+'<small>(税込)<\/small><\/span>'+(txt(dc)?'<span class="kgi-poff">'+esc(txt(dc))+'<\/span>':'')+'<\/div>'+(free?'<span class="kgi-pfree">送料無料<\/span>':'')+'<\/a>';n++;});
   if(n){pl.innerHTML=out;}else rec.classList.add('kgi-empty');
  }).catch(function(){rec.classList.add('kgi-empty');});
 }
