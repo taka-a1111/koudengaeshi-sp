@@ -1,0 +1,23 @@
+<!-- kg-pc 2026-10-08 nofouc start -->
+{literal}<script>(function(){var d=document.documentElement;if(!d.classList.contains('kg-pc'))return;
+var p=location.pathname;
+if(!(p==='/'||p==='/index.html'||p==='/index.htm'||p.indexOf('/SHOP/')===0||p.indexOf('/hpgen/')===0))return;
+d.classList.add('kg-pcsrv');
+if(/^\/SHOP\/[^\/]+\.html$/.test(p)&&!/list/.test(p))d.classList.add('kg-pcwait','kg-pcitem');else if(p.indexOf('/SHOP/')===0)d.classList.add('kg-pcwait');
+function show(){d.classList.remove('kg-pcwait');}
+function done(){show();
+if(!document.querySelector('.kgp-hd'))d.classList.add('kg-nohd');
+if(!document.querySelector('.kgp-ft'))d.classList.add('kg-noft');
+if(!document.querySelector('.kgp-sd'))d.classList.add('kg-nosd');}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',done);else done();
+window.addEventListener('load',show);setTimeout(show,8000);
+})();</script>
+<style>
+@media (min-width:769px){
+html.kg-pc.kg-pcsrv:not(.kg-nohd) #header-inner,html.kg-pc.kg-pcsrv:not(.kg-nohd) #gnav{display:none!important}
+html.kg-pc.kg-pcsrv:not(.kg-noft) #footer-inner{display:none!important}
+html.kg-pc.kg-pcsrv:not(.kg-nosd) #sub-column>:not(.kgp-sd):not(:has(#subc_calendar)){display:none!important}
+html.kg-pc.kg-pcwait.kg-pcitem #main-column,html.kg-pc.kg-pcwait #main-column .column-set{visibility:hidden}
+}
+</style>{/literal}
+<!-- kg-pc 2026-10-08 nofouc end -->

@@ -2,6 +2,7 @@
 
 <html lang="ja" >
 <head>
+<!-- BUILD: pc-cart-preview 2026-10-08a -->
 <base href="https://koudengaesi-e-shop.net/CART/">
 <script>window.KG_CART_PREVIEW=1;document.addEventListener('submit',function(e){e.preventDefault();},true);</script>
 
@@ -2781,7 +2782,7 @@ else if(v==='変更'||v==='削除')b[i].classList.add('kgc-mini');}}
 function run(){if(!document.querySelector('.kgp-hd')){var hi=document.getElementById('header-inner');if(hi){var w=document.createElement('div');w.innerHTML=HD;while(w.firstChild)hi.parentNode.insertBefore(w.firstChild,hi);}}
 var fi=document.getElementById('footer-inner');if(fi&&!document.querySelector('.kgp-ft')){var x=document.createElement('div');x.innerHTML=FT;while(x.firstChild)fi.parentNode.insertBefore(x.firstChild,fi.nextSibling);}
 steps();btns();}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();})();</script>
+if(document.readyState==='loading'){var mo=null;try{mo=new MutationObserver(run);mo.observe(document.documentElement,{childList:true,subtree:true});}catch(e){}document.addEventListener('DOMContentLoaded',function(){if(mo)mo.disconnect();run();});}else run();})();</script>
 <style>
 @media (min-width:769px){
 html.kg-pc.kg-cart #header-inner,html.kg-pc.kg-cart #gnav{display:none!important}
@@ -2800,10 +2801,10 @@ html.kg-pc.kg-cart .kgc-stepwrap{display:block!important;float:none!important;wi
 html.kg-pc.kg-cart #center1 .centerbox>.mainCont:first-child{width:100%!important;float:none!important}
 html.kg-pc.kg-cart .kgc-steps{display:flex;justify-content:center;list-style:none;margin:0 auto!important;padding:0!important;width:620px}
 html.kg-pc.kg-cart .kgc-steps li{flex:1;position:relative;text-align:center;color:#9A9A9A;font-size:13px;letter-spacing:.06em}
-html.kg-pc.kg-cart .kgc-steps li::before{content:"";position:absolute;top:19px;left:-50%;width:100%;height:2px;background:#E5DAEA;z-index:0}
+html.kg-pc.kg-cart .kgc-steps li::before{content:"";position:absolute;top:19px;left:-50%;width:100%;height:2px;background:#D6D6D6;z-index:0}
 html.kg-pc.kg-cart .kgc-steps li:first-child::before{display:none}
 html.kg-pc.kg-cart .kgc-steps li.is-done::before,html.kg-pc.kg-cart .kgc-steps li.is-cur::before{background:#41214B}
-html.kg-pc.kg-cart .kgc-no{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;width:40px;height:40px;margin:0 auto 8px;border-radius:50%;background:#fff;border:2px solid #E5DAEA;font-family:var(--mincho);font-size:18px;color:#9A9A9A}
+html.kg-pc.kg-cart .kgc-no{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;width:40px;height:40px;margin:0 auto 8px;border-radius:50%;background:#F4F4F4;border:2px solid #CFCFCF;font-family:var(--mincho);font-size:18px;color:#9A9A9A}
 html.kg-pc.kg-cart .kgc-steps li.is-done .kgc-no{border-color:#41214B;color:#41214B;background:#F4EFF6}
 html.kg-pc.kg-cart .kgc-steps li.is-cur .kgc-no{border-color:#41214B;background:#41214B;color:#fff}
 html.kg-pc.kg-cart .kgc-steps li.is-cur{color:#41214B;font-weight:700}
