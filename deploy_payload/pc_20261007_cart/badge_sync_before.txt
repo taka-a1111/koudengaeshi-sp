@@ -1,0 +1,27 @@
+<!-- kg-badge-sync 2026-09-16 start -->
+
+<script>
+(function(){
+  var K='kgCartN',T='kgCartT',TTL=30000;
+  function paint(n){document.querySelectorAll('.kg-badge').forEach(function(b){b.textContent=n;});}
+  function run(force){
+    if(!document.querySelector('.kg-badge')) return;
+    var now=Date.now(),c=null,t=0;
+    try{c=sessionStorage.getItem(K);t=+sessionStorage.getItem(T)||0;}catch(e){}
+    if(c!==null) paint(c);
+    /* キャッシュは即時表示のみ。最新値は毎回取得 */
+    fetch('/CART/smp_cart.php',{credentials:'same-origin'}).then(function(r){return r.text();}).then(function(h){
+      var d=new DOMParser().parseFromString(h,'text/html'),n=0;
+      d.querySelectorAll('input[name^="QT-"]').forEach(function(i){n+=parseInt(i.value,10)||0;});
+      paint(n);
+      try{sessionStorage.setItem(K,n);sessionStorage.setItem(T,Date.now());}catch(e){}
+    }).catch(function(){});
+  }
+  var fromCart=/\/CART\//.test(document.referrer)||/\/CART\//.test(location.pathname);
+  function start(){run(fromCart);}
+  if(document.readyState==='complete') start(); else window.addEventListener('load',start);
+  window.addEventListener('pageshow',function(e){if(e.persisted) run(true);});
+})();
+</script>
+
+<!-- kg-badge-sync 2026-09-16 end -->
