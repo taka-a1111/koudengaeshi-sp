@@ -1,0 +1,8 @@
+<script>(function(){var d=document.documentElement,off=false,pc=true;
+window.kgIsPC=function(){try{if(window.matchMedia('(min-width:769px)').matches)return true;}catch(e){}var w=document.documentElement.clientWidth||window.innerWidth||0;return w>=769;};
+try{var q=location.search,s=window.sessionStorage;
+if(/[?&]kgpc=0(&|$)/.test(q))s.setItem('kgpc','0');
+if(/[?&]kgpc=1(&|$)/.test(q))s.removeItem('kgpc');
+off=s.getItem('kgpc')==='0';}catch(e){}
+pc=window.kgIsPC();
+if(pc&&!off)d.classList.add('kg-pc');})();</script>

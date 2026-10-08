@@ -1,0 +1,31 @@
+<!-- kg-badge-sync 2026-09-16 start -->
+
+<script>
+(function(){
+  var K='kgCartN',T='kgCartT',TTL=30000,PTTL=600000,pc=false;
+  try{pc=(window.kgIsPC?window.kgIsPC():window.matchMedia('(min-width:769px)').matches);}catch(e){}
+  function paint(n){document.querySelectorAll('.kg-badge').forEach(function(b){b.textContent=n;});}
+  function count(d){var n=0;d.querySelectorAll('input[name^="QT-"]').forEach(function(i){n+=parseInt(i.value,10)||0;});return n;}
+  function save(n){try{sessionStorage.setItem(K,n);sessionStorage.setItem(T,Date.now());}catch(e){}}
+  function run(force){
+    if(!document.querySelector('.kg-badge')) return;
+    var now=Date.now(),c=null,t=0;
+    try{c=sessionStorage.getItem(K);t=+sessionStorage.getItem(T)||0;}catch(e){}
+    if(c!==null) paint(c);
+    /* PC（2026-10-07）：smp_cart.php はPCでは中身が返らないため cart.php で数える。カート画面では画面上の個数をそのまま使う */
+    if(pc&&/\/CART\/cart\.php/.test(location.pathname)){var m=count(document);paint(m);save(m);return;}
+    if(pc&&!force&&c!==null&&now-t<PTTL) return;
+    /* スマホ：キャッシュは即時表示のみ。最新値は毎回取得 */
+    fetch(pc?'/CART/cart.php':'/CART/smp_cart.php',{credentials:'same-origin'}).then(function(r){return r.text();}).then(function(h){
+      var n=count(new DOMParser().parseFromString(h,'text/html'));
+      paint(n);save(n);
+    }).catch(function(){});
+  }
+  var fromCart=/\/CART\//.test(document.referrer)||/\/CART\//.test(location.pathname);
+  function start(){run(fromCart);}
+  if(document.readyState==='complete') start(); else window.addEventListener('load',start);
+  window.addEventListener('pageshow',function(e){if(e.persisted) run(true);});
+})();
+</script>
+
+<!-- kg-badge-sync 2026-09-16 end -->
