@@ -19,5 +19,8 @@ html.kg-pc.kg-pcsrv:not(.kg-noft) #footer-inner{display:none!important}
 html.kg-pc.kg-pcsrv:not(.kg-nosd) #sub-column>:not(.kgp-sd):not(:has(#subc_calendar)){display:none!important}
 html.kg-pc.kg-pcwait.kg-pcitem #main-column,html.kg-pc.kg-pcwait #main-column .column-set{visibility:hidden}
 }
+@media (min-width:769px) and (max-width:1209px){
+html.kg-pc .kgp-hd .kgp-hutil{margin-right:6px}
+}
 </style>{/literal}
 <!-- kg-pc 2026-10-08 nofouc end -->
