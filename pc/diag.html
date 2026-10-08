@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- BUILD: pc-diag 2026-10-08a -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>表示判定の確認</title>
+<script>
+window.__kgd=[];
+function kgSnap(when){var o={when:when};
+try{o.mq769=window.matchMedia('(min-width:769px)').matches;}catch(e){o.mq769='err';}
+o.innerWidth=window.innerWidth;o.clientWidth=document.documentElement.clientWidth;o.screenWidth=screen.width;o.dpr=window.devicePixelRatio;
+try{o.kgpc=window.sessionStorage.getItem('kgpc');}catch(e){o.kgpc='err';}
+window.__kgd.push(o);}
+kgSnap('head');
+try{window.matchMedia('(min-width:769px)').addEventListener('change',function(e){kgSnap('change:'+e.matches);render();});}catch(e){}
+window.addEventListener('resize',function(){kgSnap('resize');render();});
+document.addEventListener('DOMContentLoaded',function(){kgSnap('DOMContentLoaded');render();});
+window.addEventListener('load',function(){kgSnap('load');render();setTimeout(function(){kgSnap('load+1s');render();},1000);});
+function render(){var t=document.getElementById('out');if(!t)return;
+t.textContent=navigator.userAgent+'\n\n'+window.__kgd.map(function(o){return [o.when,'769px以上='+o.mq769,'innerWidth='+o.innerWidth,'clientWidth='+o.clientWidth,'screen='+o.screenWidth,'dpr='+o.dpr,'kgpc='+o.kgpc].join('  ');}).join('\n');}
+</script>
+<style>
+body{margin:0;padding:24px;background:#fff;color:#222;font-family:"Noto Sans JP","游ゴシック","Yu Gothic","メイリオ",Meiryo,"MS Pゴシック","Noto Sans CJK JP","IPAexゴシック",sans-serif}
+h1{font-size:28px;margin:0 0 12px}
+p{font-size:20px;line-height:1.7;margin:0 0 16px}
+pre{font-size:22px;line-height:1.8;white-space:pre-wrap;word-break:break-all;background:#F4EFF6;padding:18px;border-radius:4px}
+</style>
+</head>
+<body>
+<h1>表示判定の確認ページ</h1>
+<p>このページを「PC版サイト」の表示にした状態で開き、下の枠が見えるように画面写真を送ってください。</p>
+<pre id="out">読み込み中…</pre>
+</body>
+</html>
