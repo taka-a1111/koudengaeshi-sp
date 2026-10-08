@@ -1,0 +1,2 @@
+/* 10/8 12:37 ちとせ屋さん依頼：購入手続きのお支払い方法選択欄を紫→グレー。本番投入時は cart ブロック（kg-pc 2026-10-07 cart）の style 内に追記する */
+html.kg-pc.kg-cart #contact table.border:not(.cartItem) td.backcolor1:has(input[name="PAYTYPE"]){background:#DDDDDD!important;color:#2B2B2B!important}
