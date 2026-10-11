@@ -1,0 +1,35 @@
+<!-- kg-sp 2026-10-12 menu start -->
+{literal}<style>
+@media (max-width:768px){
+html:not(.kg-pc) #sub-column .kgm-tel{width:250px;max-width:100%;margin:0 0 12px;padding:12px 10px 10px;background:#fff;border:1px solid #D9CCE0;border-radius:4px;text-align:center;box-sizing:border-box}
+html:not(.kg-pc) #sub-column .kgm-tel-lead{font-size:12px;color:#666;letter-spacing:.06em;margin-bottom:7px}
+html:not(.kg-pc) #sub-column a.kgm-tel-btn{position:relative;display:block;background:#5E2E6B;border-radius:99px;padding:8px 10px 7px 44px;color:#fff!important;text-decoration:none!important;box-shadow:0 2px 8px rgba(94,46,107,.22)}
+html:not(.kg-pc) #sub-column a.kgm-tel-btn svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:28px;height:28px;stroke:#fff;fill:none;stroke-width:1.5}
+html:not(.kg-pc) #sub-column .kgm-tel-num{display:block;font-size:23px;font-weight:700;letter-spacing:.03em;line-height:1.2;color:#fff}
+html:not(.kg-pc) #sub-column .kgm-tel-time{display:block;font-size:11px;color:rgba(255,255,255,.92)}
+html:not(.kg-pc) #sub-column .kgm-tel-sub{margin-top:7px;font-size:12px;color:#444}
+html:not(.kg-pc) #sub-column .kgm-tel-sub a{color:#5E2E6B!important;font-weight:700;text-decoration:underline}
+html:not(.kg-pc) #sub-column .optiontitle{background:#5E2E6B!important;color:#fff!important;padding:9px 12px!important;font-size:15px!important;height:auto!important;min-height:0!important;line-height:1.5!important;overflow:visible!important;letter-spacing:.06em;border-radius:4px 4px 0 0;box-sizing:border-box;width:250px!important;max-width:100%}
+html:not(.kg-pc) #sub-column .optionmenu{border:1px solid #D9CCE0!important;border-top:0!important;background:#F8F4F9!important;padding:4px 10px!important;border-radius:0 0 4px 4px;box-sizing:border-box;width:250px!important;max-width:100%}
+html:not(.kg-pc) #sub-column .optionmenu li{position:relative;padding-left:16px!important}
+html:not(.kg-pc) #sub-column .optionmenu li img[src*="yajirusi"]{display:none!important}
+html:not(.kg-pc) #sub-column .optionmenu li::before{content:"";position:absolute;left:2px;top:50%;width:6px;height:6px;border-top:2px solid #5E2E6B;border-right:2px solid #5E2E6B;transform:translateY(-50%) rotate(45deg)}
+html:not(.kg-pc) #sub-column h2{border-top-color:#5E2E6B!important;color:#41214B!important}
+}
+</style>
+<script>(function(){
+function run(){
+ if(document.documentElement.classList.contains('kg-pc'))return;
+ var sc=document.getElementById('sub-column');if(!sc||sc.querySelector('.kgm-tel'))return;
+ var img=sc.querySelector('a[href^="tel:"] img[src*="freedial_banner"]');if(!img)return;
+ var p=img.closest('p')||img.parentNode;
+ var d=document.createElement('div');d.className='kgm-tel';
+ d.innerHTML='<div class="kgm-tel-lead">ご不明点はお気軽にお電話ください</div>'+
+ '<a class="kgm-tel-btn" href="tel:0120994527"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.4 7.6c1.6-.4 2 .6 2.4 1.6.3.8-.6 1.2-.7 1.8-.1.9 2.2 3.2 3.1 3.1.6-.1 1-1 1.8-.7 1 .4 2 .8 1.6 2.4-.3 1.2-1.9 1.6-3.2 1.2-2.7-.8-5.6-3.7-6.4-6.4-.4-1.3 0-2.9 1.4-3z" stroke-linejoin="round"/></svg>'+
+ '<span class="kgm-tel-num">0120-994-527</span><span class="kgm-tel-time">営業時間 平日 9:00〜17:00</span></a>'+
+ '<div class="kgm-tel-sub">繋がらない方は <a href="tel:05031554576">050-3155-4576</a></div>';
+ p.parentNode.replaceChild(d,p);
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
+})();</script>{/literal}
+<!-- kg-sp 2026-10-12 menu end -->
