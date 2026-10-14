@@ -1,0 +1,46 @@
+<!-- kg-coupon 2026-10-10 start -->
+<style>
+.kgcp{margin:18px 0 26px;font-family:"Noto Sans JP","游ゴシック","Yu Gothic","メイリオ",Meiryo,sans-serif;color:#333}
+.kgcp-lead{margin:0 0 12px;font-size:14px;line-height:1.7;text-align:center;color:#41214B}
+.kgcp-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0;padding:0;list-style:none}
+.kgcp-item{margin:0;padding:0;list-style:none}
+.kgcp-btn{display:block;width:100%;margin:0;padding:0;border:0;background:none;cursor:pointer;text-align:center;font:inherit;color:inherit;-webkit-tap-highlight-color:transparent}
+.kgcp-btn img{display:block;width:100%;height:auto;border:0;transition:opacity .15s}
+.kgcp-btn:hover img{opacity:.85}
+.kgcp-tag{display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:5px 14px;border:1px solid #41214B;border-radius:999px;background:#fff;font-size:13px;line-height:1.4;color:#41214B;transition:background .15s,color .15s}
+.kgcp-tag svg{width:14px;height:14px;flex:none}
+.kgcp-btn:hover .kgcp-tag{background:#F4EFF6}
+.kgcp-btn.is-done .kgcp-tag{background:#41214B;color:#fff}
+.kgcp-btn:focus-visible{outline:2px solid #41214B;outline-offset:3px}
+@media (max-width:768px){
+ .kgcp{margin:14px 0 22px}
+ .kgcp-lead{font-size:13px;text-align:left}
+ .kgcp-list{grid-template-columns:1fr;gap:16px}
+ .kgcp-tag{font-size:13px;padding:6px 16px}
+}
+</style>
+<div class="kgcp" id="kgcp">
+<p class="kgcp-lead">クーポンをクリック（スマホはタップ）すると、クーポンIDをコピーできます。</p>
+<ul class="kgcp-list">
+<li class="kgcp-item"><button type="button" class="kgcp-btn" data-kgcp="62170"><img src="https://koudengaesi-e-shop.net/pic-labo/kg_coupon_10000off.jpg" width="1086" height="362" alt="大口のお客様限定特典 10万円以上のご購入で使える10,000円OFF クーポンID:62170"><span class="kgcp-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span class="kgcp-txt">クーポンID 62170 をコピー</span></span></button></li>
+<li class="kgcp-item"><button type="button" class="kgcp-btn" data-kgcp="96264"><img src="https://koudengaesi-e-shop.net/pic-labo/kg_coupon_3000off.jpg" width="1086" height="362" alt="大口のお客様限定特典 5万円以上のご購入で使える3,000円OFF クーポンID:96264"><span class="kgcp-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span class="kgcp-txt">クーポンID 96264 をコピー</span></span></button></li>
+<li class="kgcp-item"><button type="button" class="kgcp-btn" data-kgcp="49643"><img src="https://koudengaesi-e-shop.net/pic-labo/kg_coupon_1000off.jpg" width="1086" height="362" alt="大口のお客様限定特典 3万円以上のご購入で使える1,000円OFF クーポンID:49643"><span class="kgcp-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span class="kgcp-txt">クーポンID 49643 をコピー</span></span></button></li>
+</ul>
+</div>
+<script>
+(function(){
+ function copyText(t){
+  if(navigator.clipboard&&window.isSecureContext){return navigator.clipboard.writeText(t);}
+  return new Promise(function(ok,ng){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.top='-1000px';document.body.appendChild(a);a.select();a.setSelectionRange(0,t.length);var r=false;try{r=document.execCommand('copy');}catch(e){}document.body.removeChild(a);r?ok():ng();});
+ }
+ var box=document.getElementById('kgcp');if(!box||box.getAttribute('data-ready'))return;box.setAttribute('data-ready','1');
+ [].forEach.call(box.querySelectorAll('.kgcp-btn'),function(b){
+  var id=b.getAttribute('data-kgcp'),txt=b.querySelector('.kgcp-txt'),base=txt.textContent,tm;
+  b.addEventListener('click',function(){
+   copyText(id).then(function(){txt.textContent='コピーしました（ID '+id+'）';b.classList.add('is-done');},function(){txt.textContent='クーポンID：'+id;});
+   clearTimeout(tm);tm=setTimeout(function(){txt.textContent=base;b.classList.remove('is-done');},2500);
+  });
+ });
+})();
+</script>
+<!-- kg-coupon 2026-10-10 end -->

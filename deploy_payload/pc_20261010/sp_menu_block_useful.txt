@@ -1,0 +1,25 @@
+<div class="category">
+<h2>香典返し・弔事のお役立ち情報</h2>
+<section class="tatenarabi">
+<nav>
+<ul class="sps-itemCategorySub">
+<ul>
+<li class="cat2"><div class="sitelink"><a href="/hpgen/HPB/entries/11.html">香典返しマナーのまとめ</a></div></li>
+<li class="cat2"><div class="sitelink"><a href="/manner/" target="_blank">香典返しのマナーガイド</a></div></li>
+<li class="cat2"><div class="sitelink"><a href="/hpgen/HPB/entries/207.html">日本の三大宗教</a></div></li>
+<li class="cat2"><div class="sitelink"><a href="/hpgen/HPB/entries/208.html">宗教別葬儀の流れ</a></div></li>
+<!--
+<li class="cat2"><div class="sitelink"><a href="/hpgen/HPB/entries/210.html">葬儀後～初七日までの流れ</a></div></li>
+-->
+<li class="cat2"><div class="sitelink"><a href="/hpgen/HPB/entries/211.html">初七日～七七日忌（忌明法要）前日までの流れ</a></div></li>
+<!--
+<li class="cat2"><div class="sitelink"><a href="/hpgen/HPB/entries/212.html">忌明法要（七七日忌）当日の流れ</a></div></li>
+-->
+<li class="cat2"><div class="sitelink"><a href="/hpgen/HPB/entries/215.html">納骨の行い方・時期・流れ</a></div></li>
+<li class="cat2"><div class="sitelink"><a href="/hpgen/HPB/categories/16731.html">弔事・香典返しの豆知識</a></div></li>
+<li class="cat2"><div class="sitelink"><a href="/hpgen/HPB/categories/9650.html">仏事、法事・法要の豆知識</a></div></li>
+</ul>
+</ul>
+</nav>
+</section>
+</div>

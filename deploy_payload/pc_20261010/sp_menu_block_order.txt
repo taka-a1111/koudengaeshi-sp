@@ -1,0 +1,23 @@
+<div class="category">
+<h2>ご注文のご案内</h2>
+<section class="tatenarabi">
+<nav>
+<ul class="sps-itemCategorySub">
+<ul>
+<li class="cat2"><div class="sitelink"><a href="/hpgen/HPB/entries/8.html">選べる４種の注文方法</a></div></li>
+<li class="cat2"><div class="sitelink"><a href="/hpgen/HPB/entries/224.html">複数配送もカンタン注文</a></div></li>
+<li class="cat2"><div class="sitelink"><a href="/hpgen/HPB/entries/2.html">ご注文の流れ</a></div></li>
+<li class="cat2"><div class="sitelink"><a href="/hpgen/HPB/entries/3.html">お支払い方法</a></div></li>
+<li class="cat2"><div class="sitelink"><a href="/hpgen/HPB/entries/2.html#nouki">納期について</a></div></li>
+<li class="cat2"><div class="sitelink"><a href="/hpgen/HPB/entries/42.html#nouki">送料について</a></div></li>
+<li class="cat2"><div class="sitelink"><a href="/hpgen/HPB/entries/60.html">会社・法人向けサービス</a></div></li>
+<li class="cat2"><div class="sitelink"><a href="/hpgen/HPB/entries/206.html">よくあるご質問</a></div></li>
+<!--
+<li class="cat2"><div class="sitelink"><a href="/hpgen/HPB/entries/11.html">香典返しマナーのまとめ</a></div></li>
+<li class="cat2"><div class="sitelink"><a href="/manner/">香典返し・弔事のマナー</a></div></li>
+-->
+</ul>
+</ul>
+</nav>
+</section>
+</div>
