@@ -1,0 +1,84 @@
+<!-- kg-tally 2026-10-15 start（口コミ集計：/SHOP/rating_list.html?kgtally=1 のときだけ集計画面を出す） -->
+{literal}<script>
+(function(){
+if(location.pathname!=='/SHOP/rating_list.html'||!/[?&]kgtally=1(&|$)/.test(location.search))return;
+try{var mt=document.createElement('meta');mt.name='robots';mt.content='noindex,nofollow';document.head.appendChild(mt);}catch(e){}
+var CSS='#kgrt{max-width:720px;margin:24px auto 40px;padding:0 16px;font-family:"游ゴシック","Yu Gothic","メイリオ",Meiryo,"Noto Sans JP",sans-serif;color:#333;line-height:1.7;box-sizing:border-box;clear:both}'
++'#kgrt *{box-sizing:border-box}'
++'#kgrt .kgrt-h{font-size:22px;font-weight:700;color:#41214B;border-bottom:2px solid #41214B;padding:0 0 8px;margin:0 0 14px}'
++'#kgrt .kgrt-note{font-size:13px;color:#666;margin:0 0 14px}'
++'#kgrt .kgrt-st{background:#F4EFF6;border-left:4px solid #7A4489;padding:10px 14px;font-size:14px;margin:0 0 14px}'
++'#kgrt .kgrt-st.err{background:#FDF0EE;border-left-color:#B52A1F;color:#B52A1F}'
++'#kgrt .kgrt-res{display:none;border:1px solid #DCDCDC;background:#fff;padding:18px 18px 8px;margin:0 0 14px}'
++'#kgrt .kgrt-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:0 0 12px}'
++'#kgrt .kgrt-lbl{min-width:96px;font-size:14px;color:#555}'
++'#kgrt .kgrt-val{font-size:30px;font-weight:700;color:#41214B;min-width:90px}'
++'#kgrt .kgrt-btn{appearance:none;border:1px solid #41214B;background:#41214B;color:#fff;font-size:14px;padding:6px 14px;cursor:pointer;border-radius:2px;line-height:1.5}'
++'#kgrt .kgrt-btn.sub{background:#fff;color:#41214B}'
++'#kgrt .kgrt-btn:disabled{opacity:.5;cursor:default}'
++'#kgrt .kgrt-ok{font-size:13px;color:#1F7A3A}'
++'#kgrt table{border-collapse:collapse;width:100%;font-size:14px;margin:6px 0 12px}'
++'#kgrt th,#kgrt td{border:1px solid #E3DCE6;padding:6px 10px;text-align:left}'
++'#kgrt th{background:#F4EFF6;font-weight:600;width:40%}'
++'#kgrt .kgrt-sub{font-size:13px;color:#666;margin:0 0 10px}';
+var HTML='<div class="kgrt-h">口コミ集計（管理用）</div>'
++'<p class="kgrt-note">口コミ・レビューを全件読み込み、平均点と件数を計算します。トップページのレビュー欄の数字を更新するときに使います。このURLはお客様には案内していません。</p>'
++'<div class="kgrt-st" id="kgrtSt">読み込みを準備しています...</div>'
++'<div class="kgrt-res" id="kgrtRes">'
++'<div class="kgrt-row"><span class="kgrt-lbl">平均点</span><span class="kgrt-val" id="kgrtAvg">-</span><button type="button" class="kgrt-btn" data-copy="kgrtAvg">コピー</button><span class="kgrt-ok" id="kgrtAvgOk"></span></div>'
++'<div class="kgrt-row"><span class="kgrt-lbl">件数</span><span class="kgrt-val" id="kgrtCnt">-</span><button type="button" class="kgrt-btn" data-copy="kgrtCnt">コピー</button><span class="kgrt-ok" id="kgrtCntOk"></span></div>'
++'<p class="kgrt-sub" id="kgrtWhen"></p><table><tbody id="kgrtDist"></tbody></table></div>'
++'<button type="button" class="kgrt-btn sub" id="kgrtRetry" disabled>もう一度集計する</button>';
+function wait(ms){return new Promise(function(r){setTimeout(r,ms);});}
+function get(page,tries){
+ tries=tries||0;
+ var p=page>1?fetch('/SHOP/rating_list'+page+'.html',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'PAGE='+page}):fetch('/SHOP/rating_list.html?kgrt='+Date.now(),{credentials:'same-origin',cache:'no-store'});
+ return p.then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.text();}).catch(function(e){if(tries>=4)throw e;return wait(2000*(tries+1)).then(function(){return get(page,tries+1);});});
+}
+function parse(html){
+ var d=new DOMParser().parseFromString(html,'text/html'),m=(d.body?d.body.textContent:'').match(/全\s*([0-9,]+)\s*件/),out=[];
+ [].slice.call(d.querySelectorAll('.reviewBox')).forEach(function(b){var ul=b.querySelector('.reviewTxt ul')||b;out.push({id:b.id,on:ul.querySelectorAll('img[src*="rate_on"]').length,off:ul.querySelectorAll('img[src*="rate_off"]').length});});
+ return {total:m?parseInt(m[1].replace(/,/g,''),10):null,items:out};
+}
+function start(){
+ if(document.getElementById('kgrt'))return;
+ var st0=document.createElement('style');st0.textContent=CSS;document.head.appendChild(st0);
+ var box=document.createElement('div');box.id='kgrt';box.innerHTML=HTML;
+ var ref=document.getElementById('contents');
+ if(ref&&ref.parentNode)ref.parentNode.insertBefore(box,ref);else document.body.insertBefore(box,document.body.firstChild);
+ var $=function(i){return document.getElementById(i);},st=$('kgrtSt'),res=$('kgrtRes'),btn=$('kgrtRetry');
+ function say(t,err){st.textContent=t;st.className='kgrt-st'+(err?' err':'');}
+ function run(){
+  btn.disabled=true;res.style.display='none';say('1ページ目を読み込んでいます...');
+  var seen={},sum=0,n=0,dist={1:0,2:0,3:0,4:0,5:0},bad=0,total=null,pages=1;
+  function add(p){p.items.forEach(function(it){if(seen[it.id])return;seen[it.id]=1;if(it.on+it.off!==5)bad++;sum+=it.on;n++;if(dist[it.on]!==undefined)dist[it.on]++;});}
+  get(1).then(function(h){
+   var p=parse(h);total=p.total;add(p);
+   if(!total)throw new Error('全件数が読み取れませんでした');
+   pages=Math.ceil(total/10);
+   var chain=Promise.resolve();
+   for(var i=2;i<=pages;i++){(function(i){chain=chain.then(function(){say(i+' / '+pages+' ページ目を読み込んでいます...');return wait(400).then(function(){return get(i);});}).then(function(h){add(parse(h));});})(i);}
+   return chain;
+  }).then(function(){
+   if(!n)throw new Error('口コミを1件も読み取れませんでした');
+   $('kgrtAvg').textContent=(Math.round(sum/n*100)/100).toFixed(2);
+   $('kgrtCnt').textContent=String(n);
+   var dt=new Date();
+   $('kgrtWhen').textContent='集計日時：'+dt.getFullYear()+'年'+(dt.getMonth()+1)+'月'+dt.getDate()+'日 '+('0'+dt.getHours()).slice(-2)+':'+('0'+dt.getMinutes()).slice(-2)+'（'+pages+'ページ分）';
+   var rows='';[5,4,3,2,1].forEach(function(k){rows+='<tr><th>星'+k+'つ</th><td>'+dist[k]+'件</td></tr>';});
+   $('kgrtDist').innerHTML=rows;res.style.display='block';
+   if(n!==total||bad)say('集計しましたが、一覧の件数（'+total+'件）と読み取れた件数（'+n+'件）が合いません。時間をおいて「もう一度集計する」を押してください。',true);
+   else say('集計が完了しました。下の2つの数字をトップページの更新に使ってください。');
+  }).catch(function(e){say('集計できませんでした（'+(e&&e.message?e.message:'通信エラー')+'）。時間をおいて「もう一度集計する」を押してください。',true);}).then(function(){btn.disabled=false;});
+ }
+ [].slice.call(box.querySelectorAll('[data-copy]')).forEach(function(b){b.addEventListener('click',function(){
+  var id=b.getAttribute('data-copy'),v=$(id).textContent,ok=$(id+'Ok');
+  function done(){ok.textContent='コピーしました';setTimeout(function(){ok.textContent='';},2500);}
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(v).then(done,function(){ok.textContent='数字を選んでコピーしてください';});else ok.textContent='数字を選んでコピーしてください';
+ });});
+ btn.addEventListener('click',run);run();
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+})();
+</script>{/literal}
+<!-- kg-tally 2026-10-15 end -->
