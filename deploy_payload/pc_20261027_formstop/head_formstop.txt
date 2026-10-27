@@ -1,0 +1,72 @@
+<!-- kg-formstop 2026-10-27 start（問合せ・資料請求フォームの一時停止案内：/ENQ/enquete.cgi へのリンクを押したとき、フォームが404のときだけ案内を出す。開けばそのままフォームへ進む） -->
+{literal}<script>
+(function(){
+var RE=/\/ENQ\/enquete\.cgi/i;
+var state=(window.KG_FS_FORCE==='stop')?'stop':null; /* null=未確認 / 'ok' / 'stop' */
+var checking=null;
+var TEL='0120-994-527',TELH='0120994527',MAIL='order@koudengaesi-e-shop.net';
+function check(url){
+ if(state)return Promise.resolve(state);
+ if(checking)return checking;
+ var ctl=('AbortController' in window)?new AbortController():null;
+ var tm=setTimeout(function(){if(ctl)ctl.abort();},5000);
+ checking=fetch(url,{method:'GET',cache:'no-store',credentials:'same-origin',signal:ctl?ctl.signal:undefined})
+  .then(function(r){state=(r.status===404||r.status===410)?'stop':'ok';return state;})
+  .catch(function(){return 'ok';}) /* 通信の失敗や混雑は停止と決めつけず、いつもどおりフォームへ進める */
+  .then(function(s){clearTimeout(tm);checking=null;return s;});
+ return checking;
+}
+var CSS='.kgfs-ov{position:fixed;left:0;top:0;right:0;bottom:0;z-index:2147483000;background:rgba(26,26,26,.55);display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s}'
++'.kgfs-ov.is-open{opacity:1;visibility:visible}'
++'.kgfs-ov *{box-sizing:border-box}'
++'.kgfs-box{background:#fff;width:100%;max-width:480px;max-height:calc(100vh - 32px);overflow:auto;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,.25);color:#2B2B2B;font-family:"Noto Sans JP","游ゴシック","Yu Gothic","メイリオ",Meiryo,"MS Pゴシック","Noto Sans CJK JP","IPAexゴシック",sans-serif;line-height:1.8;text-align:left}'
++'.kgfs-hd{background:#41214B;color:#fff;padding:14px 48px 14px 20px;position:relative;font-family:"Shippori Mincho","Noto Serif JP","游明朝","Yu Mincho","MS P明朝",serif;font-size:17px;font-weight:600;letter-spacing:.05em}'
++'.kgfs-x{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:36px;height:36px;border:0;background:transparent;color:#fff;font-size:24px;line-height:36px;cursor:pointer;padding:0}'
++'.kgfs-bd{padding:20px 20px 8px;font-size:14px}'
++'.kgfs-bd p{margin:0 0 16px}'
++'.kgfs-item{display:block;border:1px solid #D9CCDD;border-radius:4px;padding:12px 16px;margin:0 0 12px;background:#F4EFF6;color:#2B2B2B;text-decoration:none}'
++'.kgfs-item:hover{background:#EDE3F1}'
++'.kgfs-lb{display:block;font-size:12px;color:#7A4489;font-weight:600}'
++'.kgfs-tel{display:block;font-size:24px;font-weight:700;color:#41214B;letter-spacing:.03em;line-height:1.4}'
++'.kgfs-mail{display:block;font-size:16px;font-weight:600;color:#41214B;word-break:break-all;line-height:1.5}'
++'.kgfs-note{display:block;font-size:12px;color:#4A4A4A}'
++'.kgfs-ft{padding:4px 20px 20px;text-align:center}'
++'.kgfs-close{display:inline-block;min-width:160px;padding:10px 24px;border:1px solid #41214B;border-radius:3px;background:#fff;color:#41214B;font-size:14px;cursor:pointer;font-family:inherit}'
++'.kgfs-close:hover{background:#41214B;color:#fff}'
++'@media (max-width:480px){.kgfs-hd{font-size:16px}.kgfs-tel{font-size:22px}}';
+var ov=null,lastFocus=null;
+function build(){
+ if(ov)return ov;
+ var st=document.createElement('style');st.textContent=CSS;document.head.appendChild(st);
+ ov=document.createElement('div');ov.className='kgfs-ov';
+ ov.innerHTML='<div class="kgfs-box" role="dialog" aria-modal="true" aria-labelledby="kgfs-title">'
+ +'<div class="kgfs-hd" id="kgfs-title">お問い合わせ・カタログ請求について<button type="button" class="kgfs-x" aria-label="閉じる">&times;</button></div>'
+ +'<div class="kgfs-bd"><p>現在、お問い合わせ・カタログ請求のフォームを一時停止しております。お手数ですが、お電話またはメールにてお問い合わせください。</p>'
+ +'<a class="kgfs-item" href="tel:'+TELH+'"><span class="kgfs-lb">お電話（フリーダイヤル）</span><span class="kgfs-tel">'+TEL+'</span><span class="kgfs-note">受付時間　平日9:00〜17:00</span></a>'
+ +'<a class="kgfs-item" href="mailto:'+MAIL+'"><span class="kgfs-lb">メール</span><span class="kgfs-mail">'+MAIL+'</span></a></div>'
+ +'<div class="kgfs-ft"><button type="button" class="kgfs-close">閉じる</button></div></div>';
+ document.body.appendChild(ov);
+ ov.addEventListener('click',function(e){if(e.target===ov||e.target.closest('.kgfs-x,.kgfs-close'))hide();});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&ov.classList.contains('is-open'))hide();});
+ return ov;
+}
+function show(){build();lastFocus=document.activeElement;ov.classList.add('is-open');var b=ov.querySelector('.kgfs-close');if(b)b.focus();}
+function hide(){if(!ov)return;ov.classList.remove('is-open');if(lastFocus&&lastFocus.focus)try{lastFocus.focus();}catch(e){}}
+function linkOf(t){return (t&&t.closest)?t.closest('a[href]'):null;}
+function warm(e){var a=linkOf(e.target);if(a&&RE.test(a.href))check(a.href);}
+document.addEventListener('mouseover',warm,true);
+document.addEventListener('touchstart',warm,{capture:true,passive:true});
+document.addEventListener('click',function(e){
+ if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+ var a=linkOf(e.target);if(!a||!RE.test(a.href))return;
+ if(state==='ok')return;
+ e.preventDefault();
+ var href=a.href,blank=(a.target==='_blank');
+ check(href).then(function(s){
+  if(s==='stop'){show();return;}
+  if(blank){var w=window.open(href,'_blank');if(!w)location.href=href;}else{location.href=href;}
+ });
+},true);
+})();
+</script>{/literal}
+<!-- kg-formstop 2026-10-27 end -->
