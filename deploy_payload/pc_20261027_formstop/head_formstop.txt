@@ -16,29 +16,29 @@ function check(url){
   .then(function(s){clearTimeout(tm);checking=null;return s;});
  return checking;
 }
-var CSS='.kgfs-ov{position:fixed;left:0;top:0;right:0;bottom:0;z-index:2147483000;background:rgba(26,26,26,.55);display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s}'
-+'.kgfs-ov.is-open{opacity:1;visibility:visible}'
-+'.kgfs-ov *{box-sizing:border-box}'
-+'.kgfs-box{background:#fff;width:100%;max-width:480px;max-height:calc(100vh - 32px);overflow:auto;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,.25);color:#2B2B2B;font-family:"Noto Sans JP","游ゴシック","Yu Gothic","メイリオ",Meiryo,"MS Pゴシック","Noto Sans CJK JP","IPAexゴシック",sans-serif;line-height:1.8;text-align:left}'
-+'.kgfs-hd{background:#41214B;color:#fff;padding:14px 48px 14px 20px;position:relative;font-family:"Shippori Mincho","Noto Serif JP","游明朝","Yu Mincho","MS P明朝",serif;font-size:17px;font-weight:600;letter-spacing:.05em}'
-+'.kgfs-x{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:36px;height:36px;border:0;background:transparent;color:#fff;font-size:24px;line-height:36px;cursor:pointer;padding:0}'
-+'.kgfs-bd{padding:20px 20px 8px;font-size:14px}'
-+'.kgfs-bd p{margin:0 0 16px}'
-+'.kgfs-item{display:block;border:1px solid #D9CCDD;border-radius:4px;padding:12px 16px;margin:0 0 12px;background:#F4EFF6;color:#2B2B2B;text-decoration:none}'
-+'.kgfs-item:hover{background:#EDE3F1}'
-+'.kgfs-lb{display:block;font-size:12px;color:#7A4489;font-weight:600}'
-+'.kgfs-tel{display:block;font-size:24px;font-weight:700;color:#41214B;letter-spacing:.03em;line-height:1.4}'
-+'.kgfs-mail{display:block;font-size:16px;font-weight:600;color:#41214B;word-break:break-all;line-height:1.5}'
-+'.kgfs-note{display:block;font-size:12px;color:#4A4A4A}'
-+'.kgfs-ft{padding:4px 20px 20px;text-align:center}'
-+'.kgfs-close{display:inline-block;min-width:160px;padding:10px 24px;border:1px solid #41214B;border-radius:3px;background:#fff;color:#41214B;font-size:14px;cursor:pointer;font-family:inherit}'
-+'.kgfs-close:hover{background:#41214B;color:#fff}'
-+'@media (max-width:480px){.kgfs-hd{font-size:16px}.kgfs-tel{font-size:22px}}';
+var CSS='#kgfs-root.kgfs-ov{position:fixed!important;left:0!important;top:0!important;right:0!important;bottom:0!important;z-index:2147483000!important;background:rgba(26,26,26,.55)!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:16px!important;box-sizing:border-box!important;opacity:0!important;visibility:hidden!important;transition:opacity .2s,visibility .2s!important}'
++'#kgfs-root.kgfs-ov.is-open{opacity:1!important;visibility:visible!important}'
++'#kgfs-root.kgfs-ov *{box-sizing:border-box!important}'
++'#kgfs-root.kgfs-ov .kgfs-box{background:#fff!important;width:100%!important;max-width:480px!important;max-height:calc(100vh - 32px)!important;overflow:auto!important;border-radius:6px!important;box-shadow:0 10px 40px rgba(0,0,0,.25)!important;color:#2B2B2B!important;font-family:"Noto Sans JP","游ゴシック","Yu Gothic","メイリオ",Meiryo,"MS Pゴシック","Noto Sans CJK JP","IPAexゴシック",sans-serif!important;line-height:1.8!important;text-align:left!important}'
++'#kgfs-root.kgfs-ov .kgfs-hd{background:#41214B!important;color:#fff!important;padding:14px 48px 14px 20px!important;position:relative!important;font-family:"Shippori Mincho","Noto Serif JP","游明朝","Yu Mincho","MS P明朝",serif!important;font-size:17px!important;font-weight:600!important;letter-spacing:.05em!important}'
++'#kgfs-root.kgfs-ov .kgfs-x{position:absolute!important;right:8px!important;top:50%!important;transform:translateY(-50%)!important;width:36px!important;height:36px!important;border:0!important;background:transparent!important;color:#fff!important;font-size:24px!important;line-height:36px!important;cursor:pointer!important;padding:0!important}'
++'#kgfs-root.kgfs-ov .kgfs-bd{padding:20px 20px 8px!important;font-size:14px!important}'
++'#kgfs-root.kgfs-ov .kgfs-bd p{margin:0 0 16px!important}'
++'#kgfs-root.kgfs-ov .kgfs-item{display:block!important;border:1px solid #D9CCDD!important;border-radius:4px!important;padding:12px 16px!important;margin:0 0 12px!important;background:#F4EFF6!important;color:#2B2B2B!important;text-decoration:none!important}'
++'#kgfs-root.kgfs-ov .kgfs-item:hover{background:#EDE3F1!important}'
++'#kgfs-root.kgfs-ov .kgfs-lb{display:block!important;font-size:12px!important;color:#7A4489!important;font-weight:600!important}'
++'#kgfs-root.kgfs-ov .kgfs-tel{display:block!important;font-size:24px!important;font-weight:700!important;color:#41214B!important;letter-spacing:.03em!important;line-height:1.4!important}'
++'#kgfs-root.kgfs-ov .kgfs-mail{display:block!important;font-size:16px!important;font-weight:600!important;color:#41214B!important;word-break:break-all!important;line-height:1.5!important}'
++'#kgfs-root.kgfs-ov .kgfs-note{display:block!important;font-size:12px!important;color:#4A4A4A!important}'
++'#kgfs-root.kgfs-ov .kgfs-ft{padding:4px 20px 20px!important;text-align:center!important}'
++'#kgfs-root.kgfs-ov .kgfs-close{display:inline-block!important;min-width:160px!important;padding:10px 24px!important;border:1px solid #41214B!important;border-radius:3px!important;background:#fff!important;color:#41214B!important;font-size:14px!important;cursor:pointer!important;font-family:inherit!important}'
++'#kgfs-root.kgfs-ov .kgfs-close:hover{background:#41214B!important;color:#fff!important}'
++'@media (max-width:480px){#kgfs-root.kgfs-ov .kgfs-hd{font-size:16px!important}#kgfs-root.kgfs-ov .kgfs-tel{font-size:22px!important}}';
 var ov=null,lastFocus=null;
 function build(){
  if(ov)return ov;
  var st=document.createElement('style');st.textContent=CSS;document.head.appendChild(st);
- ov=document.createElement('div');ov.className='kgfs-ov';
+ ov=document.createElement('div');ov.id='kgfs-root';ov.className='kgfs-ov';
  ov.innerHTML='<div class="kgfs-box" role="dialog" aria-modal="true" aria-labelledby="kgfs-title">'
  +'<div class="kgfs-hd" id="kgfs-title">お問い合わせ・カタログ請求について<button type="button" class="kgfs-x" aria-label="閉じる">&times;</button></div>'
  +'<div class="kgfs-bd"><p>現在、お問い合わせ・カタログ請求のフォームを一時停止しております。お手数ですが、お電話またはメールにてお問い合わせください。</p>'
