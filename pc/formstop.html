@@ -951,7 +951,7 @@ nav.kg-acc .kg-acc-toggle:hover{background:#f2f2f2}
 <script>
 (function(){
   var p = location.pathname;
-  if (p === '/' || p === '/index.html' || p === '/index.php') {
+  if (p === '/' || p === '/pc/formstop.html' || p === '/index.html' || p === '/index.php') {
     document.documentElement.className += ' kg-top';
   }
 })();
@@ -1016,7 +1016,7 @@ nav.kg-acc .kg-acc-toggle:hover{background:#f2f2f2}
 <!-- ======== SP改装 2026-08-28 kg ここから ======== -->
 
 <script>
-(function(){var p=location.pathname;if(p===''||p==='/'||p==='/index.html'||p==='/index.htm'){document.documentElement.classList.add('kg-top');}else if(p.indexOf('/SHOP/')===0){document.documentElement.classList.add('kg-sub');}})();
+(function(){var p=location.pathname;if(p===''||p==='/'||p==='/pc/formstop.html'||p==='/index.html'||p==='/index.htm'){document.documentElement.classList.add('kg-top');}else if(p.indexOf('/SHOP/')===0){document.documentElement.classList.add('kg-sub');}})();
 </script>
 <style>
 .kg-sp{display:none}
@@ -2838,7 +2838,7 @@ html.kg-pc.kg-cart #contact table.border:not(.cartItem) td.backcolor1:has(input[
 <!-- kg-pc 2026-10-08 nofouc start -->
 <script>(function(){var d=document.documentElement;if(!d.classList.contains('kg-pc'))return;
 var p=location.pathname;
-if(!(p==='/'||p==='/index.html'||p==='/index.htm'||p.indexOf('/SHOP/')===0||p.indexOf('/hpgen/')===0))return;
+if(!(p==='/'||p==='/pc/formstop.html'||p==='/index.html'||p==='/index.htm'||p.indexOf('/SHOP/')===0||p.indexOf('/hpgen/')===0))return;
 d.classList.add('kg-pcsrv');
 if(/^\/SHOP\/[^\/]+\.html$/.test(p)&&!/list/.test(p))d.classList.add('kg-pcwait','kg-pcitem');else if(p.indexOf('/SHOP/')===0)d.classList.add('kg-pcwait');
 function show(){d.classList.remove('kg-pcwait');}
